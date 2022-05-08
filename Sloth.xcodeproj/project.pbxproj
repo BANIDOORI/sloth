@@ -16,6 +16,18 @@
 		E05D95F12827ACF6007F2ACA /* SlothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95F02827ACF6007F2ACA /* SlothTests.swift */; };
 		E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D960A2827B1BC007F2ACA /* Icons.swift */; };
 		E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D960C2827B5CC007F2ACA /* ColorPalette.swift */; };
+		E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D960F2827CA07007F2ACA /* DependencyContainer.swift */; };
+		E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96122827CA4B007F2ACA /* Coordinator.swift */; };
+		E05D96162827CA58007F2ACA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96152827CA58007F2ACA /* Router.swift */; };
+		E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D961D2827CAC0007F2ACA /* NavigationRouter.swift */; };
+		E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D961F2827CAC0007F2ACA /* InitNavRouter.swift */; };
+		E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */; };
+		E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D962A2827CE0A007F2ACA /* TodayViewController.swift */; };
+		E05D962E2827CEC1007F2ACA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E05D962D2827CEC1007F2ACA /* SnapKit */; };
+		E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */; };
+		E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96312827D057007F2ACA /* MainViewNavigator.swift */; };
+		E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96332827D20F007F2ACA /* MyPageViewController.swift */; };
+		E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96352827D234007F2ACA /* MyPageCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,17 @@
 		E05D95F62827ACF6007F2ACA /* SlothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D960A2827B1BC007F2ACA /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		E05D960C2827B5CC007F2ACA /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		E05D960F2827CA07007F2ACA /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		E05D96122827CA4B007F2ACA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E05D96152827CA58007F2ACA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E05D961D2827CAC0007F2ACA /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		E05D961F2827CAC0007F2ACA /* InitNavRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitNavRouter.swift; sourceTree = "<group>"; };
+		E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		E05D962A2827CE0A007F2ACA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewNavigatorDelegate.swift; sourceTree = "<group>"; };
+		E05D96312827D057007F2ACA /* MainViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigator.swift; sourceTree = "<group>"; };
+		E05D96332827D20F007F2ACA /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		E05D96352827D234007F2ACA /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05D962E2827CEC1007F2ACA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +122,15 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E05D96292827CDF6007F2ACA /* LectureListView */,
+				E05D96282827CDF1007F2ACA /* MyPageView */,
+				E05D96272827CDE6007F2ACA /* TodayView */,
+				E05D96252827CD7F007F2ACA /* MainView */,
+				E05D96112827CA24007F2ACA /* Coordinator */,
+				E05D960E2827C9D8007F2ACA /* Dependency */,
 				E05D96092827B1B5007F2ACA /* Common */,
 				E05D95D92827ACF4007F2ACA /* AppDelegate.swift */,
 				E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */,
-				E05D95DD2827ACF4007F2ACA /* MainViewController.swift */,
 				E05D95DF2827ACF4007F2ACA /* Main.storyboard */,
 				E05D95E22827ACF5007F2ACA /* Assets.xcassets */,
 				E05D95E42827ACF5007F2ACA /* LaunchScreen.storyboard */,
@@ -127,6 +156,68 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		E05D960E2827C9D8007F2ACA /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				E05D960F2827CA07007F2ACA /* DependencyContainer.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		E05D96112827CA24007F2ACA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E05D96142827CA54007F2ACA /* Router */,
+				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
+				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
+				E05D96352827D234007F2ACA /* MyPageCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E05D96142827CA54007F2ACA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E05D961F2827CAC0007F2ACA /* InitNavRouter.swift */,
+				E05D961D2827CAC0007F2ACA /* NavigationRouter.swift */,
+				E05D96152827CA58007F2ACA /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E05D96252827CD7F007F2ACA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				E05D95DD2827ACF4007F2ACA /* MainViewController.swift */,
+				E05D96312827D057007F2ACA /* MainViewNavigator.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		E05D96272827CDE6007F2ACA /* TodayView */ = {
+			isa = PBXGroup;
+			children = (
+				E05D962A2827CE0A007F2ACA /* TodayViewController.swift */,
+				E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */,
+			);
+			path = TodayView;
+			sourceTree = "<group>";
+		};
+		E05D96282827CDF1007F2ACA /* MyPageView */ = {
+			isa = PBXGroup;
+			children = (
+				E05D96332827D20F007F2ACA /* MyPageViewController.swift */,
+			);
+			path = MyPageView;
+			sourceTree = "<group>";
+		};
+		E05D96292827CDF6007F2ACA /* LectureListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LectureListView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +234,9 @@
 			dependencies = (
 			);
 			name = Sloth;
+			packageProductDependencies = (
+				E05D962D2827CEC1007F2ACA /* SnapKit */,
+			);
 			productName = Sloth;
 			productReference = E05D95D62827ACF4007F2ACA /* Sloth.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +309,9 @@
 				Base,
 			);
 			mainGroup = E05D95CD2827ACF4007F2ACA;
+			packageReferences = (
+				E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E05D95D72827ACF4007F2ACA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,11 +355,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
+				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
+				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
+				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
+				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
+				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
+				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
+				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
+				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
+				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
+				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +710,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E05D962D2827CEC1007F2ACA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E05D95CE2827ACF4007F2ACA /* Project object */;
 }

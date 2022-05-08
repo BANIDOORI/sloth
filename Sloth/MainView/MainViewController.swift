@@ -9,7 +9,9 @@ import UIKit
 
 class MainViewController: UITabBarController {
     
-    private let todayViewController = UIViewController()
+    weak var navigator: MainViewNavigator?
+    
+    private let todayViewController = TodayViewController()
     private let lectureListViewController = UIViewController()
     private let myPageViewController = UIViewController()
     
@@ -20,6 +22,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeViews()
+        todayViewController.navigator = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -83,3 +86,8 @@ class MainViewController: UITabBarController {
     }
 }
 
+extension MainViewController: TodayViewNavigatorDelegate {
+    func showMyPage() {
+        navigator?.showMyPage()
+    }
+}
