@@ -62,6 +62,12 @@ class RegisterLectureViewController: UIViewController {
         return field
     }()
     
+    private let nextButton: ConfirmButton = {
+        let button = ConfirmButton()
+        button.setTitle("다음", for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeViews()
@@ -109,8 +115,14 @@ class RegisterLectureViewController: UIViewController {
             $0.height.equalTo(86)
         }
         stackView.addArrangedSubview(lectureSiteField)
+        stackView.setCustomSpacing(54, after: lectureSiteField)
         lectureSiteField.snp.makeConstraints {
             $0.height.equalTo(86)
+        }
+        
+        stackView.addArrangedSubview(nextButton)
+        nextButton.snp.makeConstraints {
+            $0.height.equalTo(56)
         }
     }
 }

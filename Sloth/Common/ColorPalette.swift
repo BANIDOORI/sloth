@@ -29,4 +29,8 @@ extension UIColor {
     static var gray300: UIColor {
         UIColor(named: "gray300")!
     }
+    
+    static var gray200: UIColor {
+        UIColor(named: "gray200")!
+    }
 }
