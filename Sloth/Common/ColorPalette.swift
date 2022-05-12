@@ -17,4 +17,16 @@ extension UIColor {
     static var primary100: UIColor { UIColor(named: "primary100")! }
     static var error: UIColor { UIColor(named: "error")! }
     
+    
+    static var gray600: UIColor {
+        UIColor(named: "gray600")!
+    }
+    
+    static var gray500: UIColor {
+        UIColor(named: "gray500")!
+    }
+    
+    static var gray300: UIColor {
+        UIColor(named: "gray300")!
+    }
 }
