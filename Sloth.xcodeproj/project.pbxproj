@@ -28,6 +28,9 @@
 		E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96312827D057007F2ACA /* MainViewNavigator.swift */; };
 		E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96332827D20F007F2ACA /* MyPageViewController.swift */; };
 		E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96352827D234007F2ACA /* MyPageCoordinator.swift */; };
+		E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */; };
+		E086090B282BD87F0050E7C6 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090A282BD87E0050E7C6 /* TitleTextField.swift */; };
+		E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		E05D96312827D057007F2ACA /* MainViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigator.swift; sourceTree = "<group>"; };
 		E05D96332827D20F007F2ACA /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E05D96352827D234007F2ACA /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
+		E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureViewController.swift; sourceTree = "<group>"; };
+		E086090A282BD87E0050E7C6 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
+		E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E0860906282BD7200050E7C6 /* RegisterLectureView */,
 				E05D96292827CDF6007F2ACA /* LectureListView */,
 				E05D96282827CDF1007F2ACA /* MyPageView */,
 				E05D96272827CDE6007F2ACA /* TodayView */,
@@ -171,6 +178,7 @@
 				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
 				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
 				E05D96352827D234007F2ACA /* MyPageCoordinator.swift */,
+				E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -216,6 +224,15 @@
 			children = (
 			);
 			path = LectureListView;
+			sourceTree = "<group>";
+		};
+		E0860906282BD7200050E7C6 /* RegisterLectureView */ = {
+			isa = PBXGroup;
+			children = (
+				E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */,
+				E086090A282BD87E0050E7C6 /* TitleTextField.swift */,
+			);
+			path = RegisterLectureView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,8 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E086090B282BD87F0050E7C6 /* TitleTextField.swift in Sources */,
 				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
 				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
+				E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */,
 				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
@@ -367,6 +386,7 @@
 				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
+				E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */,
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
