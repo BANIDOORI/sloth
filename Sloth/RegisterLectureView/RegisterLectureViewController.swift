@@ -9,7 +9,20 @@ import UIKit
 
 class RegisterLectureViewController: UIViewController {
     
-    private let titleContainerView: UIView = UIView()
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        return scrollView
+    }()
+    
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 32
+        return stackView
+    }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -21,12 +34,31 @@ class RegisterLectureViewController: UIViewController {
     }()
     
     
-    private let fieldContainerView: UIView = UIView()
-    
     private let lectureNameField: TitleTextField = {
         let field = TitleTextField()
         field.titleText = "강의 이름"
         field.placeholder = "수강할 인강 이름을 입력하세요."
+        return field
+    }()
+    
+    private let lectureCountField: TitleTextField = {
+        let field = TitleTextField()
+        field.titleText = "강의 개수"
+        field.placeholder = "전체 강의 개수를 입력하세요."
+        return field
+    }()
+    
+    private let lectureCategoryField: TitleTextField = {
+        let field = TitleTextField()
+        field.titleText = "카테고리"
+        field.placeholder = "인강 카테고리를 선택하세요."
+        return field
+    }()
+    
+    private let lectureSiteField: TitleTextField = {
+        let field = TitleTextField()
+        field.titleText = "강의 사이트"
+        field.placeholder = "강의 사이트를 선택하세요."
         return field
     }()
     
@@ -38,35 +70,47 @@ class RegisterLectureViewController: UIViewController {
     private func initializeViews() {
         view.backgroundColor = .white
         
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.left.right.bottom.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        scrollView.addSubview(stackView)
+        stackView.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().inset(34)
+            $0.centerX.bottom.equalToSuperview()
+        }
+        
         initializeTitleView()
         initializeFields()
     }
     
     private func initializeTitleView() {
-        view.addSubview(titleContainerView)
-        titleContainerView.addSubview(titleLabel)
-        titleContainerView.snp.makeConstraints {
-            $0.top.left.right.equalToSuperview()
-            $0.height.equalTo(80)
-        }
+        stackView.addArrangedSubview(titleLabel)
+        stackView.setCustomSpacing(30, after: titleLabel)
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(30)
-            $0.left.bottom.equalToSuperview().inset(16)
-            $0.right.equalToSuperview()
+            $0.height.equalTo(34)
         }
     }
     
     private func initializeFields() {
-        view.addSubview(fieldContainerView)
-        fieldContainerView.addSubview(lectureNameField)
-        fieldContainerView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(14)
-            $0.left.right.bottom.equalToSuperview()
-        }
+        stackView.addArrangedSubview(lectureNameField)
         lectureNameField.snp.makeConstraints {
-            $0.left.right.equalToSuperview().inset(16)
             $0.height.equalTo(86)
         }
-        
+        stackView.addArrangedSubview(lectureCountField)
+        lectureCountField.snp.makeConstraints {
+            $0.height.equalTo(86)
+        }
+        stackView.addArrangedSubview(lectureCategoryField)
+        lectureCategoryField.snp.makeConstraints {
+            $0.height.equalTo(86)
+        }
+        stackView.addArrangedSubview(lectureSiteField)
+        lectureSiteField.snp.makeConstraints {
+            $0.height.equalTo(86)
+        }
     }
 }
