@@ -1,16 +1,14 @@
 //
-//  TitleTextField.swift
+//  TitleInput.swift
 //  Sloth
 //
-//  Created by 심지원 on 2022/05/11.
+//  Created by 심지원 on 2022/05/15.
 //
 
 import UIKit
 
 class TitleInput: UIView {
-    
-    // Title Label Properties
-    
+    // MARK: Title Label Properties
     var titleText: String? {
         didSet {
             titleLabel.text = titleText
@@ -43,8 +41,7 @@ class TitleInput: UIView {
         return label
     }()
     
-    // Input Container View Properties
-    
+    // MARK: Input Container View Properties
     var borderWidth: CGFloat = 1 {
         didSet {
             inputContainerView.layer.borderWidth = borderWidth
@@ -73,8 +70,7 @@ class TitleInput: UIView {
         return view
     }()
     
-    // Text Field Properties
-    
+    // MARK: Text Field Properties
     var text: String? {
         didSet {
             textField.text = text
@@ -145,36 +141,5 @@ class TitleInput: UIView {
         textField.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(17)
         }
-    }
-    
-}
-
-class TitleActionSheet: TitleInput {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-class TitleTextField: TitleInput {
-    
-    
-    var keyboardType: UIKeyboardType = .default {
-        didSet {
-            textField.keyboardType = keyboardType
-        }
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        textField.keyboardType = keyboardType
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

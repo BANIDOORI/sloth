@@ -7,8 +7,7 @@
 
 import UIKit
 
-class RegisterLectureViewController: UIViewController {
-    
+final class RegisterLectureViewController: UIViewController {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
@@ -32,7 +31,6 @@ class RegisterLectureViewController: UIViewController {
         label.textColor = .gray600
         return label
     }()
-    
     
     private var lectureName: String = ""
     private let lectureNameField: TitleTextField = {

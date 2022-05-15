@@ -13,7 +13,6 @@ protocol RegisterLessonViewBinder {
     var lectureCategory: LectureCategory? { get set }
     var lectureSite: LectureSite? { get set }
     
-    
     func handleNextClicked(completion: @escaping (Bool) -> ())
 }
 
@@ -22,7 +21,6 @@ class RegisterLectureViewModel: RegisterLessonViewBinder {
     var lectureCount: String?
     var lectureCategory: LectureCategory?
     var lectureSite: LectureSite?
-    
     
     func handleNextClicked(completion: @escaping (Bool) -> ()) {
         let isNextPossible = checkIfFieldsAreValid()

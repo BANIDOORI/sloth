@@ -36,23 +36,24 @@ extension UIImage {
     static var alertConfirm: UIImage {
         UIImage(named: "ic_alert_confirm")!
     }
+    
     static var alertError: UIImage {
         UIImage(named: "ic_alert_error")!
     }
+    
     static var failureStamp: UIImage {
         UIImage(named: "ic_failure")!
     }
+    
     static var successStamp: UIImage {
         UIImage(named: "ic_success")!
     }
+    
     static var profile: UIImage {
         UIImage(named: "img_personal_thum")!
     }
     
-    // Illust
-    
     struct Sloth {
-    
         static var inProgress: UIImage {
             UIImage(named: "img_sloth_in_progess")!
         }
@@ -89,6 +90,4 @@ extension UIImage {
             UIImage(named: "img_sloth_today_lose")!
         }
     }
-    
-    
 }
