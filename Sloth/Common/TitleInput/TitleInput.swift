@@ -101,7 +101,7 @@ class TitleInput: UIView {
         }
     }
     
-    fileprivate lazy var textField: UITextField = {
+    lazy var textField: UITextField = {
         let field = UITextField()
         field.textAlignment = textFieldAlignment
         field.font = textFieldFont
