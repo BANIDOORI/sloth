@@ -34,17 +34,21 @@ class RegisterLectureViewController: UIViewController {
     }()
     
     
+    private var lectureName: String = ""
     private let lectureNameField: TitleTextField = {
         let field = TitleTextField()
         field.titleText = "강의 이름"
         field.placeholder = "수강할 인강 이름을 입력하세요."
+        field.keyboardType = .default
         return field
     }()
     
+    private var lectureCount: String = ""
     private let lectureCountField: TitleTextField = {
         let field = TitleTextField()
         field.titleText = "강의 개수"
         field.placeholder = "전체 강의 개수를 입력하세요."
+        field.keyboardType = .numberPad
         return field
     }()
     
@@ -67,6 +71,17 @@ class RegisterLectureViewController: UIViewController {
         button.setTitle("다음", for: .normal)
         return button
     }()
+    
+    private let viewModel: RegisterLessonViewBinder
+    
+    init(viewModel: RegisterLessonViewBinder) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

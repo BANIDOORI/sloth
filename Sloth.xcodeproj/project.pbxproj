@@ -33,6 +33,9 @@
 		E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */; };
 		E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860910282D4A070050E7C6 /* ConfirmButton.swift */; };
 		E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860912282D4C8C0050E7C6 /* CancelButton.swift */; };
+		E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */; };
+		E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609172830AE180050E7C6 /* LectureCategory.swift */; };
+		E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609192830AE940050E7C6 /* LectureSite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureCoordinator.swift; sourceTree = "<group>"; };
 		E0860910282D4A070050E7C6 /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		E0860912282D4C8C0050E7C6 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureViewModel.swift; sourceTree = "<group>"; };
+		E08609172830AE180050E7C6 /* LectureCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureCategory.swift; sourceTree = "<group>"; };
+		E08609192830AE940050E7C6 /* LectureSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureSite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,9 @@
 		E05D96092827B1B5007F2ACA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E086090A282BD87E0050E7C6 /* TitleTextField.swift */,
+				E0860910282D4A070050E7C6 /* ConfirmButton.swift */,
+				E0860912282D4C8C0050E7C6 /* CancelButton.swift */,
 				E05D960A2827B1BC007F2ACA /* Icons.swift */,
 				E05D960C2827B5CC007F2ACA /* ColorPalette.swift */,
 			);
@@ -233,12 +242,20 @@
 		E0860906282BD7200050E7C6 /* RegisterLectureView */ = {
 			isa = PBXGroup;
 			children = (
+				E08609162830AE0A0050E7C6 /* Model */,
 				E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */,
-				E086090A282BD87E0050E7C6 /* TitleTextField.swift */,
-				E0860910282D4A070050E7C6 /* ConfirmButton.swift */,
-				E0860912282D4C8C0050E7C6 /* CancelButton.swift */,
+				E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */,
 			);
 			path = RegisterLectureView;
+			sourceTree = "<group>";
+		};
+		E08609162830AE0A0050E7C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E08609172830AE180050E7C6 /* LectureCategory.swift */,
+				E08609192830AE940050E7C6 /* LectureSite.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +403,7 @@
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
 				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
+				E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
@@ -398,6 +416,8 @@
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
+				E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */,
+				E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
