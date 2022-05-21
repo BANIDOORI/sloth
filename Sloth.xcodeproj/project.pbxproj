@@ -45,6 +45,19 @@
 		E086091F28310FBF0050E7C6 /* TitleActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086091E28310FBF0050E7C6 /* TitleActionSheet.swift */; };
 		E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092028310FD00050E7C6 /* TitleTextField.swift */; };
 		E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092228310FDF0050E7C6 /* TitleInput.swift */; };
+		E086092628368B420050E7C6 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092528368B410050E7C6 /* InitViewController.swift */; };
+		E086092928368E500050E7C6 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092828368E500050E7C6 /* HTTPClient.swift */; };
+		E086092C2837E9630050E7C6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092B2837E9620050E7C6 /* LoginService.swift */; };
+		E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860933283898E40050E7C6 /* RequestMaker.swift */; };
+		E086093828389DC80050E7C6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086093728389DC80050E7C6 /* Endpoint.swift */; };
+		E086093A28389DDA0050E7C6 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086093928389DDA0050E7C6 /* EndpointType.swift */; };
+		E086093C28389DFA0050E7C6 /* AccountRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086093B28389DFA0050E7C6 /* AccountRequestMaker.swift */; };
+		E086093E28389E470050E7C6 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086093D28389E470050E7C6 /* EndpointProvider.swift */; };
+		E086094128389E7F0050E7C6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086094028389E7F0050E7C6 /* Requestable.swift */; };
+		E086094328389F350050E7C6 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086094228389F350050E7C6 /* LoginRequest.swift */; };
+		E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609462838A1570050E7C6 /* HTTPMethod.swift */; };
+		E08609492838A17F0050E7C6 /* URLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609482838A17F0050E7C6 /* URLProvider.swift */; };
+		E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086094A2838A1A40050E7C6 /* LogoutRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +119,19 @@
 		E086091E28310FBF0050E7C6 /* TitleActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleActionSheet.swift; sourceTree = "<group>"; };
 		E086092028310FD00050E7C6 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
 		E086092228310FDF0050E7C6 /* TitleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleInput.swift; sourceTree = "<group>"; };
+		E086092528368B410050E7C6 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		E086092828368E500050E7C6 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		E086092B2837E9620050E7C6 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		E0860933283898E40050E7C6 /* RequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
+		E086093728389DC80050E7C6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E086093928389DDA0050E7C6 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		E086093B28389DFA0050E7C6 /* AccountRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRequestMaker.swift; sourceTree = "<group>"; };
+		E086093D28389E470050E7C6 /* EndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
+		E086094028389E7F0050E7C6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		E086094228389F350050E7C6 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		E08609462838A1570050E7C6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E08609482838A17F0050E7C6 /* URLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProvider.swift; sourceTree = "<group>"; };
+		E086094A2838A1A40050E7C6 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +163,10 @@
 		CE5CE0D3282EBACE00C70EAF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E086093528389DA40050E7C6 /* Endpoint */,
+				E08609442838A1250050E7C6 /* Request */,
+				E0860932283898DC0050E7C6 /* RequestMaker */,
+				E086092728368E480050E7C6 /* HTTPClient */,
 				CE5CE0D9282EBD7600C70EAF /* Service */,
 				CE5CE0D4282EBAD200C70EAF /* Model */,
 			);
@@ -154,6 +184,7 @@
 		CE5CE0D9282EBD7600C70EAF /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E086092B2837E9620050E7C6 /* LoginService.swift */,
 				CE5CE0DA282EBD7F00C70EAF /* TodayService.swift */,
 			);
 			path = Service;
@@ -190,9 +221,9 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E086092428368B200050E7C6 /* InitView */,
 				E0860906282BD7200050E7C6 /* RegisterLectureView */,
 				CE5CE0D3282EBACE00C70EAF /* API */,
-				E05D96292827CDF6007F2ACA /* LectureListView */,
 				E05D96282827CDF1007F2ACA /* MyPageView */,
 				E05D96272827CDE6007F2ACA /* TodayView */,
 				E05D96252827CD7F007F2ACA /* MainView */,
@@ -289,13 +320,6 @@
 			path = MyPageView;
 			sourceTree = "<group>";
 		};
-		E05D96292827CDF6007F2ACA /* LectureListView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LectureListView;
-			sourceTree = "<group>";
-		};
 		E0860906282BD7200050E7C6 /* RegisterLectureView */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +347,53 @@
 				E086092228310FDF0050E7C6 /* TitleInput.swift */,
 			);
 			path = TitleInput;
+			sourceTree = "<group>";
+		};
+		E086092428368B200050E7C6 /* InitView */ = {
+			isa = PBXGroup;
+			children = (
+				E086092528368B410050E7C6 /* InitViewController.swift */,
+			);
+			path = InitView;
+			sourceTree = "<group>";
+		};
+		E086092728368E480050E7C6 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				E086092828368E500050E7C6 /* HTTPClient.swift */,
+				E08609462838A1570050E7C6 /* HTTPMethod.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		E0860932283898DC0050E7C6 /* RequestMaker */ = {
+			isa = PBXGroup;
+			children = (
+				E086093B28389DFA0050E7C6 /* AccountRequestMaker.swift */,
+				E0860933283898E40050E7C6 /* RequestMaker.swift */,
+			);
+			path = RequestMaker;
+			sourceTree = "<group>";
+		};
+		E086093528389DA40050E7C6 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E086093728389DC80050E7C6 /* Endpoint.swift */,
+				E086093928389DDA0050E7C6 /* EndpointType.swift */,
+				E086093D28389E470050E7C6 /* EndpointProvider.swift */,
+				E08609482838A17F0050E7C6 /* URLProvider.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		E08609442838A1250050E7C6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E086094028389E7F0050E7C6 /* Requestable.swift */,
+				E086094228389F350050E7C6 /* LoginRequest.swift */,
+				E086094A2838A1A40050E7C6 /* LogoutRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,10 +541,15 @@
 				E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */,
 				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E086091F28310FBF0050E7C6 /* TitleActionSheet.swift in Sources */,
+				E086093A28389DDA0050E7C6 /* EndpointType.swift in Sources */,
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
+				E086093E28389E470050E7C6 /* EndpointProvider.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
 				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
+				E086094328389F350050E7C6 /* LoginRequest.swift in Sources */,
 				E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */,
+				E086093828389DC80050E7C6 /* Endpoint.swift in Sources */,
+				E086094128389E7F0050E7C6 /* Requestable.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
@@ -482,18 +558,26 @@
 				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
 				CE5CE0E0282EC19A00C70EAF /* TodayLessonCollectionCell.swift in Sources */,
 				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
+				E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
 				E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */,
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */,
+				E086093C28389DFA0050E7C6 /* AccountRequestMaker.swift in Sources */,
+				E08609492838A17F0050E7C6 /* URLProvider.swift in Sources */,
 				CE5CE0E42830A9FB00C70EAF /* ActivityIndicatorView.swift in Sources */,
 				CE5CE0D6282EBBD900C70EAF /* Lesson.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
+				E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */,
+				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
 				E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */,
 				E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */,
+				E086092C2837E9630050E7C6 /* LoginService.swift in Sources */,
+				E086092928368E500050E7C6 /* HTTPClient.swift in Sources */,
 				CE5CE0E2282EC1D600C70EAF /* TodayLessonCollectionCellViewModel.swift in Sources */,
+				E086092628368B420050E7C6 /* InitViewController.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
