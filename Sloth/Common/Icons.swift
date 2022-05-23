@@ -90,4 +90,18 @@ extension UIImage {
             UIImage(named: "img_sloth_today_lose")!
         }
     }
+    
+    struct Login {
+        static var google: UIImage {
+            UIImage(named: "btn_google_login")!
+        }
+        
+        static var kakao: UIImage {
+            UIImage(named: "btn_kakao_login")!
+        }
+        
+        static var apple: UIImage {
+            UIImage(named: "btn_apple_login")!
+        }
+    }
 }

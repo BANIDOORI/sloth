@@ -12,26 +12,21 @@ enum CommonError: Error {
     case authError
     case serverError
     case networkError
-    case decodeError
     case unknown(Error)
 }
 
-protocol HTTPClient {
-    func execute<ResponseType: Decodable>(
-        request: URLRequest
-    ) -> AnyPublisher<ResponseType, CommonError>
+protocol NetworkManager {
+    func execute(request: URLRequest) -> AnyPublisher<Data, CommonError>
 }
 
-class HTTPClientImp: HTTPClient {
+class NetworkManagerImp: NetworkManager {
     
-    func execute<ResponseType: Decodable>(
-        request: URLRequest
-    ) -> AnyPublisher<ResponseType, CommonError> {
+    func execute(request: URLRequest) -> AnyPublisher<Data, CommonError> {
         var dataTask: URLSessionDataTask?
         let onSubscription: (Subscription) -> Void = { _ in dataTask?.resume() }
         let onCancel: () -> Void = { dataTask?.cancel() }
         
-        return Future<ResponseType, CommonError> { promise in
+        return Future<Data, CommonError> { promise in
             dataTask = URLSession.shared.dataTask(with: request) { data, response, error   in
                 guard let data = data else {
                     if let error = error {
@@ -39,14 +34,7 @@ class HTTPClientImp: HTTPClient {
                     }
                     return
                 }
-                
-                do {
-                    let decoded = try JSONDecoder().decode(ResponseType.self, from: data)
-                    promise(.success(decoded)) 
-                }
-                catch {
-                    promise(.failure(.decodeError))
-                }
+                promise(.success(data))
             }
         }
         .handleEvents(receiveSubscription: onSubscription, receiveOutput: nil, receiveCompletion: nil, receiveCancel: onCancel, receiveRequest: nil)
