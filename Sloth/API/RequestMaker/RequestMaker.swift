@@ -22,9 +22,9 @@ extension RequestMaker: AccountRequestMaker {
         return request.makeURLRequest()
     }
     
-    func makeLoginRequest() -> URLRequest {
+    func makeLoginRequest(provider: SocialLoginProvider) -> URLRequest {
         let endpoint = endpointProvider.makeEndpoint(for: .login)
-        let request = LoginReqeust(endpoint: endpoint)
+        let request = LoginReqeust(endpoint: endpoint, provider: provider)
         return request.makeURLRequest()
     }
 }

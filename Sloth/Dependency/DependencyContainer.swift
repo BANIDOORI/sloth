@@ -22,7 +22,8 @@ class DependencyContainer {
         networkManager = NetworkManagerImp()
         urlProvider = URLProvider(
             scheme: "https",
-            host: "https://slothbackend.hopto.org/v3/api-docs?group=sloth",
+            host: "slothbackend.hopto.org",
+            path: "",
             login: "/api/oauth/login",
             logout: "/api/logout")
         endpointProvider = EndpointProvider(urlProvider: urlProvider)

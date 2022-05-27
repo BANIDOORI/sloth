@@ -19,7 +19,17 @@ class LoginViewModel {
     }
     
     func loginWithKakao() {
-        service.loginWithKakao() 
+        service.loginWithKakao()
+            .sink { completion in
+                switch completion {
+                case .failure(let error):
+                    print("LOGIN FAILED", error)
+                case .finished:
+                    print("LOGIN SUCCESS")
+                }
+            } receiveValue: { response in
+                print("LOGIN", response)
+            }.store(in: &disposable)
     }
     
     func loginWithApple() {
@@ -30,6 +40,5 @@ class LoginViewModel {
                 print(credential)
             }
             .store(in: &disposable)
-
     }
 }

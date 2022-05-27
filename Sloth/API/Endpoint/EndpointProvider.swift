@@ -15,13 +15,13 @@ class EndpointProvider {
     }
     
     func makeEndpoint(for type: EndpointType) -> Endpoint {
-        let path: String
+        var path: String = urlProvider.path
         let queryItems: [URLQueryItem] = []
         switch type {
         case .login:
-            path = urlProvider.login
+            path += urlProvider.login
         case .logout:
-            path = urlProvider.logout
+            path += urlProvider.logout
         }
         
         return Endpoint(

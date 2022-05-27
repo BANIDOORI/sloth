@@ -17,9 +17,9 @@ enum LoginError: Error {
 }
 
 struct LoginResponse: Codable {
-    let accessToken: String
-    let accessTokenExpireTime: String
-    let refreshToken: String
+    let accessToken: String?
+    let accessTokenExpireTime: String?
+    let refreshToken: String?
     let refreshTokenExpireTime: String
 }
 
@@ -65,10 +65,11 @@ class LoginService {
     }
     
     private func getClientToken(with token: String) -> AnyPublisher<LoginResponse, LoginError> {
-        let request = requestMaker.makeLoginRequest()
+        let request = requestMaker.makeLoginRequest(provider: .kakao(token: token))
         return networkManager.execute(request: request)
             .decode(type: LoginResponse.self, decoder: JSONDecoder())
             .mapError { error -> LoginError in
+                print("[LOGIN] ERROR \(error)")
                 if error is DecodingError {
                     return .decodeError
                 }

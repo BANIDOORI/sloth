@@ -10,6 +10,7 @@ import Foundation
 struct URLProvider {
     let scheme: String
     let host: String
+    let path: String
     let login: String
     let logout: String
 }

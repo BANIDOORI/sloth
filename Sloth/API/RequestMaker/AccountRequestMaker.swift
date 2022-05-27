@@ -8,6 +8,6 @@
 import Foundation
 
 protocol AccountRequestMaker {
-    func makeLoginRequest() -> URLRequest
+    func makeLoginRequest(provider: SocialLoginProvider) -> URLRequest
     func makeLogoutRequest() -> URLRequest
 }
