@@ -19,11 +19,6 @@ enum TodayViewModelState: Equatable {
 }
 
 final class TodayViewModel {
-    enum Section {
-        case will
-        case done
-    }
-
     @Published private(set) var lessons: [Lesson] = []
     @Published private(set) var state: TodayViewModelState = .loading
 

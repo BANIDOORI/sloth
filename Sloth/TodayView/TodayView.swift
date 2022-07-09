@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 
 final class TodayView: UIView {
-    lazy var slothImageView = UIImageView()
-    lazy var messageLabel = UILabel()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     lazy var activityIndicationView = ActivityIndicatorView(style: .medium)
 
@@ -20,10 +18,6 @@ final class TodayView: UIView {
         addSubviews()
         setUpConstraints()
         setUpViews()
-
-        messageLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        messageLabel.numberOfLines = 3
-        messageLabel.text = "시작이 반인데...\n너 설마 아직도\n시작 안했어?"
     }
 
     required init?(coder: NSCoder) {
@@ -32,8 +26,6 @@ final class TodayView: UIView {
 
     private func addSubviews() {
         let subviews = [
-            messageLabel,
-            slothImageView,
             collectionView,
             activityIndicationView
         ]
@@ -45,26 +37,12 @@ final class TodayView: UIView {
     }
 
     private func setUpViews() {
-        slothImageView.backgroundColor = .yellow
         collectionView.backgroundColor = .white
     }
 
     private func setUpConstraints() {
-        slothImageView.snp.makeConstraints {
-            $0.width.height.equalTo(160)
-            $0.top.equalToSuperview().inset(24)
-            $0.right.equalToSuperview().inset(20)
-        }
-        
-        messageLabel.snp.makeConstraints {
-            $0.centerY.equalTo(slothImageView.snp.centerY)
-            $0.left.equalToSuperview().inset(20)
-            $0.right.equalToSuperview().inset(18)
-        }
-
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(slothImageView.snp.bottom).offset(24)
-            $0.leading.trailing.bottom.equalToSuperview()
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
     }
 

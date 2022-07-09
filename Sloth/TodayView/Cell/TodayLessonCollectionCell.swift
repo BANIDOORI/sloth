@@ -56,3 +56,19 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         teamLabel.text = "\(viewModel.lessonName ?? "")의 팀ㅋ"
     }
 }
+
+final class TodayLessonCollectionCellViewModel {
+    @Published var lessonName: String? = ""
+
+    private let lesson: Lesson
+
+    init(lesson: Lesson) {
+        self.lesson = lesson
+
+        setUpBindings()
+    }
+
+    private func setUpBindings() {
+        lessonName = lesson.lessonName
+    }
+}
