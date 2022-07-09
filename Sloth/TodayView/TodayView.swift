@@ -14,7 +14,6 @@ final class TodayView: UIView {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = .brown
         addSubviews()
         setUpConstraints()
         setUpViews()
@@ -37,7 +36,8 @@ final class TodayView: UIView {
     }
 
     private func setUpViews() {
-        collectionView.backgroundColor = .white
+        backgroundColor = .gray100
+        collectionView.backgroundColor = .clear
     }
 
     private func setUpConstraints() {
@@ -58,8 +58,8 @@ final class TodayView: UIView {
         )
 
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-        section.interGroupSpacing = 5
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+        section.interGroupSpacing = 16
 
         return UICollectionViewCompositionalLayout(section: section)
     }

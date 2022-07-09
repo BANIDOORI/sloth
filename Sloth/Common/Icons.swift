@@ -52,6 +52,14 @@ extension UIImage {
     static var profile: UIImage {
         UIImage(named: "img_personal_thum")!
     }
+
+    static var activationPlus: UIImage {
+        UIImage(named: "activation_plus")!
+    }
+
+    static var disableMinus: UIImage {
+        UIImage(named: "disable_minus")!
+    }
     
     struct Sloth {
         static var inProgress: UIImage {
