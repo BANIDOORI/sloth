@@ -52,8 +52,8 @@ final class TodayLessonHeaderCell: UICollectionViewCell {
 
         messageLabel.snp.makeConstraints {
             $0.centerY.equalTo(slothImageView.snp.centerY)
-            $0.left.equalToSuperview().inset(20)
-            $0.right.equalToSuperview().inset(18)
+            $0.leading.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(18)
         }
     }
 

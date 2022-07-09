@@ -16,51 +16,7 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
     }
 
     lazy var isFinished: Bool = false
-
-    lazy var remainDayLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .primary400
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
-        return label
-    }()
-
-    lazy var categoryNameLabel: PaddingLabel = {
-        let label = PaddingLabel()
-        label.font = .systemFont(ofSize: 12, weight: .regular)
-        label.backgroundColor = .gray200
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 8
-        return label
-    }()
-
-    lazy var siteNameLabel: PaddingLabel = {
-        let label = PaddingLabel()
-        label.font = .systemFont(ofSize: 12, weight: .regular)
-        label.backgroundColor = .gray200
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 8
-        return label
-    }()
-
-    lazy var labelStackView: UIStackView = {
-        let stackView = UIStackView(
-            arrangedSubviews: [
-                remainDayLabel,
-                categoryNameLabel,
-                siteNameLabel
-            ]
-        )
-        stackView.spacing = 6
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .leading
-        return stackView
-    }()
-
-    lazy var lessonNameLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 2
-        return label
-    }()
+    lazy var lessonInformationView = LessonInformationView()
 
     lazy var numberLabel: UILabel = {
         let label = UILabel()
@@ -135,8 +91,7 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
 
     private func addSubviews() {
         let subviews = [
-            labelStackView,
-            lessonNameLabel,
+            lessonInformationView,
             progressBarView,
             numberLabel,
             buttonStackView
@@ -145,20 +100,17 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
             contentView.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
+
+        print(lessonInformationView)
     }
 
     private func setUpConstraints() {
-        labelStackView.snp.makeConstraints {
-            $0.left.top.equalToSuperview().inset(20)
-        }
-
-        lessonNameLabel.snp.makeConstraints {
-            $0.top.equalTo(labelStackView.snp.bottom).inset(-11)
-            $0.left.right.equalToSuperview().inset(20)
+        lessonInformationView.snp.makeConstraints {
+            $0.top.left.trailing.equalToSuperview().inset(20)
         }
 
         progressBarView.snp.makeConstraints {
-            $0.top.equalTo(lessonNameLabel.snp.bottom).inset(-20)
+            $0.top.equalTo(lessonInformationView.snp.bottom).inset(-20)
             $0.centerX.equalToSuperview()
         }
 
@@ -176,10 +128,10 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
 
     private func setUpViewModel() {
         changeFinishedView(isFinished: viewModel.totalNumber == viewModel.presentNumber)
-        remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
-        categoryNameLabel.text = viewModel.categoryName
-        siteNameLabel.text = viewModel.siteName
-        lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)" //viewModel.lessonName
+        lessonInformationView.remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
+        lessonInformationView.categoryNameLabel.text = viewModel.categoryName
+        lessonInformationView.siteNameLabel.text = viewModel.siteName
+        lessonInformationView.lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)" //viewModel.lessonName
         numberLabel.text = "0/4"
     }
 
