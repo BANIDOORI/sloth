@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class LoginViewModel {
-    
+    var navigator: LoginNavigator?
     
     private let service: LoginService
     private var disposable = Set<AnyCancellable>()
@@ -19,26 +19,32 @@ class LoginViewModel {
     }
     
     func loginWithKakao() {
-        service.loginWithKakao()
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    print("LOGIN FAILED", error)
-                case .finished:
-                    print("LOGIN SUCCESS")
-                }
-            } receiveValue: { response in
-                print("LOGIN", response)
-            }.store(in: &disposable)
+        navigator?.dismissAndStart()
+//        service.loginWithKakao()
+//            .sink { completion in
+//                switch completion {
+//                case .failure(let error):
+//                    print("LOGIN FAILED", error)
+//                case .finished:
+//                    print("LOGIN SUCCESS")
+//                }
+//            } receiveValue: { response in
+//                print("LOGIN", response)
+//            }.store(in: &disposable)
     }
     
     func loginWithApple() {
-        service.loginWithApple()
-            .sink { completion in
-                print(completion)
-            } receiveValue: { credential in
-                print(credential)
-            }
-            .store(in: &disposable)
+        navigator?.dismissAndStart()
+//        service.loginWithApple()
+//            .sink { completion in
+//                print(completion)
+//            } receiveValue: { credential in
+//                print(credential)
+//            }
+//            .store(in: &disposable)
+    }
+    
+    func loginWithGoogle() {
+        navigator?.dismissAndStart()
     }
 }
