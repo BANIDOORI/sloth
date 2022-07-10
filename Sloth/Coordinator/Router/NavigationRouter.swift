@@ -16,7 +16,7 @@ class NavigationRouter: Router {
   }
   
   func present(viewController: UIViewController, animated: Bool) {
-    navigationController.pushViewController(viewController, animated: true)
+    navigationController.pushViewController(viewController, animated: animated)
   }
   
   func dismiss() {
