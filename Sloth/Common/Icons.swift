@@ -60,6 +60,14 @@ extension UIImage {
     static var disableMinus: UIImage {
         UIImage(named: "disable_minus")!
     }
+
+    static var activationPlusWhite: UIImage {
+        UIImage(named: "activation_plus_white")!
+    }
+
+    static var activationMinusWhite: UIImage {
+        UIImage(named: "activation_minus_white")!
+    }
     
     struct Sloth {
         static var inProgress: UIImage {

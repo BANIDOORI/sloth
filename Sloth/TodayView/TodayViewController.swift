@@ -167,14 +167,14 @@ extension TodayViewController {
                         withReuseIdentifier: TodayLessonCollectionViewCell.identifier,
                         for: indexPath
                     ) as? TodayLessonCollectionViewCell
-                    cell?.viewModel = TodayLessonCollectionCellViewModel(lesson: lesson)
+                    cell?.viewModel = TodayLessonCollectionCellViewModel(lesson: lesson, isDone: false)
                     return cell
                 case .doneLesson(let lesson):
                     let cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: TodayLessonCollectionViewCell.identifier,
                         for: indexPath
                     ) as? TodayLessonCollectionViewCell
-                    cell?.viewModel = TodayLessonCollectionCellViewModel(lesson: lesson)
+                    cell?.viewModel = TodayLessonCollectionCellViewModel(lesson: lesson, isDone: true)
                     return cell
                 }
             })

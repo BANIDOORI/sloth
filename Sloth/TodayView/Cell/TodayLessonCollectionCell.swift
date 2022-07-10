@@ -15,15 +15,7 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         didSet { setUpViewModel() }
     }
 
-    lazy var isFinished: Bool = false
     lazy var lessonInformationView = LessonInformationView()
-
-    lazy var numberLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 28, weight: .bold)
-        label.textColor = .gray300
-        return label
-    }()
 
     lazy var progressBarView: UIView = {
         let view = UIView()
@@ -37,8 +29,21 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
 
     lazy var plusButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage.activationPlus, for: .normal)
+        button.setImage(.activationPlus, for: .normal)
         return button
+    }()
+
+    lazy var minusButton: UIButton = {
+        let button = UIButton()
+        button.setImage(.disableMinus, for: .normal)
+        return button
+    }()
+
+    lazy var numberLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.textColor = .gray300
+        return label
     }()
 
     lazy var pigView: UIView = {
@@ -48,21 +53,41 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(58)
         }
         view.backgroundColor = .gray200
-        print(isFinished)
         return view
     }()
 
-    lazy var minusButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage.disableMinus, for: .normal)
-        return button
+    lazy var bottomStackView: UIStackView = {
+        let stackView = UIStackView(
+            arrangedSubviews: [
+                progressBarView,
+                buttonStackView
+            ]
+        )
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
+        return stackView
+    }()
+
+    lazy var buttonMiddleStackView: UIStackView = {
+        let stackView = UIStackView(
+            arrangedSubviews: [
+                progressBarView,
+                numberLabel,
+                pigView
+            ]
+        )
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
+        return stackView
     }()
 
     lazy var buttonStackView: UIStackView = {
         let stackView = UIStackView(
             arrangedSubviews: [
                 minusButton,
-                pigView,
+                buttonMiddleStackView,
                 plusButton
             ]
         )
@@ -92,16 +117,12 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
     private func addSubviews() {
         let subviews = [
             lessonInformationView,
-            progressBarView,
-            numberLabel,
-            buttonStackView
+            bottomStackView
         ]
         subviews.forEach {
             contentView.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-
-        print(lessonInformationView)
     }
 
     private func setUpConstraints() {
@@ -109,25 +130,15 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
             $0.top.left.trailing.equalToSuperview().inset(20)
         }
 
-        progressBarView.snp.makeConstraints {
+        bottomStackView.snp.makeConstraints {
             $0.top.equalTo(lessonInformationView.snp.bottom).inset(-20)
             $0.centerX.equalToSuperview()
-        }
-
-        buttonStackView.snp.makeConstraints {
-            $0.top.equalTo(progressBarView.snp.bottom)
-            $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(20)
-        }
-
-        numberLabel.snp.makeConstraints {
-            $0.bottom.equalTo(buttonStackView.snp.top)
-            $0.centerX.equalTo(buttonStackView.snp.centerX)
         }
     }
 
     private func setUpViewModel() {
-        changeFinishedView(isFinished: viewModel.totalNumber == viewModel.presentNumber)
+        changeViewDesign(isDone: viewModel.isDone)
         lessonInformationView.remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
         lessonInformationView.categoryNameLabel.text = viewModel.categoryName
         lessonInformationView.siteNameLabel.text = viewModel.siteName
@@ -135,8 +146,11 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         numberLabel.text = "0/4"
     }
 
-    private func changeFinishedView(isFinished: Bool) {
-        pigView.isHidden = isFinished
+    private func changeViewDesign(isDone: Bool) {
+        pigView.isHidden = isDone
+        progressBarView.isHidden = isDone
+        plusButton.setImage(isDone ? .activationPlusWhite : .activationPlus, for: .normal)
+        minusButton.setImage(isDone ? .activationMinusWhite : .disableMinus, for: .normal)
     }
 }
 
@@ -147,11 +161,13 @@ final class TodayLessonCollectionCellViewModel {
     @Published var siteName: String? = ""
     @Published var presentNumber: Int? = 0
     @Published var totalNumber: Int? = 0
+    @Published var isDone: Bool = false
 
     private let lesson: Lesson
 
-    init(lesson: Lesson) {
+    init(lesson: Lesson, isDone: Bool) {
         self.lesson = lesson
+        self.isDone = isDone
 
         setUpBindings()
     }
