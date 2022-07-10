@@ -151,6 +151,13 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         progressBarView.isHidden = isDone
         plusButton.setImage(isDone ? .activationPlusWhite : .activationPlus, for: .normal)
         minusButton.setImage(isDone ? .activationMinusWhite : .disableMinus, for: .normal)
+        lessonInformationView.remainDayLabel.textColor = isDone ? .white : .primary400
+        lessonInformationView.categoryNameLabel.backgroundColor = isDone ? .primary200 : .gray200
+        lessonInformationView.categoryNameLabel.textColor = isDone ? .primary600 : .black
+        lessonInformationView.siteNameLabel.backgroundColor = isDone ? .primary200 : .gray200
+        lessonInformationView.siteNameLabel.textColor = isDone ? .primary600 : .black
+        lessonInformationView.lessonNameLabel.textColor = isDone ? .white : .black
+        backgroundColor = isDone ? .primary500 : .white
     }
 }
 
