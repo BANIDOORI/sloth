@@ -19,7 +19,7 @@ class CancelButton: UIButton {
     
     private func setAttributes() {
         titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        titleLabel?.textColor = .gray600
+        setTitleColor(.gray600, for: .normal)
         titleLabel?.textAlignment = .center
         
         layer.cornerRadius = 10
