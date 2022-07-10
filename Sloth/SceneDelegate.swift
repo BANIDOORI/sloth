@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         container = DependencyContainer(window: window)
         
         guard let window = window else { return }
-        mainCoordinator = container.makeLoginCoordinator(window: window)
+        mainCoordinator = container.makeStartCoordinator(window: window)
         mainCoordinator?.present()
     }
     

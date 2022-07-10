@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class DependencyContainer {
+    typealias OnAction = () -> ()
     
     private let kakaoSessionManager: KakaoSessionManager
     private let googleSessionManager: GoogleSessiongManager
@@ -66,8 +67,37 @@ class DependencyContainer {
         return coordinator
     }
     
-    func makeLoginCoordinator(window: UIWindow) -> Coordinator {
+    func makeStartCoordinator(window: UIWindow) -> Coordinator {
         let router = InitNavRouter(window: window)
+        
+        let viewController = StartViewController()
+        let loginCoordinatorFactory: (OnAction?) -> (Coordinator) = { onAction in
+            self.makeLoginCoordinator(
+                parentViewController: viewController,
+                onSuccessActionToLogin: onAction
+            )
+        }
+        
+        let informationAgreementCoordinatorFactory: () -> (Coordinator) = {
+            self.makeInformationAgreementCoordinator(parentViewController: viewController)
+        }
+        
+        let coordinator = StartCoordinator(
+            router: router,
+            viewController: viewController,
+            loginCoordinatorFactory: loginCoordinatorFactory,
+            informationAgreementCoordinator: informationAgreementCoordinatorFactory
+        )
+        
+        
+        viewController.navigator = coordinator
+        
+        return coordinator
+    }
+    
+    func makeLoginCoordinator(parentViewController: UIViewController,
+                              onSuccessActionToLogin: OnAction?) -> Coordinator {
+        let router = PopOverRouter(parentViewController: parentViewController)
         
         let service = LoginService(
             kakaoSessionManager: kakaoSessionManager,
@@ -78,13 +108,35 @@ class DependencyContainer {
         let viewModel = LoginViewModel(service: service)
         let viewController = LoginViewController(viewModel: viewModel)
         
+        let informationAgreementCoordinatorFactory: () -> (Coordinator) = {
+            self.makeInformationAgreementCoordinator(parentViewController: viewController)
+        }
+        
         let coordinator = LoginCoordinator(
             router: router,
-            viewController: viewController
+            viewController: viewController,
+            informationAgreementCoordinatorFactory: informationAgreementCoordinatorFactory,
+            onSuccessAction: onSuccessActionToLogin
         )
+        
+        viewModel.navigator = coordinator
         
         return coordinator
     }
     
+    
+    func makeInformationAgreementCoordinator(parentViewController: UIViewController) -> Coordinator {
+        let router = PopOverRouter(parentViewController: parentViewController)
+        
+        let viewController = InformationAgreementViewController()
+        let coordinator = InformationAgreementCoordinator(
+            router: router,
+            viewController: viewController
+        )
+        
+        viewController.navigator = coordinator
+        
+        return coordinator
+    }
 }
 
