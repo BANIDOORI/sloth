@@ -53,6 +53,14 @@ extension UIImage {
         UIImage(named: "img_personal_thum")!
     }
     
+    static var back: UIImage {
+        UIImage(named: "ic_navi_arrow_back")!
+    }
+    
+    static var expandMore: UIImage {
+        UIImage(named: "ic_expand_more")!
+    }
+    
     struct Sloth {
         static var inProgress: UIImage {
             UIImage(named: "img_sloth_in_progess")!

@@ -9,4 +9,5 @@ import Foundation
 
 protocol StartNavigator {
     func showLogin()
+    func showRegisterLecture()
 }

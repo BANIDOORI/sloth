@@ -14,16 +14,19 @@ class StartCoordinator: Coordinator {
     private let viewController: UIViewController
     
     private let loginCoordinatorFactory: (OnAction?) -> (Coordinator)
-    private let informationAgreementCoordinator: () -> (Coordinator)
+    private let informationAgreementCoordinatorFactory: () -> (Coordinator)
+    private let lectureInformationRegisterCoordinatorFactory: () -> (Coordinator)
     
     init(router: Router,
          viewController: UIViewController,
          loginCoordinatorFactory: @escaping (OnAction?) -> (Coordinator),
-         informationAgreementCoordinator: @escaping () -> (Coordinator)) {
+         informationAgreementCoordinatorFactory: @escaping () -> (Coordinator),
+         lectureInformationRegisterCoordinatorFactory: @escaping () -> (Coordinator)) {
         self.router = router
         self.viewController = viewController
         self.loginCoordinatorFactory = loginCoordinatorFactory
-        self.informationAgreementCoordinator = informationAgreementCoordinator
+        self.informationAgreementCoordinatorFactory = informationAgreementCoordinatorFactory
+        self.lectureInformationRegisterCoordinatorFactory = lectureInformationRegisterCoordinatorFactory
     }
     
     func present() {
@@ -40,7 +43,12 @@ extension StartCoordinator: StartNavigator {
     }
     
     private func showInformationAgreement() {
-        let coordinator = informationAgreementCoordinator()
+        let coordinator = informationAgreementCoordinatorFactory()
+        present(child: coordinator)
+    }
+    
+    func showRegisterLecture() {
+        let coordinator = lectureInformationRegisterCoordinatorFactory()
         present(child: coordinator)
     }
 }

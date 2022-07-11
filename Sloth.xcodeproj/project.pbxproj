@@ -22,6 +22,12 @@
 		E02033A5287AAF3200ED01DA /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033A4287AAF3200ED01DA /* LoginNavigator.swift */; };
 		E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033A6287AAFDB00ED01DA /* InformationAgreementCoordinator.swift */; };
 		E02033A9287AE3D500ED01DA /* InformationAgreementNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033A8287AE3D500ED01DA /* InformationAgreementNavigator.swift */; };
+		E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */; };
+		E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */; };
+		E02033B1287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B0287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift */; };
+		E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */; };
+		E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */; };
+		E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */; };
 		E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95D92827ACF4007F2ACA /* AppDelegate.swift */; };
 		E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */; };
 		E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DD2827ACF4007F2ACA /* MainViewController.swift */; };
@@ -43,14 +49,14 @@
 		E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96312827D057007F2ACA /* MainViewNavigator.swift */; };
 		E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96332827D20F007F2ACA /* MyPageViewController.swift */; };
 		E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96352827D234007F2ACA /* MyPageCoordinator.swift */; };
-		E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */; };
-		E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */; };
+		E0860908282BD7560050E7C6 /* LectureInformationRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */; };
+		E086090F282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */; };
 		E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860910282D4A070050E7C6 /* ConfirmButton.swift */; };
 		E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860912282D4C8C0050E7C6 /* CancelButton.swift */; };
-		E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */; };
+		E08609152830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */; };
 		E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609172830AE180050E7C6 /* LectureCategory.swift */; };
 		E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609192830AE940050E7C6 /* LectureSite.swift */; };
-		E086091F28310FBF0050E7C6 /* TitleActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086091E28310FBF0050E7C6 /* TitleActionSheet.swift */; };
+		E086091F28310FBF0050E7C6 /* TitleActionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086091E28310FBF0050E7C6 /* TitleActionField.swift */; };
 		E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092028310FD00050E7C6 /* TitleTextField.swift */; };
 		E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092228310FDF0050E7C6 /* TitleInput.swift */; };
 		E086092628368B420050E7C6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086092528368B410050E7C6 /* StartViewController.swift */; };
@@ -111,6 +117,12 @@
 		E02033A4287AAF3200ED01DA /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		E02033A6287AAFDB00ED01DA /* InformationAgreementCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAgreementCoordinator.swift; sourceTree = "<group>"; };
 		E02033A8287AE3D500ED01DA /* InformationAgreementNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationAgreementNavigator.swift; sourceTree = "<group>"; };
+		E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		E02033B0287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterViewController.swift; sourceTree = "<group>"; };
+		E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterCoordinator.swift; sourceTree = "<group>"; };
+		E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterNavigator.swift; sourceTree = "<group>"; };
+		E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInformationRegisterNavigator.swift; sourceTree = "<group>"; };
 		E05D95D62827ACF4007F2ACA /* Sloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D95D92827ACF4007F2ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,14 +147,14 @@
 		E05D96312827D057007F2ACA /* MainViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigator.swift; sourceTree = "<group>"; };
 		E05D96332827D20F007F2ACA /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E05D96352827D234007F2ACA /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
-		E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureViewController.swift; sourceTree = "<group>"; };
-		E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureCoordinator.swift; sourceTree = "<group>"; };
+		E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInformationRegisterViewController.swift; sourceTree = "<group>"; };
+		E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfomationRegisterCoordinator.swift; sourceTree = "<group>"; };
 		E0860910282D4A070050E7C6 /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
 		E0860912282D4C8C0050E7C6 /* CancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
-		E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLectureViewModel.swift; sourceTree = "<group>"; };
+		E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInformationRegisterViewModel.swift; sourceTree = "<group>"; };
 		E08609172830AE180050E7C6 /* LectureCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureCategory.swift; sourceTree = "<group>"; };
 		E08609192830AE940050E7C6 /* LectureSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureSite.swift; sourceTree = "<group>"; };
-		E086091E28310FBF0050E7C6 /* TitleActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleActionSheet.swift; sourceTree = "<group>"; };
+		E086091E28310FBF0050E7C6 /* TitleActionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleActionField.swift; sourceTree = "<group>"; };
 		E086092028310FD00050E7C6 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
 		E086092228310FDF0050E7C6 /* TitleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleInput.swift; sourceTree = "<group>"; };
 		E086092528368B410050E7C6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */,
+				E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */,
+				E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -251,6 +265,22 @@
 				E02033A8287AE3D500ED01DA /* InformationAgreementNavigator.swift */,
 			);
 			path = InformationAgreementView;
+			sourceTree = "<group>";
+		};
+		E02033AE287B195600ED01DA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				E02033B0287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift */,
+				E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */,
+			);
+			path = LectureGoalRegisterView;
 			sourceTree = "<group>";
 		};
 		E05D95CD2827ACF4007F2ACA = {
@@ -275,11 +305,13 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */,
+				E02033AE287B195600ED01DA /* New Group */,
 				E02033A1287AAAF900ED01DA /* InformationAgreementView */,
 				E08609662838C6EA0050E7C6 /* Sloth.entitlements */,
 				E086094E2838AA4D0050E7C6 /* LoginView */,
 				E086092428368B200050E7C6 /* StartView */,
-				E0860906282BD7200050E7C6 /* RegisterLectureView */,
+				E0860906282BD7200050E7C6 /* LectureInformationRegisterView */,
 				CE5CE0D3282EBACE00C70EAF /* API */,
 				E05D96282827CDF1007F2ACA /* MyPageView */,
 				E05D96272827CDE6007F2ACA /* TodayView */,
@@ -333,8 +365,9 @@
 				E05D96142827CA54007F2ACA /* Router */,
 				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
 				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
+				E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */,
 				E05D96352827D234007F2ACA /* MyPageCoordinator.swift */,
-				E086090E282D429E0050E7C6 /* RegisterLectureCoordinator.swift */,
+				E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */,
 				E08609642838C22A0050E7C6 /* LoginCoordinator.swift */,
 				E0203398287A7AD300ED01DA /* StartCoordinator.swift */,
 				E02033A6287AAFDB00ED01DA /* InformationAgreementCoordinator.swift */,
@@ -382,14 +415,15 @@
 			path = MyPageView;
 			sourceTree = "<group>";
 		};
-		E0860906282BD7200050E7C6 /* RegisterLectureView */ = {
+		E0860906282BD7200050E7C6 /* LectureInformationRegisterView */ = {
 			isa = PBXGroup;
 			children = (
 				E08609162830AE0A0050E7C6 /* Model */,
-				E0860907282BD7560050E7C6 /* RegisterLectureViewController.swift */,
-				E08609142830AAF00050E7C6 /* RegisterLectureViewModel.swift */,
+				E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */,
+				E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */,
+				E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */,
 			);
-			path = RegisterLectureView;
+			path = LectureInformationRegisterView;
 			sourceTree = "<group>";
 		};
 		E08609162830AE0A0050E7C6 /* Model */ = {
@@ -404,7 +438,7 @@
 		E086091D28310FB00050E7C6 /* TitleInput */ = {
 			isa = PBXGroup;
 			children = (
-				E086091E28310FBF0050E7C6 /* TitleActionSheet.swift */,
+				E086091E28310FBF0050E7C6 /* TitleActionField.swift */,
 				E086092028310FD00050E7C6 /* TitleTextField.swift */,
 				E086092228310FDF0050E7C6 /* TitleInput.swift */,
 			);
@@ -628,16 +662,17 @@
 				CE5CE0DD282EBFF900C70EAF /* TodayView.swift in Sources */,
 				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
 				E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */,
-				E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */,
+				E086090F282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */,
 				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E02033A5287AAF3200ED01DA /* LoginNavigator.swift in Sources */,
-				E086091F28310FBF0050E7C6 /* TitleActionSheet.swift in Sources */,
+				E086091F28310FBF0050E7C6 /* TitleActionField.swift in Sources */,
 				E020339E287A8DE400ED01DA /* StartNavigator.swift in Sources */,
 				E02033A9287AE3D500ED01DA /* InformationAgreementNavigator.swift in Sources */,
 				E086093A28389DDA0050E7C6 /* EndpointType.swift in Sources */,
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E086093E28389E470050E7C6 /* EndpointProvider.swift in Sources */,
+				E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */,
 				E08609572838BE9E0050E7C6 /* GoogleSessionService.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
 				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
@@ -649,7 +684,9 @@
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
+				E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */,
 				E08609522838AA700050E7C6 /* LoginViewModel.swift in Sources */,
+				E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
 				CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */,
 				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
@@ -658,9 +695,11 @@
 				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
 				E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
+				E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
-				E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */,
+				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,
+				E0860908282BD7560050E7C6 /* LectureInformationRegisterViewController.swift in Sources */,
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */,
 				E086093C28389DFA0050E7C6 /* AccountRequestMaker.swift in Sources */,
@@ -674,7 +713,8 @@
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
 				E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */,
 				E08609502838AA590050E7C6 /* LoginViewController.swift in Sources */,
-				E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */,
+				E08609152830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift in Sources */,
+				E02033B1287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift in Sources */,
 				E086092C2837E9630050E7C6 /* LoginService.swift in Sources */,
 				E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */,
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,

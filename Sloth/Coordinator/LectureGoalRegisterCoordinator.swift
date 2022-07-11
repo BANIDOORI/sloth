@@ -1,13 +1,14 @@
 //
-//  RegisterLectureCoordinator.swift
+//  LectureGoalRegisterCoordinator.swift
 //  Sloth
 //
-//  Created by 심지원 on 2022/05/12.
+//  Created by 심지원 on 2022/07/10.
 //
 
+import Foundation
 import UIKit
 
-class RegisterLectureCoordinator: Coordinator {
+class LectureGoalRegisterCoordinator: Coordinator {
     var router: Router
     private let viewController: UIViewController
     
@@ -21,4 +22,3 @@ class RegisterLectureCoordinator: Coordinator {
         router.present(viewController: viewController, animated: true)
     }
 }
-

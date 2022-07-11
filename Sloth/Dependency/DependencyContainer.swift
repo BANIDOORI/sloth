@@ -82,13 +82,17 @@ class DependencyContainer {
             self.makeInformationAgreementCoordinator(parentViewController: viewController)
         }
         
+        let lectureInformationRegisterCoordinatorFactory: () -> (Coordinator) = {
+            self.makeLectureInformationRegisterCoordinator(navigationController: router.navigationController)
+        }
+        
         let coordinator = StartCoordinator(
             router: router,
             viewController: viewController,
             loginCoordinatorFactory: loginCoordinatorFactory,
-            informationAgreementCoordinator: informationAgreementCoordinatorFactory
+            informationAgreementCoordinatorFactory: informationAgreementCoordinatorFactory,
+            lectureInformationRegisterCoordinatorFactory: lectureInformationRegisterCoordinatorFactory
         )
-        
         
         viewController.navigator = coordinator
         
@@ -135,6 +139,37 @@ class DependencyContainer {
         )
         
         viewController.navigator = coordinator
+        
+        return coordinator
+    }
+    
+    func makeLectureInformationRegisterCoordinator(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        
+        let viewModel = LectureInformationRegisterViewModel()
+        let viewController = LectureInformationRegisterViewController(viewModel: viewModel)
+        
+        let lectureGoalRegisterCoordinatorFactory: () -> (Coordinator) = {
+            self.makeLectureGoalRegisterCoordinator(navigationController: navigationController)
+        }
+        
+        let coordinator = LectureInformationRegisterCoordinator(
+            router: router,
+            viewController: viewController,
+            lectureGoalRegisterCoordinatorFactory: lectureGoalRegisterCoordinatorFactory
+        )
+        
+        viewController.navigator = coordinator
+        
+        return coordinator
+    }
+    
+    func makeLectureGoalRegisterCoordinator(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        
+        let viewController = LectureGoalRegisterViewController()
+        
+        let coordinator = LectureGoalRegisterCoordinator(router: router, viewController: viewController)
         
         return coordinator
     }
