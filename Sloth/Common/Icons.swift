@@ -52,6 +52,22 @@ extension UIImage {
     static var profile: UIImage {
         UIImage(named: "img_personal_thum")!
     }
+
+    static var activationPlus: UIImage {
+        UIImage(named: "activation_plus")!
+    }
+
+    static var disableMinus: UIImage {
+        UIImage(named: "disable_minus")!
+    }
+
+    static var activationPlusWhite: UIImage {
+        UIImage(named: "activation_plus_white")!
+    }
+
+    static var activationMinusWhite: UIImage {
+        UIImage(named: "activation_minus_white")!
+    }
     
     static var back: UIImage {
         UIImage(named: "ic_navi_arrow_back")!

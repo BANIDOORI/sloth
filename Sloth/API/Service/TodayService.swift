@@ -55,7 +55,7 @@ final class TodayService: TodayServiceProtocol {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "slothbackend.hopto.org"
-        components.path = "/api/lesson/list"
+        components.path = "/api/lesson/doing"
         guard let url = components.url else { return nil }
 
         var urlRequest = URLRequest(url: url)
