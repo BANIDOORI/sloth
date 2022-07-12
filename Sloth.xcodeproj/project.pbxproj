@@ -670,6 +670,7 @@
 				E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */,
 				E086090F282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */,
+				E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */,
 				CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */,
 				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E02033A5287AAF3200ED01DA /* LoginNavigator.swift in Sources */,
@@ -708,6 +709,7 @@
 				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,
 				E0860908282BD7560050E7C6 /* LectureInformationRegisterViewController.swift in Sources */,
 				CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */,
+				E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */,
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */,
 				E086093C28389DFA0050E7C6 /* AccountRequestMaker.swift in Sources */,
@@ -731,6 +733,7 @@
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
+				E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
