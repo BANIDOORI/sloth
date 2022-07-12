@@ -1,5 +1,5 @@
 //
-//  RegisterLectureViewModel.swift
+//  LectureInformationRegisterViewModel.swift
 //  Sloth
 //
 //  Created by 심지원 on 2022/05/15.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RegisterLessonViewBinder {
+protocol LectureInformationRegisterViewBinder {
     var lectureTitle: String? { get set }
     var lectureCount: String? { get set }
     var lectureCategory: LectureCategory? { get set }
@@ -16,7 +16,7 @@ protocol RegisterLessonViewBinder {
     func handleNextClicked(completion: @escaping (Bool) -> ())
 }
 
-class RegisterLectureViewModel: RegisterLessonViewBinder {
+class LectureInformationRegisterViewModel: LectureInformationRegisterViewBinder {
     var lectureTitle: String?
     var lectureCount: String?
     var lectureCategory: LectureCategory?

@@ -61,13 +61,31 @@ class TitleInput: UIView {
         }
     }
     
-    private lazy var inputContainerView: UIView = {
+    lazy var inputContainerView: UIView = {
         let view = UIView()
         view.layer.borderColor = borderColor.cgColor
         view.layer.borderWidth = borderWidth
         view.layer.cornerRadius = cornerRadius
         view.backgroundColor = activatedBackgroundColor
         return view
+    }()
+    
+    lazy var secondaryInputContainerView: UIView = {
+        let view = UIView()
+        view.layer.borderColor = borderColor.cgColor
+        view.layer.borderWidth = borderWidth
+        view.layer.cornerRadius = cornerRadius
+        view.backgroundColor = activatedBackgroundColor
+        return view
+    }()
+    
+    private let inputStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 5
+        return stackView
     }()
     
     // MARK: Text Field Properties
@@ -92,6 +110,7 @@ class TitleInput: UIView {
     var placeholder: String? {
         didSet {
             textField.placeholder = placeholder
+            secondaryTextField.placeholder = placeholder
         }
     }
     
@@ -101,7 +120,7 @@ class TitleInput: UIView {
         }
     }
     
-    lazy var textField: UITextField = {
+    internal lazy var textField: UITextField = {
         let field = UITextField()
         field.textAlignment = textFieldAlignment
         field.font = textFieldFont
@@ -109,6 +128,29 @@ class TitleInput: UIView {
         field.textColor = textFieldColor
         field.backgroundColor = .clear
         return field
+    }()
+    
+    internal lazy var secondaryTextField: UITextField = {
+        let field = UITextField()
+        field.textAlignment = textFieldAlignment
+        field.font = textFieldFont
+        field.placeholder = placeholder
+        field.textColor = textFieldColor
+        field.backgroundColor = .clear
+        return field
+    }()
+    
+    // MARK: Right Icon Properties
+    var rightIcon: UIImage? {
+        didSet {
+            rightIconImageView.image = rightIcon
+        }
+    }
+    
+    private let rightIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
     override init(frame: CGRect) {
@@ -122,8 +164,14 @@ class TitleInput: UIView {
     
     private func initializeViews() {
         addSubview(titleLabel)
+        
         addSubview(inputContainerView)
-        inputContainerView.addSubview(textField)
+        inputContainerView.addSubview(inputStackView)
+        inputStackView.addArrangedSubviews(views: [textField, rightIconImageView])
+        
+        addSubview(secondaryInputContainerView)
+        secondaryInputContainerView.addSubview(secondaryTextField)
+        
         initializeConstraints()
     }
     
@@ -134,12 +182,34 @@ class TitleInput: UIView {
         }
         
         inputContainerView.snp.makeConstraints {
-            $0.left.right.bottom.equalToSuperview()
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(56)
             $0.top.equalTo(titleLabel.snp.bottom).offset(8)
         }
         
-        textField.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(17)
+        inputStackView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(16)
+        }
+        
+        rightIconImageView.snp.makeConstraints {
+            $0.width.equalTo(24)
+        }
+        
+        secondaryInputContainerView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(inputContainerView.snp.bottom)
+            $0.bottom.equalToSuperview()
+        }
+    }
+    
+    func activateSecondaryInput() {
+        secondaryInputContainerView.snp.updateConstraints {
+            $0.top.equalTo(inputContainerView.snp.bottom).offset(8)
+        }
+        secondaryTextField.isUserInteractionEnabled = true
+        
+        secondaryTextField.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(16)
         }
     }
 }

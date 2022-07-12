@@ -1,5 +1,5 @@
 //
-//  RegisterLectureViewController.swift
+//  LectureInformationRegisterViewController.swift
 //  Sloth
 //
 //  Created by 심지원 on 2022/05/11.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class RegisterLectureViewController: UIViewController {
+final class LectureInformationRegisterViewController: UIViewController {
+    var navigator: LectureInformationRegisterNavigator?
+    
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
@@ -50,29 +52,36 @@ final class RegisterLectureViewController: UIViewController {
         return field
     }()
     
-    private let lectureCategoryField: TitleTextField = {
-        let field = TitleTextField()
+    private lazy var lectureCategoryField: TitleActionField = {
+        let field = TitleActionField()
         field.titleText = "카테고리"
         field.placeholder = "인강 카테고리를 선택하세요."
+        field.onAction = {
+            self.handleCategoryButtonTapped()
+        }
         return field
     }()
     
-    private let lectureSiteField: TitleTextField = {
-        let field = TitleTextField()
+    private lazy var lectureSiteField: TitleActionField = {
+        let field = TitleActionField()
         field.titleText = "강의 사이트"
         field.placeholder = "강의 사이트를 선택하세요."
+        field.onAction = {
+            self.handleLectureSiteButtonTapped()
+        }
         return field
     }()
     
-    private let nextButton: ConfirmButton = {
+    private lazy var nextButton: ConfirmButton = {
         let button = ConfirmButton()
         button.setTitle("다음", for: .normal)
+        button.addTarget(self, action: #selector(handleNextButtonTapped), for: .touchUpInside)
         return button
     }()
     
-    private let viewModel: RegisterLessonViewBinder
+    private let viewModel: LectureInformationRegisterViewBinder
     
-    init(viewModel: RegisterLessonViewBinder) {
+    init(viewModel: LectureInformationRegisterViewBinder) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -83,6 +92,7 @@ final class RegisterLectureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         initializeViews()
     }
     
@@ -104,6 +114,15 @@ final class RegisterLectureViewController: UIViewController {
         
         initializeTitleView()
         initializeFields()
+    }
+    
+    private func setupNavigationBar() {
+        title = "새로운 인강 등록"
+        
+        navigationController?.navigationBar.tintColor = .gray600
+        navigationController?.navigationBar.backIndicatorImage = .back
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = .back
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     private func initializeTitleView() {
@@ -137,5 +156,40 @@ final class RegisterLectureViewController: UIViewController {
         nextButton.snp.makeConstraints {
             $0.height.equalTo(56)
         }
+    }
+    
+    @objc private func handleCategoryButtonTapped() {
+        let lectureCategories = LectureCategory.allCases
+        presentActionSheet(
+            title: nil,
+            message: nil,
+            actionTitles: lectureCategories.map { $0.rawValue },
+            cancelTitle: "취소") { index in
+                print("\(lectureCategories[index])")
+            } cancelAction: {
+                print("취소")
+            }
+    }
+    
+    @objc private func handleLectureSiteButtonTapped() {
+        let lectureSites = LectureSite.allCases
+        presentActionSheet(
+            title: nil,
+            message: nil,
+            actionTitles: lectureSites.map { $0.rawValue },
+            cancelTitle: "취소") { index in
+                if lectureSites[index] == .userInput {
+                    self.lectureSiteField.snp.updateConstraints {
+                        $0.height.equalTo(86 + 56)
+                    }
+                    self.lectureSiteField.showDirectInputField()
+                }
+            } cancelAction: {
+                print("취소")
+            }
+    }
+    
+    @objc private func handleNextButtonTapped() {
+        navigator?.showLectureGoalRegister()
     }
 }
