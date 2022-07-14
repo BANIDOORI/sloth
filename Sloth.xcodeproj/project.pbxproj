@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */; };
+		CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */; };
+		CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */; };
 		CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */; };
 		CE5CE0D6282EBBD900C70EAF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D5282EBBD900C70EAF /* Lesson.swift */; };
 		CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */; };
@@ -14,6 +17,8 @@
 		CE5CE0DD282EBFF900C70EAF /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0DC282EBFF900C70EAF /* TodayView.swift */; };
 		CE5CE0E0282EC19A00C70EAF /* TodayLessonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0DF282EC19A00C70EAF /* TodayLessonCollectionCell.swift */; };
 		CE5CE0E42830A9FB00C70EAF /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */; };
+		CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D5192879994400CDEEC7 /* PaddingLabel.swift */; };
+		CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */; };
 		E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0203398287A7AD300ED01DA /* StartCoordinator.swift */; };
 		E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */; };
 		E020339E287A8DE400ED01DA /* StartNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339D287A8DE400ED01DA /* StartNavigator.swift */; };
@@ -28,8 +33,6 @@
 		E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */; };
 		E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */; };
 		E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */; };
-		CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D5192879994400CDEEC7 /* PaddingLabel.swift */; };
-		CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */; };
 		E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95D92827ACF4007F2ACA /* AppDelegate.swift */; };
 		E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */; };
 		E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DD2827ACF4007F2ACA /* MainViewController.swift */; };
@@ -51,11 +54,8 @@
 		E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96312827D057007F2ACA /* MainViewNavigator.swift */; };
 		E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96332827D20F007F2ACA /* MyPageViewController.swift */; };
 		E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96352827D234007F2ACA /* MyPageCoordinator.swift */; };
-		E0860908282BD7560050E7C6 /* LectureInformationRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */; };
-		E086090F282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */; };
 		E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860910282D4A070050E7C6 /* ConfirmButton.swift */; };
 		E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860912282D4C8C0050E7C6 /* CancelButton.swift */; };
-		E08609152830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */; };
 		E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609172830AE180050E7C6 /* LectureCategory.swift */; };
 		E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609192830AE940050E7C6 /* LectureSite.swift */; };
 		E086091F28310FBF0050E7C6 /* TitleActionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086091E28310FBF0050E7C6 /* TitleActionField.swift */; };
@@ -111,6 +111,8 @@
 		CE5CE0DC282EBFF900C70EAF /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		CE5CE0DF282EC19A00C70EAF /* TodayLessonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonCollectionCell.swift; sourceTree = "<group>"; };
 		CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		CE61D5192879994400CDEEC7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonInformationView.swift; sourceTree = "<group>"; };
 		E0203398287A7AD300ED01DA /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E020339D287A8DE400ED01DA /* StartNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigator.swift; sourceTree = "<group>"; };
@@ -125,8 +127,6 @@
 		E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterCoordinator.swift; sourceTree = "<group>"; };
 		E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterNavigator.swift; sourceTree = "<group>"; };
 		E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInformationRegisterNavigator.swift; sourceTree = "<group>"; };
-		CE61D5192879994400CDEEC7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonInformationView.swift; sourceTree = "<group>"; };
 		E05D95D62827ACF4007F2ACA /* Sloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D95D92827ACF4007F2ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,13 +271,6 @@
 			path = InformationAgreementView;
 			sourceTree = "<group>";
 		};
-		E02033AE287B195600ED01DA /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */,
-				E02033AE287B195600ED01DA /* New Group */,
 				E02033A1287AAAF900ED01DA /* InformationAgreementView */,
 				E08609662838C6EA0050E7C6 /* Sloth.entitlements */,
 				E086094E2838AA4D0050E7C6 /* LoginView */,
@@ -663,14 +655,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */,
+				CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */,
+				CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				CE5CE0DB282EBD7F00C70EAF /* TodayService.swift in Sources */,
 				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
 				CE5CE0DD282EBFF900C70EAF /* TodayView.swift in Sources */,
 				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
 				E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */,
-				E086090F282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */,
-				E086090F282D429E0050E7C6 /* RegisterLectureCoordinator.swift in Sources */,
 				CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */,
 				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
 				E02033A5287AAF3200ED01DA /* LoginNavigator.swift in Sources */,
@@ -707,9 +700,7 @@
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
 				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,
-				E0860908282BD7560050E7C6 /* LectureInformationRegisterViewController.swift in Sources */,
 				CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */,
-				E0860908282BD7560050E7C6 /* RegisterLectureViewController.swift in Sources */,
 				E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */,
 				E086092128310FD00050E7C6 /* TitleTextField.swift in Sources */,
 				E086093C28389DFA0050E7C6 /* AccountRequestMaker.swift in Sources */,
@@ -724,16 +715,13 @@
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
 				E086091A2830AE940050E7C6 /* LectureSite.swift in Sources */,
 				E08609502838AA590050E7C6 /* LoginViewController.swift in Sources */,
-				E08609152830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift in Sources */,
 				E02033B1287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift in Sources */,
 				E086092C2837E9630050E7C6 /* LoginService.swift in Sources */,
 				E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */,
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,
-				CE5CE0E2282EC1D600C70EAF /* TodayLessonCollectionCellViewModel.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
-				E08609152830AAF00050E7C6 /* RegisterLectureViewModel.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
