@@ -10,10 +10,10 @@ import Combine
 import SnapKit
 
 final class TodayViewController: UIViewController {
-    enum Section: Hashable {
-        case header
-        case will
-        case done
+    enum Section: String, Hashable {
+        case header = ""
+        case will = "오늘까지 들어야하는 강의"
+        case done = "오늘까지 완료한 강의"
     }
 
     enum Item: Hashable {
@@ -65,6 +65,11 @@ final class TodayViewController: UIViewController {
         todayView.collectionView.register(
             TodayLessonCollectionViewCell.self,
             forCellWithReuseIdentifier: TodayLessonCollectionViewCell.identifier
+        )
+        todayView.collectionView.register(
+            TodayLessonSectionHeaderCell.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: TodayLessonSectionHeaderCell.identifier
         )
     }
 
@@ -139,7 +144,7 @@ final class TodayViewController: UIViewController {
             .filter{ !($0.untilTodayFinished ?? true) }
             .map{ Item.willLesson($0) }
         snapshot.appendItems(will, toSection: .will)
-
+        
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
@@ -178,5 +183,17 @@ extension TodayViewController {
                     return cell
                 }
             })
+
+        dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
+            guard kind == UICollectionView.elementKindSectionHeader else { return nil }
+            let view = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: TodayLessonSectionHeaderCell.identifier,
+                for: indexPath
+            ) as? TodayLessonSectionHeaderCell
+            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
+            view?.titleLabel.text = section.rawValue
+            return view
+        }
     }
 }

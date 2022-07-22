@@ -9,8 +9,10 @@ import UIKit
 import Combine
 
 final class TodayLessonCollectionViewCell: UICollectionViewCell {
-    static let identifier = "TodayLessonCollectionViewCell"
-
+    static var identifier: String {
+        return String(describing: TodayLessonCollectionViewCell.self)
+    }
+    
     var viewModel: TodayLessonCollectionCellViewModel! {
         didSet { setUpViewModel() }
     }

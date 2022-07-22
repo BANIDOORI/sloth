@@ -9,7 +9,9 @@ import UIKit
 import Combine
 
 final class TodayLessonHeaderCell: UICollectionViewCell {
-    static let identifier = "TodayLessonHeaderCell"
+    static var identifier: String {
+        return String(describing: TodayLessonHeaderCell.self)
+    }
 
     var viewModel: TodayLessonHeaderViewModel! {
         didSet { setUpViewModel() }
