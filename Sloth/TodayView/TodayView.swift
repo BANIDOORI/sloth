@@ -9,8 +9,12 @@ import UIKit
 import SnapKit
 
 final class TodayView: UIView {
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-    lazy var activityIndicationView = ActivityIndicatorView(style: .medium)
+    lazy var collectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: createLayout()
+    )
+
+    lazy var activityIndicationView = ActivityIndicatorView(style: .large)
 
     init() {
         super.init(frame: .zero)
@@ -41,6 +45,10 @@ final class TodayView: UIView {
     }
 
     private func setUpConstraints() {
+        activityIndicationView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+        }
+
         collectionView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
@@ -49,17 +57,34 @@ final class TodayView: UIView {
     private func createLayout() -> UICollectionViewLayout {
         let size = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .estimated(40)
+            heightDimension: .estimated(1)
         )
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: size,
-            subitem: item, count: 1
+            subitem: item,
+            count: 1
         )
 
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
         section.interGroupSpacing = 16
+        section.contentInsets = NSDirectionalEdgeInsets(
+            top: 16,
+            leading: 16,
+            bottom: 32,
+            trailing: 16
+        )
+
+        let headerFooterSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .estimated(0.1)
+        )
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerFooterSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [sectionHeader]
 
         return UICollectionViewCompositionalLayout(section: section)
     }

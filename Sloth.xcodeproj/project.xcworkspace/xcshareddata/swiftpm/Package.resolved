@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleSignIn-iOS",
       "state" : {
-        "revision" : "9450e779619fc184d360c9f7ce61023587f7e1f4",
-        "version" : "6.2.2"
+        "revision" : "21b8c78b6a10613cbaad3ca14052254a32af1c85",
+        "version" : "6.2.1"
       }
     },
     {
@@ -51,7 +51,7 @@
       "location" : "https://github.com/kakao/kakao-ios-sdk",
       "state" : {
         "branch" : "master",
-        "revision" : "4aee2605de323bdb54d42fb5108a414838efac08"
+        "revision" : "9a9f396e637454f55cc6ae7a08e2da6b6b64ca2f"
       }
     },
     {

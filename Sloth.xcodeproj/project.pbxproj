@@ -10,6 +10,7 @@
 		CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */; };
 		CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */; };
 		CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */; };
+		CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */; };
 		CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */; };
 		CE5CE0D6282EBBD900C70EAF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D5282EBBD900C70EAF /* Lesson.swift */; };
 		CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonSectionHeaderCell.swift; sourceTree = "<group>"; };
 		CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonHeaderCell.swift; sourceTree = "<group>"; };
 		CE5CE0D5282EBBD900C70EAF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */,
 				CE5CE0DF282EC19A00C70EAF /* TodayLessonCollectionCell.swift */,
+				CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				E086092C2837E9630050E7C6 /* LoginService.swift in Sources */,
 				E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */,
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,
+				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,

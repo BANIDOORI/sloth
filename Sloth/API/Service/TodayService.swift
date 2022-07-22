@@ -61,7 +61,7 @@ final class TodayService: TodayServiceProtocol {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         urlRequest.allHTTPHeaderFields = [
-            "Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBQ0NFU1MiLCJhdWQiOiJzYXRsczM0QG5hdmVyLmNvbSIsImlhdCI6MTY1MjYwOTg0NiwiZXhwIjoxNjUyNjEwNzQ2fQ.AeixE0NdEC56pIQ06pNmf-sMLAGVhHCwlONhqyFagbM6PxhHUhCvXCAzjpxTvcblI3-loVi_DvwOz9bXkl3_nA"
+            "Authorization": ""
         ]
         return urlRequest
     }

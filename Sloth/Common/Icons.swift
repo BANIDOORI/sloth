@@ -40,6 +40,10 @@ extension UIImage {
     static var alertError: UIImage {
         UIImage(named: "ic_alert_error")!
     }
+
+    static var actionBell: UIImage {
+        UIImage(named: "ic_action_bell")!
+    }
     
     static var failureStamp: UIImage {
         UIImage(named: "ic_failure")!
