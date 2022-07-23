@@ -34,6 +34,9 @@
 		E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */; };
 		E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */; };
 		E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */; };
+		E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033BD288BC77800ED01DA /* LectureListViewController.swift */; };
+		E02033C0288BC7FA00ED01DA /* LectureListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033BF288BC7FA00ED01DA /* LectureListCoordinator.swift */; };
+		E02033C2288BCF7200ED01DA /* LectureListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02033C1288BCF7200ED01DA /* LectureListNavigator.swift */; };
 		E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95D92827ACF4007F2ACA /* AppDelegate.swift */; };
 		E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */; };
 		E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D95DD2827ACF4007F2ACA /* MainViewController.swift */; };
@@ -129,6 +132,9 @@
 		E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterCoordinator.swift; sourceTree = "<group>"; };
 		E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureGoalRegisterNavigator.swift; sourceTree = "<group>"; };
 		E02033B8287B202700ED01DA /* LectureInformationRegisterNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInformationRegisterNavigator.swift; sourceTree = "<group>"; };
+		E02033BD288BC77800ED01DA /* LectureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListViewController.swift; sourceTree = "<group>"; };
+		E02033BF288BC7FA00ED01DA /* LectureListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListCoordinator.swift; sourceTree = "<group>"; };
+		E02033C1288BCF7200ED01DA /* LectureListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListNavigator.swift; sourceTree = "<group>"; };
 		E05D95D62827ACF4007F2ACA /* Sloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D95D92827ACF4007F2ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E05D95DB2827ACF4007F2ACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +289,15 @@
 			path = LectureGoalRegisterView;
 			sourceTree = "<group>";
 		};
+		E02033BC288BC76A00ED01DA /* LectureListView */ = {
+			isa = PBXGroup;
+			children = (
+				E02033BD288BC77800ED01DA /* LectureListViewController.swift */,
+				E02033C1288BCF7200ED01DA /* LectureListNavigator.swift */,
+			);
+			path = LectureListView;
+			sourceTree = "<group>";
+		};
 		E05D95CD2827ACF4007F2ACA = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +320,7 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E02033BC288BC76A00ED01DA /* LectureListView */,
 				E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */,
 				E02033A1287AAAF900ED01DA /* InformationAgreementView */,
 				E08609662838C6EA0050E7C6 /* Sloth.entitlements */,
@@ -365,6 +381,7 @@
 			children = (
 				E05D96142827CA54007F2ACA /* Router */,
 				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
+				E02033BF288BC7FA00ED01DA /* LectureListCoordinator.swift */,
 				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
 				E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */,
 				E05D96352827D234007F2ACA /* MyPageCoordinator.swift */,
@@ -694,13 +711,16 @@
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
 				CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */,
 				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
+				E02033C0288BC7FA00ED01DA /* LectureListCoordinator.swift in Sources */,
 				E02033A3287AAB2000ED01DA /* InformationAgreementViewController.swift in Sources */,
 				CE5CE0E0282EC19A00C70EAF /* TodayLessonCollectionCell.swift in Sources */,
 				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
+				E02033C2288BCF7200ED01DA /* LectureListNavigator.swift in Sources */,
 				E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
 				E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
+				E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
 				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,
 				CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */,

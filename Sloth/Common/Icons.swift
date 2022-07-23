@@ -81,6 +81,10 @@ extension UIImage {
         UIImage(named: "ic_expand_more")!
     }
     
+    static var actionPlus: UIImage {
+        UIImage(named: "ic_action_plus")!
+    }
+    
     struct Sloth {
         static var inProgress: UIImage {
             UIImage(named: "img_sloth_in_progess")!

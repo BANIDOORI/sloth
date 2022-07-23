@@ -82,8 +82,8 @@ class DependencyContainer {
             self.makeInformationAgreementCoordinator(parentViewController: viewController)
         }
         
-        let lectureInformationRegisterCoordinatorFactory: () -> (Coordinator) = {
-            self.makeLectureInformationRegisterCoordinator(navigationController: router.navigationController)
+        let lectureListCoordinatorFactory: () -> (Coordinator) = {
+            self.makeLectureListCoordinator(navigationController: router.navigationController)
         }
         
         let coordinator = StartCoordinator(
@@ -91,7 +91,7 @@ class DependencyContainer {
             viewController: viewController,
             loginCoordinatorFactory: loginCoordinatorFactory,
             informationAgreementCoordinatorFactory: informationAgreementCoordinatorFactory,
-            lectureInformationRegisterCoordinatorFactory: lectureInformationRegisterCoordinatorFactory
+            lectureListCoordinatorFactory: lectureListCoordinatorFactory
         )
         
         viewController.navigator = coordinator
@@ -170,6 +170,25 @@ class DependencyContainer {
         let viewController = LectureGoalRegisterViewController()
         
         let coordinator = LectureGoalRegisterCoordinator(router: router, viewController: viewController)
+        
+        return coordinator
+    }
+    
+    func makeLectureListCoordinator(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        let viewController = LectureListViewController()
+        
+        let lectureRegisterCoordinatorFactory: () -> (Coordinator) = {
+            self.makeLectureInformationRegisterCoordinator(navigationController: navigationController)
+        }
+        
+        let coordinator = LectureListCoordinator(
+            router: router,
+            viewController: viewController,
+            lectureRegisterCoordinatorFactory: lectureRegisterCoordinatorFactory
+        )
+        
+        viewController.navigator = coordinator
         
         return coordinator
     }
