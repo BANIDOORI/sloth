@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol InformationAgreementNavigator {
+protocol InformationAgreementNavigator: AnyObject {
     func dismiss()
     func showLectureList()
 }

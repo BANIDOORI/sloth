@@ -12,7 +12,7 @@ class InformationAgreementViewController: UIViewController {
         static let bottomPadding: CGFloat = 26
     }
     
-    var navigator: InformationAgreementNavigator?
+    weak var navigator: InformationAgreementNavigator?
     
     private var contentViewHeight: CGFloat {
         stackView.frame.height + Constraints.bottomPadding * 2

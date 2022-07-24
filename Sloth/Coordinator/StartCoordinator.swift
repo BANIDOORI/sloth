@@ -10,6 +10,7 @@ import UIKit
 class StartCoordinator: Coordinator {
     typealias OnAction = () -> ()
     
+    var children: [Coordinator] = []
     var router: Router
     private let viewController: UIViewController
     
@@ -29,7 +30,7 @@ class StartCoordinator: Coordinator {
         self.lectureListCoordinatorFactory = lectureListCoordinatorFactory
     }
     
-    func present() {
+    func present(animated: Bool, onDismiss: (() -> Void)?) {
         router.present(viewController: viewController, animated: true)
     }
 }
@@ -39,17 +40,17 @@ extension StartCoordinator: StartNavigator {
         let coordinator = loginCoordinatorFactory {
             self.showInformationAgreement()
         }
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
     
     private func showInformationAgreement() {
         let coordinator = informationAgreementCoordinatorFactory()
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
     
     func showLectureList() {
         let coordinator = lectureListCoordinatorFactory()
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
 }
 

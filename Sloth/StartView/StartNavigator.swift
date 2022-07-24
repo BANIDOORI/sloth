@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol StartNavigator {
+protocol StartNavigator: AnyObject {
     func showLogin()
     func showLectureList()
 }

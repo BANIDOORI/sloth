@@ -9,6 +9,6 @@ import UIKit
 
 // 자기자신을 Present 하고 Dismiss 를 해주는 Router
 protocol Router {
-  func present(viewController: UIViewController, animated: Bool)
-  func dismiss()
+    func present(viewController: UIViewController, animated: Bool)
+    func dismiss(animated: Bool)
 }

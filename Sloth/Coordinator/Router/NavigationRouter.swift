@@ -19,9 +19,9 @@ class NavigationRouter: Router {
     navigationController.pushViewController(viewController, animated: animated)
   }
   
-  func dismiss() {
+  func dismiss(animated: Bool) {
     if navigationController.viewControllers.count > 0 {
-      navigationController.popViewController(animated: true)
+      navigationController.popViewController(animated: animated)
     }
   }
 }

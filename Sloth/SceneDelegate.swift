@@ -24,8 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         container = DependencyContainer(window: window)
         
         guard let window = window else { return }
-        mainCoordinator = container.makeStartCoordinator(window: window)
-        mainCoordinator?.present()
+        let mainCoordinator = container.makeStartCoordinator(window: window)
+        self.mainCoordinator = mainCoordinator
+        self.mainCoordinator.present(animated: true, onDismiss: nil)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

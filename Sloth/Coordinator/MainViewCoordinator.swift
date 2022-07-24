@@ -10,6 +10,7 @@ import UIKit
 
 
 class MainViewCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     
     private let viewController: UIViewController
@@ -24,7 +25,7 @@ class MainViewCoordinator: Coordinator {
         self.myPageCoordinatorFactory = myPageCoordinatorFactory
     }
     
-    func present() {
+    func present(animated: Bool, onDismiss: (() -> Void)?) {
         router.present(viewController: viewController, animated: true)
     }
 }
@@ -32,6 +33,6 @@ class MainViewCoordinator: Coordinator {
 extension MainViewCoordinator: MainViewNavigator {
     func showMyPage() {
         let coordinator = myPageCoordinatorFactory()
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
 }

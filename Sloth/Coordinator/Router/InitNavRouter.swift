@@ -22,5 +22,5 @@ class InitNavRouter: Router {
     window.makeKeyAndVisible()
   }
   
-  func dismiss() {}
+  func dismiss(animated: Bool) {}
 }

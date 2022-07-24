@@ -8,7 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    var navigator: StartNavigator?
+    weak var navigator: StartNavigator?
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()

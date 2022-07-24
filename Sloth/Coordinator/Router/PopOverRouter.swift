@@ -22,7 +22,7 @@ class PopOverRouter: Router {
         parentViewController.present(viewController, animated: animated)
     }
     
-    func dismiss() {
-        viewController?.dismiss(animated: true)
+    func dismiss(animated: Bool) {
+        viewController?.dismiss(animated: animated)
     }
 }

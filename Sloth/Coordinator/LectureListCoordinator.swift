@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class LectureListCoordinator: Coordinator {
+final class LectureListCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     private let viewController: UIViewController
     
@@ -16,13 +17,14 @@ class LectureListCoordinator: Coordinator {
     
     init(router: Router,
          viewController: UIViewController,
-         lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator)) {
+         lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator)
+    ) {
         self.router = router
         self.viewController = viewController
         self.lectureRegisterCoordinatorFactory = lectureRegisterCoordinatorFactory
     }
     
-    func present() {
+    func present(animated: Bool, onDismiss: (() -> Void)?) {
         router.present(viewController: viewController, animated: true)
     }
 }
@@ -30,7 +32,7 @@ class LectureListCoordinator: Coordinator {
 extension LectureListCoordinator: LectureListNavigator {
     func showLectureRegister() {
         let coordinator = lectureRegisterCoordinatorFactory()
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
 }
 

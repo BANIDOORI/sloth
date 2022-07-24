@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LectureListViewController: UIViewController {
+final class LectureListViewController: UIViewController {
     
-    var navigator: LectureListNavigator?
+    weak var navigator: LectureListNavigator?
     
     private lazy var registerButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage.actionPlus, style: .plain, target: self, action: #selector(handleRegisterButtonTapped))

@@ -8,7 +8,7 @@
 import UIKit
 
 final class LectureInformationRegisterViewController: UIViewController {
-    var navigator: LectureInformationRegisterNavigator?
+    weak var navigator: LectureInformationRegisterNavigator?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()

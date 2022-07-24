@@ -8,6 +8,7 @@
 import UIKit
 
 class InformationAgreementCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     private let viewController: UIViewController
     
@@ -17,7 +18,7 @@ class InformationAgreementCoordinator: Coordinator {
         self.viewController = viewController
     }
     
-    func present() {
+    func present(animated: Bool, onDismiss: (() -> Void)?) {
         router.present(viewController: viewController, animated: true)
     }
 }

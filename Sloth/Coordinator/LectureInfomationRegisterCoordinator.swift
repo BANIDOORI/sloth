@@ -8,6 +8,7 @@
 import UIKit
 
 class LectureInformationRegisterCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     private let viewController: UIViewController
     
@@ -21,7 +22,7 @@ class LectureInformationRegisterCoordinator: Coordinator {
         self.lectureGoalRegisterCoordinatorFactory = lectureGoalRegisterCoordinatorFactory
     }
     
-    func present() {
+    func present(animated: Bool, onDismiss: (() -> Void)?) {
         router.present(viewController: viewController, animated: true)
     }
 }
@@ -33,6 +34,6 @@ extension LectureInformationRegisterCoordinator: LectureInformationRegisterNavig
     
     func showLectureGoalRegister() {
         let coordinator = lectureGoalRegisterCoordinatorFactory()
-        present(child: coordinator)
+        present(child: coordinator, animated: true)
     }
 }

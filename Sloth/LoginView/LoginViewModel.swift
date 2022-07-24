@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class LoginViewModel {
-    var navigator: LoginNavigator?
+    weak var navigator: LoginNavigator?
     
     private let service: LoginService
     private var disposable = Set<AnyCancellable>()
