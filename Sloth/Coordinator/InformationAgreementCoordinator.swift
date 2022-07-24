@@ -18,8 +18,8 @@ class InformationAgreementCoordinator: Coordinator {
         self.viewController = viewController
     }
     
-    func present(animated: Bool, onDismiss: (() -> Void)?) {
-        router.present(viewController: viewController, animated: true)
+    func present(animated: Bool, onDismissed: (() -> Void)?) {
+        router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
     }
 }
 

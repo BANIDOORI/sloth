@@ -10,7 +10,7 @@ import Foundation
 protocol Coordinator: AnyObject {
     var children: [Coordinator] { get set }
     var router: Router { get }
-    func present(animated: Bool, onDismiss: (() -> Void)?)
+    func present(animated: Bool, onDismissed: (() -> Void)?)
     func present(child: Coordinator, animated: Bool)
     func dismiss(animated: Bool, completion: (() -> ())?)
 }

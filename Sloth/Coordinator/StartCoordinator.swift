@@ -30,8 +30,8 @@ class StartCoordinator: Coordinator {
         self.lectureListCoordinatorFactory = lectureListCoordinatorFactory
     }
     
-    func present(animated: Bool, onDismiss: (() -> Void)?) {
-        router.present(viewController: viewController, animated: true)
+    func present(animated: Bool, onDismissed: (() -> Void)?) {
+        router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
     }
 }
 
