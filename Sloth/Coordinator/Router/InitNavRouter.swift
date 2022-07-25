@@ -8,19 +8,19 @@
 import UIKit
 
 class InitNavRouter: Router {
-  
-  var navigationController: UINavigationController!
-  
-  private let window: UIWindow
-  init(window: UIWindow) {
-    self.window = window
-  }
-  
-  func present(viewController: UIViewController, animated: Bool) {
-    navigationController = UINavigationController(rootViewController: viewController)
-    window.rootViewController = navigationController
-    window.makeKeyAndVisible()
-  }
-  
-  func dismiss() {}
+    
+    var navigationController: UINavigationController!
+    
+    private let window: UIWindow
+    init(window: UIWindow) {
+        self.window = window
+    }
+    
+    func present(viewController: UIViewController, animated: Bool, onDismissed: (() -> Void)?) {
+        navigationController = UINavigationController(rootViewController: viewController)
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+    }
+    
+    func dismiss(animated: Bool) {}
 }

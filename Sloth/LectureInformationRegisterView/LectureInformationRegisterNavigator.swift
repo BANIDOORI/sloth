@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LectureInformationRegisterNavigator {
+protocol LectureInformationRegisterNavigator: AnyObject {
     func dismiss()
     func showLectureGoalRegister()
 }

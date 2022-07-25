@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol LoginNavigator {
+protocol LoginNavigator: AnyObject {
     func showInformationAgreement()
     func dismissAndStart()
     func dismiss() 

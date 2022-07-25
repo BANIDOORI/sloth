@@ -8,7 +8,7 @@
 import UIKit
 
 final class LectureInformationRegisterViewController: UIViewController {
-    var navigator: LectureInformationRegisterNavigator?
+    weak var navigator: LectureInformationRegisterNavigator?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -56,8 +56,8 @@ final class LectureInformationRegisterViewController: UIViewController {
         let field = TitleActionField()
         field.titleText = "카테고리"
         field.placeholder = "인강 카테고리를 선택하세요."
-        field.onAction = {
-            self.handleCategoryButtonTapped()
+        field.onAction = { [weak self] in
+            self?.handleCategoryButtonTapped()
         }
         return field
     }()
@@ -66,8 +66,8 @@ final class LectureInformationRegisterViewController: UIViewController {
         let field = TitleActionField()
         field.titleText = "강의 사이트"
         field.placeholder = "강의 사이트를 선택하세요."
-        field.onAction = {
-            self.handleLectureSiteButtonTapped()
+        field.onAction = { [weak self] in
+            self?.handleLectureSiteButtonTapped()
         }
         return field
     }()

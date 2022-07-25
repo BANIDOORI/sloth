@@ -8,7 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    var navigator: StartNavigator?
+    weak var navigator: StartNavigator?
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -103,6 +103,6 @@ class StartViewController: UIViewController {
     }
     
     @objc private func handleButtonTapped() {
-        navigator?.showRegisterLecture()
+        navigator?.showLectureList()
     }
 }

@@ -1,28 +1,27 @@
 //
-//  MainViewCoordinator.swift
+//  LectureListCoordinator.swift
 //  Sloth
 //
-//  Created by 심지원 on 2022/05/08.
+//  Created by 심지원 on 2022/07/23.
 //
 
 import Foundation
 import UIKit
 
-
-class MainViewCoordinator: Coordinator {
+final class LectureListCoordinator: Coordinator {
     var children: [Coordinator] = []
     var router: Router
-    
     private let viewController: UIViewController
     
-    private let myPageCoordinatorFactory: () -> (Coordinator)
+    private let lectureRegisterCoordinatorFactory: () -> (Coordinator)
     
     init(router: Router,
          viewController: UIViewController,
-         myPageCoordinatorFactory: @escaping () -> (Coordinator)) {
+         lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator)
+    ) {
         self.router = router
         self.viewController = viewController
-        self.myPageCoordinatorFactory = myPageCoordinatorFactory
+        self.lectureRegisterCoordinatorFactory = lectureRegisterCoordinatorFactory
     }
     
     func present(animated: Bool, onDismissed: (() -> Void)?) {
@@ -30,9 +29,10 @@ class MainViewCoordinator: Coordinator {
     }
 }
 
-extension MainViewCoordinator: MainViewNavigator {
-    func showMyPage() {
-        let coordinator = myPageCoordinatorFactory()
+extension LectureListCoordinator: LectureListNavigator {
+    func showLectureRegister() {
+        let coordinator = lectureRegisterCoordinatorFactory()
         present(child: coordinator, animated: true)
     }
 }
+

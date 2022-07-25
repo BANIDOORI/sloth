@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class LectureGoalRegisterCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     private let viewController: UIViewController
     
@@ -18,7 +19,7 @@ class LectureGoalRegisterCoordinator: Coordinator {
         self.viewController = viewController
     }
     
-    func present() {
-        router.present(viewController: viewController, animated: true)
+    func present(animated: Bool, onDismissed: (() -> Void)?) {
+        router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
     }
 }
