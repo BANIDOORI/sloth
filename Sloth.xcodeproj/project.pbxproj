@@ -320,7 +320,6 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
-				E02033BC288BC76A00ED01DA /* LectureListView */,
 				E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */,
 				E02033A1287AAAF900ED01DA /* InformationAgreementView */,
 				E08609662838C6EA0050E7C6 /* Sloth.entitlements */,
@@ -330,6 +329,7 @@
 				CE5CE0D3282EBACE00C70EAF /* API */,
 				E05D96282827CDF1007F2ACA /* MyPageView */,
 				E05D96272827CDE6007F2ACA /* TodayView */,
+				E02033BC288BC76A00ED01DA /* LectureListView */,
 				E05D96252827CD7F007F2ACA /* MainView */,
 				E05D96112827CA24007F2ACA /* Coordinator */,
 				E05D960E2827C9D8007F2ACA /* Dependency */,

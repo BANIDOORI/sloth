@@ -9,5 +9,5 @@ import Foundation
 
 protocol StartNavigator: AnyObject {
     func showLogin()
-    func showLectureList()
+    func showMain()
 }

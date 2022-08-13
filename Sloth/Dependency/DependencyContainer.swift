@@ -82,8 +82,8 @@ class DependencyContainer {
             self.makeInformationAgreementCoordinator(parentViewController: viewController)
         }
         
-        let lectureListCoordinatorFactory: () -> (Coordinator) = {
-            self.makeLectureListCoordinator(navigationController: router.navigationController)
+        let mainCoordinatorFactory: () -> (Coordinator) = {
+            self.makeMainCoordinator(window: window)
         }
         
         let coordinator = StartCoordinator(
@@ -91,7 +91,7 @@ class DependencyContainer {
             viewController: viewController,
             loginCoordinatorFactory: loginCoordinatorFactory,
             informationAgreementCoordinatorFactory: informationAgreementCoordinatorFactory,
-            lectureListCoordinatorFactory: lectureListCoordinatorFactory
+            mainCoordinatorFactory: mainCoordinatorFactory
         )
         
         viewController.navigator = coordinator
