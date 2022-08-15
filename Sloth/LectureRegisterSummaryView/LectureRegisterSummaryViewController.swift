@@ -8,6 +8,7 @@
 import UIKit
 
 class LectureRegisterSummaryViewController: UIViewController {
+    weak var navigator: LectureRegisterSummaryNavigator?
     
     private let upperBackgroundView: UIView = {
         let view = UIView()
@@ -118,10 +119,10 @@ class LectureRegisterSummaryViewController: UIViewController {
     
     
     @objc private func handleEditButtonTapped() {
-        
+        navigator?.backToEdit()
     }
     
     @objc private func handleConfirmButtonTapped() {
-        
+        navigator?.close()
     }
 }

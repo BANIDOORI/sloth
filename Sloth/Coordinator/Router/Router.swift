@@ -11,4 +11,5 @@ import UIKit
 protocol Router {
     func present(viewController: UIViewController, animated: Bool, onDismissed: (() -> Void)?)
     func dismiss(animated: Bool)
+    func dismiss(to targetCount: Int)
 }

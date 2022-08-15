@@ -24,3 +24,13 @@ final class LectureRegisterSummaryCoordinator: Coordinator {
         router.present(viewController: viewController, animated: true, onDismissed: onDismissed)
     }
 }
+
+extension LectureRegisterSummaryCoordinator: LectureRegisterSummaryNavigator {
+    func close() {
+        router.dismiss(to: 3)
+    }
+    
+    func backToEdit() {
+        router.dismiss(animated: true)
+    }
+}

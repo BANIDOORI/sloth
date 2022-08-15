@@ -104,6 +104,7 @@
 		E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */; };
 		E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */; };
 		E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */; };
+		E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
 		E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
 		E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
+		E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				E0A8A04928AA230B00355885 /* LectureRegisterSummaryViewController.swift */,
+				E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */,
 				E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */,
 				E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */,
 			);
@@ -832,6 +835,7 @@
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,
 				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
+				E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,

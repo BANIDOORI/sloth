@@ -226,6 +226,8 @@ class DependencyContainer {
         
         let coordinator = LectureRegisterSummaryCoordinator(router: router, viewController: viewController)
         
+        viewController.navigator = coordinator
+        
         return coordinator
     }
 }

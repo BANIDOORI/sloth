@@ -23,4 +23,5 @@ class InitNavRouter: Router {
     }
     
     func dismiss(animated: Bool) {}
+    func dismiss(to targetCount: Int) {}
 }
