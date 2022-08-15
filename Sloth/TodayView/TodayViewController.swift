@@ -30,6 +30,17 @@ final class TodayViewController: UIViewController {
     private var bindings = Set<AnyCancellable>()
     private var dataSource: DataSource!
     weak var navigator: TodayViewNavigatorDelegate?
+    
+    private lazy var notificationButton: UIButton = {
+        let button = UIButton()
+        button.setImage(.actionBell, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handleNotificationButtonTapped),
+            for: .touchUpInside
+        )
+        return button
+    }()
 
     init(viewModel: TodayViewModel = TodayViewModel()) {
         self.viewModel = viewModel
@@ -46,7 +57,6 @@ final class TodayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpCollectionView()
         configureDataSource()
         setUpBindings()
@@ -55,6 +65,11 @@ final class TodayViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.retrySearch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavigationBar()
     }
 
     private func setUpCollectionView() {
@@ -147,6 +162,10 @@ final class TodayViewController: UIViewController {
         
         dataSource.apply(snapshot, animatingDifferences: true)
     }
+    
+    @objc private func handleNotificationButtonTapped() {
+        
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -195,5 +214,19 @@ extension TodayViewController {
             view?.titleLabel.text = section.rawValue
             return view
         }
+    }
+}
+
+extension TodayViewController {
+    func setupNavigationBar() {
+        navigationItem.setHidesBackButton(true, animated: false)
+        navigationController?.navigationBar.tintColor = .gray600
+
+        let stackView = UIStackView()
+        stackView.addArrangedSubviews(views: [notificationButton])
+        stackView.spacing = 16
+
+        let rightBarButton = UIBarButtonItem(customView: stackView)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = rightBarButton
     }
 }

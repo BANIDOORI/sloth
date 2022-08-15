@@ -93,6 +93,7 @@
 		E08609602838BF4B0050E7C6 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = E086095F2838BF4B0050E7C6 /* KakaoSDKUser */; };
 		E08609632838BFBB0050E7C6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E08609622838BFBB0050E7C6 /* GoogleSignIn */; };
 		E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609642838C22A0050E7C6 /* LoginCoordinator.swift */; };
+		E0A8A04128AA074F00355885 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04028AA074F00355885 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		E08609582838BEB30050E7C6 /* KakaoSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSessionManager.swift; sourceTree = "<group>"; };
 		E08609642838C22A0050E7C6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		E08609662838C6EA0050E7C6 /* Sloth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sloth.entitlements; sourceTree = "<group>"; };
+		E0A8A04028AA074F00355885 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +432,7 @@
 		E05D96252827CD7F007F2ACA /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A04028AA074F00355885 /* MainViewModel.swift */,
 				E05D95DD2827ACF4007F2ACA /* MainViewController.swift */,
 				E05D96312827D057007F2ACA /* MainViewNavigator.swift */,
 			);
@@ -703,6 +706,7 @@
 				CE03A2DB28A8C3D2000269D0 /* LectureListViewModel.swift in Sources */,
 				CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				CE5CE0DB282EBD7F00C70EAF /* TodayService.swift in Sources */,
+				E0A8A04128AA074F00355885 /* MainViewModel.swift in Sources */,
 				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
 				CE5CE0DD282EBFF900C70EAF /* TodayView.swift in Sources */,
 				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
@@ -956,7 +960,6 @@
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -987,7 +990,6 @@
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

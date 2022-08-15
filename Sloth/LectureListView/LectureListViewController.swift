@@ -69,7 +69,6 @@ final class LectureListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setUpCollectionView()
         configureDataSource()
         setUpBindings()
@@ -78,6 +77,11 @@ final class LectureListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.retrySearch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavigationBar()
     }
 
     private func setUpCollectionView() {
