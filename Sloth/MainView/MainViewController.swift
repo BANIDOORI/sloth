@@ -12,7 +12,7 @@ class MainViewController: UITabBarController {
     
     private let todayViewController = TodayViewController()
     private let lectureListViewController = LectureListViewController()
-    private let myPageViewController = UIViewController()
+    private let myPageViewController = MyPageViewController()
     
     private var tabBarItemImageInset: UIEdgeInsets {
         .init(top: 0, left: 0, bottom: -8, right: 0)

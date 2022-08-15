@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LectureListNavigator: AnyObject {
+protocol LectureListNavigatorDelegate: AnyObject {
     func showLectureRegister()
 }

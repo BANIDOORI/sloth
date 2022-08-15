@@ -10,6 +10,11 @@
 		CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0860907282BD7560050E7C6 /* LectureInformationRegisterViewController.swift */; };
 		CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609142830AAF00050E7C6 /* LectureInformationRegisterViewModel.swift */; };
 		CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086090E282D429E0050E7C6 /* LectureInfomationRegisterCoordinator.swift */; };
+		CE03A2D728A791C7000269D0 /* LectoureListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2D628A791C7000269D0 /* LectoureListCollectionCell.swift */; };
+		CE03A2D928A8C371000269D0 /* LectureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2D828A8C371000269D0 /* LectureListView.swift */; };
+		CE03A2DB28A8C3D2000269D0 /* LectureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2DA28A8C3D2000269D0 /* LectureListViewModel.swift */; };
+		CE03A2DD28A8C405000269D0 /* LectureListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2DC28A8C405000269D0 /* LectureListService.swift */; };
+		CE03A2DF28A94870000269D0 /* LectureListSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2DE28A94870000269D0 /* LectureListSectionHeaderCell.swift */; };
 		CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */; };
 		CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */; };
 		CE5CE0D6282EBBD900C70EAF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D5282EBBD900C70EAF /* Lesson.swift */; };
@@ -108,6 +113,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE03A2D628A791C7000269D0 /* LectoureListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectoureListCollectionCell.swift; sourceTree = "<group>"; };
+		CE03A2D828A8C371000269D0 /* LectureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListView.swift; sourceTree = "<group>"; };
+		CE03A2DA28A8C3D2000269D0 /* LectureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListViewModel.swift; sourceTree = "<group>"; };
+		CE03A2DC28A8C405000269D0 /* LectureListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListService.swift; sourceTree = "<group>"; };
+		CE03A2DE28A94870000269D0 /* LectureListSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListSectionHeaderCell.swift; sourceTree = "<group>"; };
 		CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonSectionHeaderCell.swift; sourceTree = "<group>"; };
 		CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonHeaderCell.swift; sourceTree = "<group>"; };
 		CE5CE0D5282EBBD900C70EAF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -221,6 +231,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE03A2D528A791A9000269D0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE03A2D628A791C7000269D0 /* LectoureListCollectionCell.swift */,
+				CE03A2DE28A94870000269D0 /* LectureListSectionHeaderCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CE5CE0D3282EBACE00C70EAF /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +266,7 @@
 			children = (
 				E086092B2837E9620050E7C6 /* LoginService.swift */,
 				CE5CE0DA282EBD7F00C70EAF /* TodayService.swift */,
+				CE03A2DC28A8C405000269D0 /* LectureListService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -293,7 +313,10 @@
 			isa = PBXGroup;
 			children = (
 				E02033BD288BC77800ED01DA /* LectureListViewController.swift */,
+				CE03A2DA28A8C3D2000269D0 /* LectureListViewModel.swift */,
+				CE03A2D828A8C371000269D0 /* LectureListView.swift */,
 				E02033C1288BCF7200ED01DA /* LectureListNavigator.swift */,
+				CE03A2D528A791A9000269D0 /* Cell */,
 			);
 			path = LectureListView;
 			sourceTree = "<group>";
@@ -677,6 +700,7 @@
 			files = (
 				CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */,
 				CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */,
+				CE03A2DB28A8C3D2000269D0 /* LectureListViewModel.swift in Sources */,
 				CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */,
 				CE5CE0DB282EBD7F00C70EAF /* TodayService.swift in Sources */,
 				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
@@ -694,6 +718,7 @@
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E086093E28389E470050E7C6 /* EndpointProvider.swift in Sources */,
 				E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */,
+				CE03A2D728A791C7000269D0 /* LectoureListCollectionCell.swift in Sources */,
 				E08609572838BE9E0050E7C6 /* GoogleSessionService.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
 				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
@@ -701,6 +726,7 @@
 				E08609182830AE180050E7C6 /* LectureCategory.swift in Sources */,
 				E086093828389DC80050E7C6 /* Endpoint.swift in Sources */,
 				E02033A0287A8EF300ED01DA /* PopOverRouter.swift in Sources */,
+				CE03A2DD28A8C405000269D0 /* LectureListService.swift in Sources */,
 				E086094128389E7F0050E7C6 /* Requestable.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
@@ -719,6 +745,7 @@
 				E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
 				E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */,
+				CE03A2DF28A94870000269D0 /* LectureListSectionHeaderCell.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
 				E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
@@ -741,6 +768,7 @@
 				E02033B1287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift in Sources */,
 				E086092C2837E9630050E7C6 /* LoginService.swift in Sources */,
 				E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */,
+				CE03A2D928A8C371000269D0 /* LectureListView.swift in Sources */,
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,
 				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
