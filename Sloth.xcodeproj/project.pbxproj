@@ -98,7 +98,6 @@
 		E0A8A04528AA15A000355885 /* PushNotiCycleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04428AA15A000355885 /* PushNotiCycleCollectionViewCell.swift */; };
 		E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04628AA165000355885 /* PushNotiCycle.swift */; };
 		E0A8A04A28AA230B00355885 /* LectureRegisterSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04928AA230B00355885 /* LectureRegisterSummaryViewController.swift */; };
-		E0A8A04C28AA24B500355885 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04B28AA24B500355885 /* UIView+Extension.swift */; };
 		E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */; };
 		E0A8A05228AA32DD00355885 /* LectureInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */; };
 		E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */; };
@@ -216,7 +215,6 @@
 		E0A8A04428AA15A000355885 /* PushNotiCycleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiCycleCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0A8A04628AA165000355885 /* PushNotiCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiCycle.swift; sourceTree = "<group>"; };
 		E0A8A04928AA230B00355885 /* LectureRegisterSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryViewController.swift; sourceTree = "<group>"; };
-		E0A8A04B28AA24B500355885 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureSummaryInformationView.swift; sourceTree = "<group>"; };
 		E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfoRowView.swift; sourceTree = "<group>"; };
 		E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryCoordinator.swift; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 			children = (
 				E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */,
 				E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */,
-				E0A8A04B28AA24B500355885 /* UIView+Extension.swift */,
 				E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
@@ -834,7 +831,6 @@
 				CE03A2D928A8C371000269D0 /* LectureListView.swift in Sources */,
 				E086092928368E500050E7C6 /* NetworkManager.swift in Sources */,
 				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
-				E0A8A04C28AA24B500355885 /* UIView+Extension.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
