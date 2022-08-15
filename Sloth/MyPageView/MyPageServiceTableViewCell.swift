@@ -34,6 +34,7 @@ class MyPageServiceTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initializeViews()
+        selectionStyle = .default
     }
     
     required init?(coder: NSCoder) {

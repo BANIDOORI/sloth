@@ -8,6 +8,7 @@
 import Foundation
 
 enum MyPageServiceType: String {
+    case informationPolicy = "개인정보 처리방침"
     case enquiries = "문의사항"
     case logOut = "로그아웃"
     case signOut = "회원탈퇴"
