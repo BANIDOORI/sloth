@@ -41,7 +41,7 @@ class TitleDaySelector: TitleInput {
         collectionView.onBounds = { [weak self] in
             self?.updateCollectionViewSpacing()
         }
-        collectionView.register(PushNotiCycleCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PushNotiCycleCollectionViewCell.self))
+        collectionView.register(PushNotiCycleCollectionViewCell.self)
         return collectionView
     }()
     

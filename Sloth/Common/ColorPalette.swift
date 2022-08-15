@@ -63,4 +63,12 @@ extension UIColor {
     static var gray100: UIColor {
         UIColor(named: "gray100")!
     }
+    
+    static var background: UIColor {
+        UIColor(named: "background")!
+    }
+    
+    static var switchBackground: UIColor {
+        UIColor(named: "switchBackground")!
+    }
 }

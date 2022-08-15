@@ -110,6 +110,18 @@
 		E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06928AA762B00355885 /* TitleDaySelector.swift */; };
 		E0A8A06C28AA7E7F00355885 /* LectureEditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */; };
 		E0A8A06E28AA7EE000355885 /* LectureEditNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */; };
+		E0A8A07128AA810600355885 /* MyPageServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07028AA810600355885 /* MyPageServiceTableViewCell.swift */; };
+		E0A8A07328AA81A200355885 /* MyAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07228AA81A200355885 /* MyAccountTableViewCell.swift */; };
+		E0A8A07528AA81B400355885 /* PushNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07428AA81B400355885 /* PushNotificationTableViewCell.swift */; };
+		E0A8A07728AA870900355885 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07628AA870900355885 /* SwitchView.swift */; };
+		E0A8A07928AA88A200355885 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07828AA88A200355885 /* UICollectionView+Extension.swift */; };
+		E0A8A07B28AA88C200355885 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07A28AA88C200355885 /* UICollectionViewCell+Extension.swift */; };
+		E0A8A07E28AA89E100355885 /* MyPageElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07D28AA89E100355885 /* MyPageElement.swift */; };
+		E0A8A08028AA8A5900355885 /* MyAccountElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A07F28AA8A5900355885 /* MyAccountElement.swift */; };
+		E0A8A08228AA8AB500355885 /* MyPageServiceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08128AA8AB500355885 /* MyPageServiceElement.swift */; };
+		E0A8A08428AA8ADC00355885 /* PushNotiElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */; };
+		E0A8A08828AA946700355885 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */; };
+		E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08928AA959C00355885 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +245,18 @@
 		E0A8A06928AA762B00355885 /* TitleDaySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDaySelector.swift; sourceTree = "<group>"; };
 		E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditCoordinator.swift; sourceTree = "<group>"; };
 		E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditNavigator.swift; sourceTree = "<group>"; };
+		E0A8A07028AA810600355885 /* MyPageServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageServiceTableViewCell.swift; sourceTree = "<group>"; };
+		E0A8A07228AA81A200355885 /* MyAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewCell.swift; sourceTree = "<group>"; };
+		E0A8A07428AA81B400355885 /* PushNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationTableViewCell.swift; sourceTree = "<group>"; };
+		E0A8A07628AA870900355885 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		E0A8A07828AA88A200355885 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		E0A8A07A28AA88C200355885 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E0A8A07D28AA89E100355885 /* MyPageElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageElement.swift; sourceTree = "<group>"; };
+		E0A8A07F28AA8A5900355885 /* MyAccountElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountElement.swift; sourceTree = "<group>"; };
+		E0A8A08128AA8AB500355885 /* MyPageServiceElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageServiceElement.swift; sourceTree = "<group>"; };
+		E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiElement.swift; sourceTree = "<group>"; };
+		E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E0A8A08928AA959C00355885 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +344,10 @@
 			children = (
 				E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */,
 				E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */,
+				E0A8A07828AA88A200355885 /* UICollectionView+Extension.swift */,
+				E0A8A08928AA959C00355885 /* UITableView+Extension.swift */,
+				E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */,
+				E0A8A07A28AA88C200355885 /* UICollectionViewCell+Extension.swift */,
 				E0A8A06728AA752D00355885 /* Date+Extension.swift */,
 				E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */,
 			);
@@ -427,6 +455,7 @@
 				CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */,
 				CE61D5192879994400CDEEC7 /* PaddingLabel.swift */,
 				CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */,
+				E0A8A07628AA870900355885 /* SwitchView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -494,7 +523,11 @@
 		E05D96282827CDF1007F2ACA /* MyPageView */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A07C28AA89D900355885 /* Element */,
 				E05D96332827D20F007F2ACA /* MyPageViewController.swift */,
+				E0A8A07228AA81A200355885 /* MyAccountTableViewCell.swift */,
+				E0A8A07028AA810600355885 /* MyPageServiceTableViewCell.swift */,
+				E0A8A07428AA81B400355885 /* PushNotificationTableViewCell.swift */,
 			);
 			path = MyPageView;
 			sourceTree = "<group>";
@@ -628,6 +661,17 @@
 				E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */,
 			);
 			path = LectureEditView;
+			sourceTree = "<group>";
+		};
+		E0A8A07C28AA89D900355885 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A07D28AA89E100355885 /* MyPageElement.swift */,
+				E0A8A07F28AA8A5900355885 /* MyAccountElement.swift */,
+				E0A8A08128AA8AB500355885 /* MyPageServiceElement.swift */,
+				E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */,
+			);
+			path = Element;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -789,7 +833,9 @@
 				E05D96222827CAC1007F2ACA /* InitNavRouter.swift in Sources */,
 				CE5CE0DD282EBFF900C70EAF /* TodayView.swift in Sources */,
 				E0A8A05228AA32DD00355885 /* LectureInfoRowView.swift in Sources */,
+				E0A8A08828AA946700355885 /* UITableViewCell+Extension.swift in Sources */,
 				E05D96162827CA58007F2ACA /* Router.swift in Sources */,
+				E0A8A07328AA81A200355885 /* MyAccountTableViewCell.swift in Sources */,
 				E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */,
 				E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */,
 				CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */,
@@ -804,6 +850,7 @@
 				E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */,
 				CE03A2D728A791C7000269D0 /* LectoureListCollectionCell.swift in Sources */,
 				E08609572838BE9E0050E7C6 /* GoogleSessionService.swift in Sources */,
+				E0A8A08028AA8A5900355885 /* MyAccountElement.swift in Sources */,
 				E05D95DE2827ACF4007F2ACA /* MainViewController.swift in Sources */,
 				E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */,
 				E086094328389F350050E7C6 /* LoginRequest.swift in Sources */,
@@ -823,18 +870,25 @@
 				E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */,
 				E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
+				E0A8A07928AA88A200355885 /* UICollectionView+Extension.swift in Sources */,
+				E0A8A07128AA810600355885 /* MyPageServiceTableViewCell.swift in Sources */,
+				E0A8A07528AA81B400355885 /* PushNotificationTableViewCell.swift in Sources */,
 				E0A8A06828AA752D00355885 /* Date+Extension.swift in Sources */,
 				CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */,
 				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
 				E02033C0288BC7FA00ED01DA /* LectureListCoordinator.swift in Sources */,
 				E02033A3287AAB2000ED01DA /* InformationAgreementViewController.swift in Sources */,
 				CE5CE0E0282EC19A00C70EAF /* TodayLessonCollectionCell.swift in Sources */,
+				E0A8A07E28AA89E100355885 /* MyPageElement.swift in Sources */,
+				E0A8A08428AA8ADC00355885 /* PushNotiElement.swift in Sources */,
 				E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */,
 				E02033C2288BCF7200ED01DA /* LectureListNavigator.swift in Sources */,
 				E086093628389DBE0050E7C6 /* RequestMaker.swift in Sources */,
 				E05D96102827CA07007F2ACA /* DependencyContainer.swift in Sources */,
+				E0A8A08228AA8AB500355885 /* MyPageServiceElement.swift in Sources */,
 				E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */,
 				CE03A2DF28A94870000269D0 /* LectureListSectionHeaderCell.swift in Sources */,
+				E0A8A07B28AA88C200355885 /* UICollectionViewCell+Extension.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
 				E0A8A06C28AA7E7F00355885 /* LectureEditCoordinator.swift in Sources */,
 				E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */,
@@ -851,6 +905,7 @@
 				CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */,
+				E0A8A07728AA870900355885 /* SwitchView.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
 				E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */,
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
@@ -867,6 +922,7 @@
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
+				E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

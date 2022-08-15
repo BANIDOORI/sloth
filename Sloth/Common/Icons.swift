@@ -85,6 +85,10 @@ extension UIImage {
         UIImage(named: "ic_action_plus")!
     }
     
+    static var right: UIImage {
+        UIImage(named: "ic_navi_chevron_right")!
+    }
+    
     struct Sloth {
         static var inProgress: UIImage {
             UIImage(named: "img_sloth_in_progess")!
