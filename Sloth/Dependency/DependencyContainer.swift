@@ -188,7 +188,16 @@ class DependencyContainer {
         
         let viewController = LectureGoalRegisterViewController()
         
-        let coordinator = LectureGoalRegisterCoordinator(router: router, viewController: viewController)
+        let lectureRegisterSummaryCoordinator: () -> (Coordinator) = {
+            self.makeLectureRegisterSummaryCoordinatorFactory(navigationController: navigationController)
+        }
+        
+        let coordinator = LectureGoalRegisterCoordinator(
+            router: router,
+            viewController: viewController, lectureRegisteSummaryCoordinatorFactory: lectureRegisterSummaryCoordinator
+            )
+        
+        viewController.navigator = coordinator
         
         return coordinator
     }
@@ -208,6 +217,16 @@ class DependencyContainer {
     func makeMyPageViewControllerFactory() -> MyPageViewController {
         let viewController = MyPageViewController()
         return viewController
+    }
+    
+    func makeLectureRegisterSummaryCoordinatorFactory(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        
+        let viewController = LectureRegisterSummaryViewController()
+        
+        let coordinator = LectureRegisterSummaryCoordinator(router: router, viewController: viewController)
+        
+        return coordinator
     }
 }
 

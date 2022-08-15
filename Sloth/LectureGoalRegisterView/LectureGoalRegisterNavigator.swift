@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LectureGoalRegisterNavigator {
-    func dismissToList()
+protocol LectureGoalRegisterNavigator: AnyObject {
+    func showRegisterSummary()
 }

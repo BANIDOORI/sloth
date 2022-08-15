@@ -8,6 +8,7 @@
 import UIKit
 
 class LectureGoalRegisterViewController: UIViewController {
+    weak var navigator: LectureGoalRegisterNavigator?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -150,9 +151,10 @@ class LectureGoalRegisterViewController: UIViewController {
         return field
     }()
     
-    private let saveButton: ConfirmButton = {
+    private lazy var saveButton: ConfirmButton = {
         let button = ConfirmButton()
         button.setTitle("완료", for: .normal)
+        button.addTarget(self, action: #selector(handleSaveButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -261,6 +263,10 @@ class LectureGoalRegisterViewController: UIViewController {
     @objc func handleEndDoneTapped() {
         lectureEndDateField.text = format(date: lectureEndDatePicker.date)
         self.view.endEditing(true)
+    }
+    
+    @objc func handleSaveButtonTapped() {
+        navigator?.showRegisterSummary()
     }
 }
 
