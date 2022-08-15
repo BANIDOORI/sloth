@@ -33,25 +33,71 @@ class LectureGoalRegisterViewController: UIViewController {
         return label
     }()
     
-    private var lectureStartDate: String = ""
+    
+    // MARK: Lecture Start Date Properties
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM.dd"
+        return formatter
+    }()
+    
+    
+    private lazy var startDateToolBar: UIToolbar = {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(handleStartDoneTapped))
+        toolBar.setItems([done], animated: true)
+        return toolBar
+    }()
+    
+    private lazy var lectureStartDatePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.preferredDatePickerStyle = .wheels
+        picker.datePickerMode = .date
+        picker.locale = Locale(identifier: "ko-KR")
+        picker.timeZone = .autoupdatingCurrent
+        picker.addTarget(self, action: #selector(handleStartDatePicker(_:)), for: .valueChanged)
+        return picker
+    }()
+    
     private lazy var lectureStartDateField: TitleActionField = {
         let field = TitleActionField()
         field.titleText = "강의 시작일"
-        field.placeholder = "\(Date())"
-        field.onAction = {
-            self.handleStartDateButtonTapped()
-        }
+        field.placeholder = "\(format(date: Date()))"
+        field.isActionEnabled = false
+        field.textField.inputAccessoryView = startDateToolBar
+        field.textField.inputView = lectureStartDatePicker
         return field
     }()
     
-    private var lectureEndDate: String = ""
+    // MARK: Lecture End Date Properties
+    
+    private lazy var endDateToolBar: UIToolbar = {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(handleEndDoneTapped))
+        toolBar.setItems([done], animated: true)
+        return toolBar
+    }()
+    
+    private lazy var lectureEndDatePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.preferredDatePickerStyle = .wheels
+        picker.datePickerMode = .date
+        picker.locale = Locale(identifier: "ko-KR")
+        picker.timeZone = .autoupdatingCurrent
+        picker.addTarget(self, action: #selector(handleEndDatePicker(_:)), for: .valueChanged)
+        return picker
+    }()
+    
     private lazy var lectureEndDateField: TitleActionField = {
         let field = TitleActionField()
         field.titleText = "완강 목표일"
-        field.placeholder = "\(Date())"
-        field.onAction = {
-            self.handleEndDateButtonTapped()
-        }
+        field.placeholder = "\(format(date: Date()))"
+        field.isActionEnabled = false
+        field.textField.inputAccessoryView = endDateToolBar
+        field.textField.inputView = lectureEndDatePicker
         return field
     }()
     
@@ -187,12 +233,34 @@ class LectureGoalRegisterViewController: UIViewController {
         }
     }
     
+    private func format(date: Date) -> String {
+        return dateFormatter.string(from: date)
+    }
+    
     @objc private func handleStartDateButtonTapped() {
         print(#function)
     }
     
     @objc private func handleEndDateButtonTapped() {
         print(#function)
+    }
+    
+    @objc private func handleStartDatePicker(_ sender: UIDatePicker) {
+        print("Start Date Updated", format(date: sender.date))
+    }
+    
+    @objc private func handleEndDatePicker(_ sender: UIDatePicker) {
+        print("End Date Updated", format(date: sender.date))
+    }
+    
+    @objc func handleStartDoneTapped() {
+       lectureStartDateField.text = format(date: lectureStartDatePicker.date)
+       self.view.endEditing(true)
+     }
+    
+    @objc func handleEndDoneTapped() {
+        lectureEndDateField.text = format(date: lectureEndDatePicker.date)
+        self.view.endEditing(true)
     }
 }
 
