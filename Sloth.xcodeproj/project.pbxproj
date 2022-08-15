@@ -105,6 +105,11 @@
 		E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */; };
 		E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */; };
 		E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */; };
+		E0A8A06628AA73B000355885 /* LectureEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06528AA73B000355885 /* LectureEditViewController.swift */; };
+		E0A8A06828AA752D00355885 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06728AA752D00355885 /* Date+Extension.swift */; };
+		E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06928AA762B00355885 /* TitleDaySelector.swift */; };
+		E0A8A06C28AA7E7F00355885 /* LectureEditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */; };
+		E0A8A06E28AA7EE000355885 /* LectureEditNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +228,11 @@
 		E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
 		E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
 		E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryNavigator.swift; sourceTree = "<group>"; };
+		E0A8A06528AA73B000355885 /* LectureEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditViewController.swift; sourceTree = "<group>"; };
+		E0A8A06728AA752D00355885 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		E0A8A06928AA762B00355885 /* TitleDaySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDaySelector.swift; sourceTree = "<group>"; };
+		E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditCoordinator.swift; sourceTree = "<group>"; };
+		E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +320,7 @@
 			children = (
 				E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */,
 				E02033AA287AFDDE00ED01DA /* UIViewController+Extension.swift */,
+				E0A8A06728AA752D00355885 /* Date+Extension.swift */,
 				E02033AC287B008300ED01DA /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
@@ -369,6 +380,7 @@
 		E05D95D82827ACF4007F2ACA /* Sloth */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A06428AA739F00355885 /* LectureEditView */,
 				E0A8A05528AA3B4600355885 /* Resource */,
 				E0A8A04828AA225500355885 /* LectureRegisterSummaryView */,
 				E02033AF287B1B2B00ED01DA /* LectureGoalRegisterView */,
@@ -432,6 +444,7 @@
 			children = (
 				E05D96142827CA54007F2ACA /* Router */,
 				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
+				E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */,
 				E02033BF288BC7FA00ED01DA /* LectureListCoordinator.swift */,
 				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
 				E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */,
@@ -510,6 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				E086091E28310FBF0050E7C6 /* TitleActionField.swift */,
+				E0A8A06928AA762B00355885 /* TitleDaySelector.swift */,
 				E086092028310FD00050E7C6 /* TitleTextField.swift */,
 				E086092228310FDF0050E7C6 /* TitleInput.swift */,
 				E0A8A04228AA11AE00355885 /* TitleField.swift */,
@@ -605,6 +619,15 @@
 				E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		E0A8A06428AA739F00355885 /* LectureEditView */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A06528AA73B000355885 /* LectureEditViewController.swift */,
+				E0A8A06D28AA7EE000355885 /* LectureEditNavigator.swift */,
+			);
+			path = LectureEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,6 +781,8 @@
 				CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */,
 				CE03A2DB28A8C3D2000269D0 /* LectureListViewModel.swift in Sources */,
 				CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */,
+				E0A8A06E28AA7EE000355885 /* LectureEditNavigator.swift in Sources */,
+				E0A8A06628AA73B000355885 /* LectureEditViewController.swift in Sources */,
 				CE5CE0DB282EBD7F00C70EAF /* TodayService.swift in Sources */,
 				E0A8A04128AA074F00355885 /* MainViewModel.swift in Sources */,
 				E0A8A04A28AA230B00355885 /* LectureRegisterSummaryViewController.swift in Sources */,
@@ -796,7 +821,9 @@
 				E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */,
 				E08609522838AA700050E7C6 /* LoginViewModel.swift in Sources */,
 				E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */,
+				E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
+				E0A8A06828AA752D00355885 /* Date+Extension.swift in Sources */,
 				CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */,
 				E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */,
 				E02033C0288BC7FA00ED01DA /* LectureListCoordinator.swift in Sources */,
@@ -809,6 +836,7 @@
 				E02033B9287B202700ED01DA /* LectureInformationRegisterNavigator.swift in Sources */,
 				CE03A2DF28A94870000269D0 /* LectureListSectionHeaderCell.swift in Sources */,
 				E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */,
+				E0A8A06C28AA7E7F00355885 /* LectureEditCoordinator.swift in Sources */,
 				E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
 				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,

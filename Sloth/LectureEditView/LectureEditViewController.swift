@@ -1,14 +1,14 @@
 //
-//  LectureGoalRegisterViewController.swift
+//  LectureEditViewController.swift
 //  Sloth
 //
-//  Created by 심지원 on 2022/07/10.
+//  Created by 심지원 on 2022/08/15.
 //
 
 import UIKit
 
-class LectureGoalRegisterViewController: UIViewController {
-    weak var navigator: LectureGoalRegisterNavigator?
+final class LectureEditViewController: UIViewController {
+    weak var navigator: LectureEditNavigator?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -25,16 +25,50 @@ class LectureGoalRegisterViewController: UIViewController {
         return stackView
     }()
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "완강 목표를 설정해보세요!"
-        label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .left
-        label.textColor = .gray600
-        return label
+    private let fieldStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 32
+        return stackView
     }()
     
-    // MARK: Lecture Start Date Properties
+    private let lectureNameField: TitleTextField = {
+        let field = TitleTextField()
+        field.titleText = "강의 이름"
+        field.placeholder = "수강할 인강 이름을 입력하세요."
+        field.keyboardType = .default
+        return field
+    }()
+    
+    private let lectureCountField: TitleTextField = {
+        let field = TitleTextField()
+        field.titleText = "강의 개수"
+        field.placeholder = "전체 강의 개수를 입력하세요."
+        field.keyboardType = .numberPad
+        return field
+    }()
+    
+    private lazy var lectureCategoryField: TitleActionField = {
+        let field = TitleActionField()
+        field.titleText = "카테고리"
+        field.placeholder = "인강 카테고리를 선택하세요."
+        field.onAction = { [weak self] in
+            self?.handleCategoryButtonTapped()
+        }
+        return field
+    }()
+    
+    private lazy var lectureSiteField: TitleActionField = {
+        let field = TitleActionField()
+        field.titleText = "강의 사이트"
+        field.placeholder = "강의 사이트를 선택하세요."
+        field.onAction = { [weak self] in
+            self?.handleLectureSiteButtonTapped()
+        }
+        return field
+    }()
     
     private lazy var startDateToolBar: UIToolbar = {
         let toolBar = UIToolbar()
@@ -64,8 +98,6 @@ class LectureGoalRegisterViewController: UIViewController {
         return field
     }()
     
-    // MARK: Lecture End Date Properties
-    
     private lazy var endDateToolBar: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -87,7 +119,6 @@ class LectureGoalRegisterViewController: UIViewController {
     private lazy var lectureEndDateField: TitleActionField = {
         let field = TitleActionField()
         field.titleText = "완강 목표일"
-        field.placeholder = "\(Date().format())"
         field.isActionEnabled = false
         field.textField.inputAccessoryView = endDateToolBar
         field.textField.inputView = lectureEndDatePicker
@@ -131,7 +162,6 @@ class LectureGoalRegisterViewController: UIViewController {
     
     private func initializeViews() {
         view.backgroundColor = .white
-        
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
             $0.left.right.bottom.equalToSuperview()
@@ -145,12 +175,33 @@ class LectureGoalRegisterViewController: UIViewController {
             $0.centerX.bottom.equalToSuperview()
         }
         
-        initializeTitleView()
+        stackView.addArrangedSubviews(views: [fieldStackView, saveButton])
+        saveButton.snp.makeConstraints {
+            $0.height.equalTo(56)
+        }
+        
         initializeFields()
     }
     
+    private func initializeFields() {
+        fieldStackView.addArrangedSubviews(views: [
+            lectureNameField,
+            lectureCountField,
+            lectureCategoryField,
+            lectureSiteField,
+            lectureStartDateField,
+            lectureEndDateField,
+            lectureAmountField,
+            pushNotiCycleField,
+            lectureResolutionField])
+        
+        lectureStartDateField.snp.makeConstraints {
+            $0.height.equalTo(86)
+        }
+    }
+    
     private func setupNavigationBar() {
-        title = "새로운 인강 등록"
+        title = "강의 정보 수정"
         
         navigationController?.navigationBar.tintColor = .gray600
         navigationController?.navigationBar.backIndicatorImage = .back
@@ -158,69 +209,34 @@ class LectureGoalRegisterViewController: UIViewController {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
-    private func initializeTitleView() {
-        stackView.addArrangedSubview(titleLabel)
-        stackView.setCustomSpacing(30, after: titleLabel)
-        titleLabel.snp.makeConstraints {
-            $0.height.equalTo(34)
-        }
+    private func handleCategoryButtonTapped() {
+        
     }
     
-    private func initializeFields() {
-        stackView.addArrangedSubviews(views: [
-            lectureStartDateField,
-            lectureEndDateField,
-            lectureAmountField,
-            pushNotiCycleField,
-            lectureResolutionField,
-            saveButton])
-        lectureStartDateField.snp.makeConstraints {
-            $0.height.equalTo(86)
-        }
-        lectureEndDateField.snp.makeConstraints {
-            $0.height.equalTo(86)
-        }
-        lectureAmountField.snp.makeConstraints {
-            $0.height.equalTo(86)
-        }
-        pushNotiCycleField.snp.makeConstraints {
-            $0.height.equalTo(86)
-        }
-        lectureResolutionField.snp.makeConstraints {
-            $0.height.equalTo(86)
-        }
-        saveButton.snp.makeConstraints {
-            $0.height.equalTo(56)
-        }
+    private func handleLectureSiteButtonTapped() {
+        
     }
     
-    @objc private func handleStartDateButtonTapped() {
-        print(#function)
-    }
     
-    @objc private func handleEndDateButtonTapped() {
-        print(#function)
+    @objc private func handleStartDoneTapped() {
+        
     }
     
     @objc private func handleStartDatePicker(_ sender: UIDatePicker) {
         print("Start Date Updated", sender.date.format())
     }
     
+    
+    @objc private func handleEndDoneTapped() {
+        
+    }
+    
     @objc private func handleEndDatePicker(_ sender: UIDatePicker) {
         print("End Date Updated", sender.date.format())
     }
     
-    @objc func handleStartDoneTapped() {
-        lectureStartDateField.text = lectureStartDatePicker.date.format()
-        self.view.endEditing(true)
-    }
-    
-    @objc func handleEndDoneTapped() {
-        lectureEndDateField.text = lectureEndDatePicker.date.format()
-        self.view.endEditing(true)
-    }
-    
     @objc func handleSaveButtonTapped() {
-        navigator?.showRegisterSummary()
+        navigator?.close()
     }
+    
 }
