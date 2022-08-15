@@ -94,6 +94,9 @@
 		E08609632838BFBB0050E7C6 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E08609622838BFBB0050E7C6 /* GoogleSignIn */; };
 		E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08609642838C22A0050E7C6 /* LoginCoordinator.swift */; };
 		E0A8A04128AA074F00355885 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04028AA074F00355885 /* MainViewModel.swift */; };
+		E0A8A04328AA11AE00355885 /* TitleField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04228AA11AE00355885 /* TitleField.swift */; };
+		E0A8A04528AA15A000355885 /* PushNotiCycleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04428AA15A000355885 /* PushNotiCycleCollectionViewCell.swift */; };
+		E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04628AA165000355885 /* PushNotiCycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +204,9 @@
 		E08609642838C22A0050E7C6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		E08609662838C6EA0050E7C6 /* Sloth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sloth.entitlements; sourceTree = "<group>"; };
 		E0A8A04028AA074F00355885 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E0A8A04228AA11AE00355885 /* TitleField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleField.swift; sourceTree = "<group>"; };
+		E0A8A04428AA15A000355885 /* PushNotiCycleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiCycleCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0A8A04628AA165000355885 /* PushNotiCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiCycle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,7 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				E02033B0287B1B3D00ED01DA /* LectureGoalRegisterViewController.swift */,
+				E0A8A04428AA15A000355885 /* PushNotiCycleCollectionViewCell.swift */,
 				E02033B6287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift */,
+				E0A8A04628AA165000355885 /* PushNotiCycle.swift */,
 			);
 			path = LectureGoalRegisterView;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 				E086091E28310FBF0050E7C6 /* TitleActionField.swift */,
 				E086092028310FD00050E7C6 /* TitleTextField.swift */,
 				E086092228310FDF0050E7C6 /* TitleInput.swift */,
+				E0A8A04228AA11AE00355885 /* TitleField.swift */,
 			);
 			path = TitleInput;
 			sourceTree = "<group>";
@@ -702,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE00DA6828805F1D0056A1CB /* LectureInformationRegisterViewController.swift in Sources */,
+				E0A8A04528AA15A000355885 /* PushNotiCycleCollectionViewCell.swift in Sources */,
 				CE00DA6928805F1D0056A1CB /* LectureInformationRegisterViewModel.swift in Sources */,
 				CE03A2DB28A8C3D2000269D0 /* LectureListViewModel.swift in Sources */,
 				CE00DA6A28805F1D0056A1CB /* LectureInfomationRegisterCoordinator.swift in Sources */,
@@ -734,6 +744,7 @@
 				E086094128389E7F0050E7C6 /* Requestable.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
+				E0A8A04328AA11AE00355885 /* TitleField.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
 				E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */,
 				E08609522838AA700050E7C6 /* LoginViewModel.swift in Sources */,
@@ -764,6 +775,7 @@
 				E08609592838BEB30050E7C6 /* KakaoSessionManager.swift in Sources */,
 				CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */,
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
+				E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
 				E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */,
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,

@@ -63,6 +63,39 @@ class LectureGoalRegisterViewController: UIViewController {
         return field
     }()
     
+    private lazy var pushNotiCycleField: TitleInput = {
+        let input = TitleInput()
+        input.titleText = "푸쉬 알림 주기"
+        input.containerView.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        return input
+    }()
+    
+    private let collectionViewFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 43, height: 43)
+        layout.minimumLineSpacing = 6
+        layout.minimumInteritemSpacing = 6
+        return layout
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isPagingEnabled = false
+        collectionView.isScrollEnabled = false
+        collectionView.allowsMultipleSelection = true
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.register(PushNotiCycleCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: PushNotiCycleCollectionViewCell.self))
+        return collectionView
+    }()
+    
     private lazy var lectureResolutionField: TitleTextField = {
         let field = TitleTextField()
         field.titleText = "각오 한 마디 (선택)"
@@ -71,20 +104,22 @@ class LectureGoalRegisterViewController: UIViewController {
         return field
     }()
     
-    
-    
     private let saveButton: ConfirmButton = {
         let button = ConfirmButton()
         button.setTitle("완료", for: .normal)
         return button
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         initializeViews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionViewFlowLayout.minimumLineSpacing = (collectionView.frame.width - 43 * 7) / 6
+        collectionViewFlowLayout.minimumInteritemSpacing = (collectionView.frame.width - 43 * 7) / 6
     }
     
     private func initializeViews() {
@@ -125,7 +160,13 @@ class LectureGoalRegisterViewController: UIViewController {
     }
     
     private func initializeFields() {
-        stackView.addArrangedSubviews(views: [lectureStartDateField, lectureEndDateField, lectureAmountField, lectureResolutionField, saveButton])
+        stackView.addArrangedSubviews(views: [
+            lectureStartDateField,
+            lectureEndDateField,
+            lectureAmountField,
+            pushNotiCycleField,
+            lectureResolutionField,
+            saveButton])
         lectureStartDateField.snp.makeConstraints {
             $0.height.equalTo(86)
         }
@@ -133,6 +174,9 @@ class LectureGoalRegisterViewController: UIViewController {
             $0.height.equalTo(86)
         }
         lectureAmountField.snp.makeConstraints {
+            $0.height.equalTo(86)
+        }
+        pushNotiCycleField.snp.makeConstraints {
             $0.height.equalTo(86)
         }
         lectureResolutionField.snp.makeConstraints {
@@ -149,5 +193,23 @@ class LectureGoalRegisterViewController: UIViewController {
     
     @objc private func handleEndDateButtonTapped() {
         print(#function)
+    }
+}
+
+extension LectureGoalRegisterViewController: UICollectionViewDelegate {
+    
+}
+
+extension LectureGoalRegisterViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PushNotiCycleCollectionViewCell.self), for: indexPath) as? PushNotiCycleCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.config(text: PushNotiCycle.allCases[indexPath.item].rawValue)
+        return cell
     }
 }

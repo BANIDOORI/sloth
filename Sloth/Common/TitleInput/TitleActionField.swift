@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TitleActionField: TitleInput {
+class TitleActionField: TitleField {
     var onAction: (() -> ())?
     
     private var tapGestureRecognizer: UITapGestureRecognizer!
