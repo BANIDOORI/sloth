@@ -36,22 +36,41 @@ class DependencyContainer {
         appleSessionManager = AppleSessionMananger(window: window)
     }
     
-    func makeMainCoordinator(window: UIWindow) -> Coordinator {
-        let router = InitNavRouter(window: window)
+    func makeMainCoordinator(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
         
-        let viewController = MainViewController()
+        let viewModel = MainViewModel()
         
-        let myPageCoordinatorFactory: () -> Coordinator = {
-            self.makeMyPageCoordinator(navigationController: router.navigationController)
+        let todayViewControllerFactory: () -> (TodayViewController) = {
+            self.makeTodayViewControllerFactory(navigator: viewModel)
         }
+        
+        let lectureListViewControllerFactory: () -> (LectureListViewController) = {
+            self.makeLectureListViewControllerFactory(navigator: viewModel)
+        }
+        
+        let myPageViewControllerFactory: () -> (MyPageViewController) = {
+            self.makeMyPageViewControllerFactory()
+        }
+        
+        let lectureRegisterCoordinatorFactory: () -> (Coordinator) = {
+            self.makeLectureInformationRegisterCoordinator(navigationController: navigationController)
+        }
+        
+        let viewController = MainViewController(
+            viewModel: viewModel,
+            todayViewControllerFactory: todayViewControllerFactory,
+            lectureListViewControllerFactory: lectureListViewControllerFactory,
+            myPageViewControllerFactory: myPageViewControllerFactory
+        )
         
         let coordinator = MainViewCoordinator(
             router: router,
             viewController: viewController,
-            myPageCoordinatorFactory: myPageCoordinatorFactory
+            lectureRegisterCoordinatorFactory: lectureRegisterCoordinatorFactory
         )
         
-        viewController.navigator = coordinator
+        viewModel.navigator = coordinator
         
         return coordinator
     }
@@ -83,7 +102,7 @@ class DependencyContainer {
         }
         
         let mainCoordinatorFactory: () -> (Coordinator) = {
-            self.makeMainCoordinator(window: window)
+            self.makeMainCoordinator(navigationController: router.navigationController)
         }
         
         let coordinator = StartCoordinator(
@@ -174,23 +193,21 @@ class DependencyContainer {
         return coordinator
     }
     
-    func makeLectureListCoordinator(navigationController: UINavigationController) -> Coordinator {
-        let router = NavigationRouter(navigationController: navigationController)
+    func makeTodayViewControllerFactory(navigator: TodayViewNavigatorDelegate?) -> TodayViewController {
+        let viewController = TodayViewController()
+        viewController.navigator = navigator
+        return viewController
+    }
+    
+    func makeLectureListViewControllerFactory(navigator: LectureListNavigatorDelegate?) -> LectureListViewController {
         let viewController = LectureListViewController()
-        
-        let lectureRegisterCoordinatorFactory: () -> (Coordinator) = {
-            self.makeLectureInformationRegisterCoordinator(navigationController: navigationController)
-        }
-        
-        let coordinator = LectureListCoordinator(
-            router: router,
-            viewController: viewController,
-            lectureRegisterCoordinatorFactory: lectureRegisterCoordinatorFactory
-        )
-        
-        viewController.navigator = coordinator
-        
-        return coordinator
+        viewController.navigator = navigator
+        return viewController
+    }
+    
+    func makeMyPageViewControllerFactory() -> MyPageViewController {
+        let viewController = MyPageViewController()
+        return viewController
     }
 }
 

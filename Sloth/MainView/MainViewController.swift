@@ -10,12 +10,37 @@ import UIKit
 class MainViewController: UITabBarController {
     weak var navigator: MainViewNavigator?
     
-    private let todayViewController = TodayViewController()
-    private let lectureListViewController = LectureListViewController()
-    private let myPageViewController = MyPageViewController()
-    
     private var tabBarItemImageInset: UIEdgeInsets {
         .init(top: 0, left: 0, bottom: -8, right: 0)
+    }
+    
+    private let todayViewControllerFactory: () -> (TodayViewController)
+    private let todayViewController: TodayViewController
+    private let lectureListViewControllerFactory: () -> (LectureListViewController)
+    private let lectureListViewController: LectureListViewController
+    private let myPageViewControllerFactory: () -> (MyPageViewController)
+    private let myPageViewController: MyPageViewController
+    
+    private let viewModel: MainViewModel
+    
+    init(
+        viewModel: MainViewModel,
+        todayViewControllerFactory: @escaping () -> (TodayViewController),
+        lectureListViewControllerFactory: @escaping () -> (LectureListViewController),
+        myPageViewControllerFactory: @escaping () -> (MyPageViewController)
+    ) {
+        self.viewModel = viewModel
+        self.todayViewControllerFactory = todayViewControllerFactory
+        self.todayViewController = todayViewControllerFactory()
+        self.lectureListViewControllerFactory = lectureListViewControllerFactory
+        self.lectureListViewController = lectureListViewControllerFactory()
+        self.myPageViewControllerFactory = myPageViewControllerFactory
+        self.myPageViewController = myPageViewControllerFactory()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -34,6 +59,7 @@ class MainViewController: UITabBarController {
     }
     
     private func initializeViews() {
+        navigationItem.setHidesBackButton(true, animated: false)
         setupTabBarItems()
         setupTabBar()
     }
@@ -87,6 +113,6 @@ class MainViewController: UITabBarController {
 
 extension MainViewController: TodayViewNavigatorDelegate {
     func showMyPage() {
-        navigator?.showMyPage()
+        
     }
 }
