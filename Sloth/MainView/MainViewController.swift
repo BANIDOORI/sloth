@@ -14,11 +14,8 @@ class MainViewController: UITabBarController {
         .init(top: 0, left: 0, bottom: -8, right: 0)
     }
     
-    private let todayViewControllerFactory: () -> (TodayViewController)
     private let todayViewController: TodayViewController
-    private let lectureListViewControllerFactory: () -> (LectureListViewController)
     private let lectureListViewController: LectureListViewController
-    private let myPageViewControllerFactory: () -> (MyPageViewController)
     private let myPageViewController: MyPageViewController
     
     private let viewModel: MainViewModel
@@ -30,11 +27,8 @@ class MainViewController: UITabBarController {
         myPageViewControllerFactory: @escaping () -> (MyPageViewController)
     ) {
         self.viewModel = viewModel
-        self.todayViewControllerFactory = todayViewControllerFactory
         self.todayViewController = todayViewControllerFactory()
-        self.lectureListViewControllerFactory = lectureListViewControllerFactory
         self.lectureListViewController = lectureListViewControllerFactory()
-        self.myPageViewControllerFactory = myPageViewControllerFactory
         self.myPageViewController = myPageViewControllerFactory()
         super.init(nibName: nil, bundle: nil)
     }

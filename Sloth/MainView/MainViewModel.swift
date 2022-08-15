@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainViewModel: TodayViewNavigatorDelegate, LectureListNavigatorDelegate {
+final class MainViewModel: TodayViewNavigatorDelegate, LectureListNavigatorDelegate {
     func showMyPage() {
         
     }
