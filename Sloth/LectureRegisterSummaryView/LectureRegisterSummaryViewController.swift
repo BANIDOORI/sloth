@@ -34,6 +34,30 @@ class LectureRegisterSummaryViewController: UIViewController {
     
     private let informationView: LectureSummaryInformationView = LectureSummaryInformationView()
     
+    private lazy var buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 10
+        stackView.addArrangedSubviews(views: [editButton, confirmButton])
+        return stackView
+    }()
+    
+    private lazy var editButton: CancelButton = {
+        let button = CancelButton()
+        button.setTitle("수정하기", for: .normal)
+        button.addTarget(self, action: #selector(handleEditButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var confirmButton: ConfirmButton = {
+        let button = ConfirmButton()
+        button.setTitle("수락하기", for: .normal)
+        button.addTarget(self, action: #selector(handleConfirmButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeViews()
@@ -47,12 +71,14 @@ class LectureRegisterSummaryViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(informationView)
         view.addSubview(iconImageView)
+        view.addSubview(buttonStackView)
         
         upperBackgroundView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.height.equalTo(280)
         }
+        
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(48)
             $0.left.right.equalToSuperview().inset(22)
@@ -63,10 +89,21 @@ class LectureRegisterSummaryViewController: UIViewController {
             $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.centerX.equalToSuperview()
         }
+        
         informationView.snp.makeConstraints {
             $0.top.equalTo(iconImageView.snp.bottom).inset(30)
             $0.left.right.equalToSuperview().inset(16)
             $0.height.equalTo(440)
+        }
+        
+        buttonStackView.snp.makeConstraints {
+            $0.top.equalTo(informationView.snp.bottom).offset(32)
+            $0.left.right.equalToSuperview().inset(16)
+            $0.height.equalTo(56)
+        }
+        
+        editButton.snp.makeConstraints {
+            $0.width.equalToSuperview().multipliedBy(0.3)
         }
     }
     
@@ -79,4 +116,12 @@ class LectureRegisterSummaryViewController: UIViewController {
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
+    
+    @objc private func handleEditButtonTapped() {
+        
+    }
+    
+    @objc private func handleConfirmButtonTapped() {
+        
+    }
 }
