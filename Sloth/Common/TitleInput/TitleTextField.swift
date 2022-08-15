@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TitleTextField: TitleInput {
+class TitleTextField: TitleField {
     var keyboardType: UIKeyboardType = .default {
         didSet {
             textField.keyboardType = keyboardType

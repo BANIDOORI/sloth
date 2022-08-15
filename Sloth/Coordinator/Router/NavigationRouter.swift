@@ -28,9 +28,16 @@ class NavigationRouter: NSObject, Router {
     
     func dismiss(animated: Bool) {
         guard let currentViewController = currentViewController,
-              navigationController.viewControllers.count <= 0 else { return }
+              navigationController.viewControllers.count > 0 else { return }
         navigationController.popViewController(animated: animated)
         executeDismissedAction(for: currentViewController)
+    }
+    
+    func dismiss(to targetCount: Int) {
+        guard targetCount < navigationController.viewControllers.count else { return }
+        let viewControllersCount = navigationController.viewControllers.count
+        let newViewControllers = navigationController.viewControllers[0..<viewControllersCount-targetCount]
+        navigationController.setViewControllers(Array(newViewControllers), animated: true)
     }
     
     private func executeDismissedAction(for viewController: UIViewController) {

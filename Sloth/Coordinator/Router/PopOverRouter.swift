@@ -38,4 +38,6 @@ class PopOverRouter: Router {
         onDismissed()
         onDismissedDictionary[viewController] = nil
     }
+    
+    func dismiss(to targetCount: Int) {}
 }

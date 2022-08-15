@@ -7,8 +7,19 @@
 
 import UIKit
 
-class TitleActionField: TitleInput {
+class TitleActionField: TitleField {
     var onAction: (() -> ())?
+    
+    var isActionEnabled: Bool = true {
+        didSet {
+            if isActionEnabled {
+                setupAction()
+            }
+            else {
+                deleteAction()
+            }
+        }
+    }
     
     private var tapGestureRecognizer: UITapGestureRecognizer!
     
@@ -39,6 +50,11 @@ class TitleActionField: TitleInput {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapped))
         addGestureRecognizer(tapGestureRecognizer)
         tapGestureRecognizer.delegate = self
+    }
+    
+    private func deleteAction() {
+        textField.isUserInteractionEnabled = true
+        removeGestureRecognizer(tapGestureRecognizer)
     }
     
     private func initializeViews() {
