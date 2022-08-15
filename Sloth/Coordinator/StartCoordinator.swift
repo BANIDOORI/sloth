@@ -16,22 +16,27 @@ class StartCoordinator: Coordinator {
     
     private let loginCoordinatorFactory: (OnAction?) -> (Coordinator)
     private let informationAgreementCoordinatorFactory: () -> (Coordinator)
-    private let lectureListCoordinatorFactory: () -> (Coordinator)
-    
+    private let mainCoordinatorFactory: () -> (Coordinator)
+
     init(router: Router,
          viewController: UIViewController,
          loginCoordinatorFactory: @escaping (OnAction?) -> (Coordinator),
          informationAgreementCoordinatorFactory: @escaping () -> (Coordinator),
-         lectureListCoordinatorFactory: @escaping () -> (Coordinator)) {
+         mainCoordinatorFactory: @escaping () -> (Coordinator)
+    ) {
         self.router = router
         self.viewController = viewController
         self.loginCoordinatorFactory = loginCoordinatorFactory
         self.informationAgreementCoordinatorFactory = informationAgreementCoordinatorFactory
-        self.lectureListCoordinatorFactory = lectureListCoordinatorFactory
+        self.mainCoordinatorFactory = mainCoordinatorFactory
     }
     
     func present(animated: Bool, onDismissed: (() -> Void)?) {
-        router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
+        router.present(
+            viewController: viewController,
+            animated: animated,
+            onDismissed: onDismissed
+        )
     }
 }
 
@@ -48,8 +53,8 @@ extension StartCoordinator: StartNavigator {
         present(child: coordinator, animated: true)
     }
     
-    func showLectureList() {
-        let coordinator = lectureListCoordinatorFactory()
+    func showMain() {
+        let coordinator = mainCoordinatorFactory()
         present(child: coordinator, animated: true)
     }
 }

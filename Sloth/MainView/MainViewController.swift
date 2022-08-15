@@ -8,12 +8,11 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-    
     weak var navigator: MainViewNavigator?
     
     private let todayViewController = TodayViewController()
-    private let lectureListViewController = UIViewController()
-    private let myPageViewController = UIViewController()
+    private let lectureListViewController = LectureListViewController()
+    private let myPageViewController = MyPageViewController()
     
     private var tabBarItemImageInset: UIEdgeInsets {
         .init(top: 0, left: 0, bottom: -8, right: 0)
