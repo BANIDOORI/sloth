@@ -156,7 +156,7 @@ final class TodayViewController: UIViewController {
         snapshot.appendItems(done, toSection: .done)
 
         let will = viewModel.lessons
-            .filter{ !($0.untilTodayFinished ?? true) }
+            .filter{ $0.untilTodayFinished ?? true }
             .map{ Item.willLesson($0) }
         snapshot.appendItems(will, toSection: .will)
         

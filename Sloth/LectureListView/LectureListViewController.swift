@@ -85,6 +85,7 @@ final class LectureListViewController: UIViewController {
     }
 
     private func setUpCollectionView() {
+        lectureListView.collectionView.delegate = self
         lectureListView.collectionView.register(
             LectoureListCollectionCell.self,
             forCellWithReuseIdentifier: LectoureListCollectionCell.identifier
@@ -190,21 +191,21 @@ extension LectureListViewController {
                         withReuseIdentifier: LectoureListCollectionCell.identifier,
                         for: indexPath
                     ) as? LectoureListCollectionCell
-                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, isDone: false)
+                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, section: .ing)
                     return cell
                 case .willLesson(let lesson):
                     let cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: LectoureListCollectionCell.identifier,
                         for: indexPath
                     ) as? LectoureListCollectionCell
-                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, isDone: false)
+                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, section: .will)
                     return cell
                 case .doneLesson(let lesson):
                     let cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: LectoureListCollectionCell.identifier,
                         for: indexPath
                     ) as? LectoureListCollectionCell
-                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, isDone: true)
+                    cell?.viewModel = LectoureListCollectionCellViewModel(lesson: lesson, section: .done)
                     return cell
                 }
             })
@@ -245,5 +246,15 @@ extension LectureListViewController {
 
     @objc private func handleNotificationButtonTapped() {
         print(#function)
+    }
+}
+
+extension LectureListViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        // NOTE:
+        navigationController?.pushViewController(LectureDetailViewController(), animated: true)
     }
 }

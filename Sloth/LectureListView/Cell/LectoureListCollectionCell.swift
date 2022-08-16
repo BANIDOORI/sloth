@@ -19,11 +19,82 @@ final class LectoureListCollectionCell: UICollectionViewCell {
 
     lazy var lessonInformationView = LessonInformationView()
 
+    lazy var startDateLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .gray600
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        return label
+    }()
+
+    lazy var lessonCountLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .gray600
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        return label
+    }()
+
+    lazy var investedMoneyLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .gray600
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        return label
+    }()
+
+    lazy var progressBarView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray300
+        return view
+    }()
+
+    lazy var stackView: UIStackView = {
+        let labelStackView = UIStackView(
+            arrangedSubviews: [
+                startDateLabel,
+                lessonCountLabel,
+                investedMoneyLabel
+            ]
+        )
+        labelStackView.axis = .vertical
+        labelStackView.spacing = 4
+        labelStackView.alignment = .leading
+
+        let stackView = UIStackView(
+            arrangedSubviews: [
+                lessonInformationView,
+                labelStackView,
+                progressBarView
+            ]
+        )
+
+        progressBarView.snp.makeConstraints {
+            $0.width.equalToSuperview()
+            $0.height.equalTo(66)
+        }
+
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .fill
+        stackView.spacing = 16
+        return stackView
+    }()
+
+    lazy var dimmedView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray600.withAlphaComponent(0.6)
+        return view
+    }()
+
+    lazy var stampImageView = UIImageView()
+
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupLayout()
         addSubviews()
         setUpConstraints()
+
+        startDateLabel.text = "시작예정일 2021.10.23"
+        investedMoneyLabel.text = "내가 투자한 금액 50,000원"
+        lessonCountLabel.text = "강의 개수 50강"
     }
 
     required init?(coder: NSCoder) {
@@ -38,7 +109,8 @@ final class LectoureListCollectionCell: UICollectionViewCell {
 
     private func addSubviews() {
         let subviews = [
-            lessonInformationView
+            stackView,
+            dimmedView
         ]
 
         subviews.forEach {
@@ -48,27 +120,37 @@ final class LectoureListCollectionCell: UICollectionViewCell {
     }
 
     private func setUpConstraints() {
-        lessonInformationView.snp.makeConstraints {
+        stackView.snp.makeConstraints {
             $0.top.left.trailing.bottom.equalToSuperview().inset(20)
+        }
+
+        dimmedView.snp.makeConstraints {
+            $0.top.left.trailing.bottom.equalToSuperview()
         }
     }
 
     private func setUpViewModel() {
-        changeViewDesign(isDone: viewModel.isDone)
+        changeViewDesign(section: viewModel.section)
+        lessonInformationView.lessonNameLabel.font = .systemFont(ofSize: 20, weight: .bold)
         lessonInformationView.remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
         lessonInformationView.categoryNameLabel.text = viewModel.categoryName
         lessonInformationView.siteNameLabel.text = viewModel.siteName
         lessonInformationView.lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)" //viewModel.lessonName
     }
 
-    private func changeViewDesign(isDone: Bool) {
-        lessonInformationView.remainDayLabel.textColor = isDone ? .white : .primary400
-        lessonInformationView.categoryNameLabel.backgroundColor = isDone ? .primary200 : .gray200
-        lessonInformationView.categoryNameLabel.textColor = isDone ? .primary600 : .black
-        lessonInformationView.siteNameLabel.backgroundColor = isDone ? .primary200 : .gray200
-        lessonInformationView.siteNameLabel.textColor = isDone ? .primary600 : .black
-        lessonInformationView.lessonNameLabel.textColor = isDone ? .white : .black
-        backgroundColor = isDone ? .primary500 : .white
+    private func changeViewDesign(section: LectureListViewController.Section) {
+        progressBarView.isHidden = section != .ing
+        lessonCountLabel.isHidden = section != .done
+        startDateLabel.isHidden = section != .will
+        dimmedView.isHidden = section != .done
+
+        if section == .done {
+            dimmedView.addSubview(stampImageView)
+            stampImageView.snp.makeConstraints {
+                $0.trailing.bottom.equalToSuperview().inset(24)
+            }
+            stampImageView.image = viewModel.isDone ? .failureStamp : .successStamp
+        }
     }
 }
 
@@ -80,12 +162,13 @@ final class LectoureListCollectionCellViewModel {
     @Published var presentNumber: Int? = 0
     @Published var totalNumber: Int? = 0
     @Published var isDone: Bool = false
+    @Published var section: LectureListViewController.Section = .ing
 
     private let lesson: Lesson
 
-    init(lesson: Lesson, isDone: Bool) {
+    init(lesson: Lesson, section: LectureListViewController.Section) {
         self.lesson = lesson
-        self.isDone = isDone
+        self.section = section
 
         setUpBindings()
     }
