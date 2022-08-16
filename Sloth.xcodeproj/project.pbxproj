@@ -123,6 +123,7 @@
 		E0A8A08428AA8ADC00355885 /* PushNotiElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */; };
 		E0A8A08828AA946700355885 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */; };
 		E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08928AA959C00355885 /* UITableView+Extension.swift */; };
+		E0A8A08C28ABBE6900355885 /* HalfCircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +260,7 @@
 		E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiElement.swift; sourceTree = "<group>"; };
 		E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A08928AA959C00355885 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircleProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +469,7 @@
 				CE61D5192879994400CDEEC7 /* PaddingLabel.swift */,
 				CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */,
 				E0A8A07628AA870900355885 /* SwitchView.swift */,
+				E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				E02033A0287A8EF300ED01DA /* PopOverRouter.swift in Sources */,
 				CE03A2DD28A8C405000269D0 /* LectureListService.swift in Sources */,
 				E086094128389E7F0050E7C6 /* Requestable.swift in Sources */,
+				E0A8A08C28ABBE6900355885 /* HalfCircleProgressBar.swift in Sources */,
 				E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */,
 				E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
