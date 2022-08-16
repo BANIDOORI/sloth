@@ -20,7 +20,7 @@ final class LectureListSectionHeaderCell: UICollectionReusableView {
             ofSize: 18,
             weight: .medium
         )
-        label.textColor = .gray500
+        label.textColor = .gray600
         label.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         return label
     }()

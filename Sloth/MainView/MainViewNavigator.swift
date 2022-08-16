@@ -9,5 +9,5 @@ import Foundation
 
 protocol MainViewNavigator: AnyObject {
     func showLectureRegister()
-    
+
 }

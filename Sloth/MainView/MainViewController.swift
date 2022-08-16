@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UITabBarController {
     weak var navigator: MainViewNavigator?
-    
+
     private var tabBarItemImageInset: UIEdgeInsets {
         .init(top: 0, left: 0, bottom: -8, right: 0)
     }
@@ -91,7 +91,8 @@ class MainViewController: UITabBarController {
         tabBar.tintColor = .primary400
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
-        
+
+        tabBar.layer.masksToBounds = true
         tabBar.layer.maskedCorners = [
             .layerMaxXMinYCorner,
             .layerMinXMinYCorner

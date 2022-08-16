@@ -144,7 +144,7 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         lessonInformationView.remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
         lessonInformationView.categoryNameLabel.text = viewModel.categoryName
         lessonInformationView.siteNameLabel.text = viewModel.siteName
-        lessonInformationView.lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)" //viewModel.lessonName
+        lessonInformationView.lessonNameLabel.text = viewModel.lessonName
         numberLabel.text = "0/4"
     }
 

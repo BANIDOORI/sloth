@@ -32,18 +32,19 @@ final class TodayService: TodayServiceProtocol {
             }
 
             dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, _, error) in
-                guard let data = data else {
-                    if let error = error {
-                        promise(.failure(error))
-                    }
-                    return
-                }
-                do {
-                    let lessons = try JSONDecoder().decode(Lessons.self, from: data)
-                    promise(.success(lessons))
-                } catch {
-                    promise(.failure(ServiceError.decode))
-                }
+                promise(.success(self?.lessonDummy() ?? []))
+//                guard let data = data else {
+//                    if let error = error {
+//                        promise(.failure(error))
+//                    }
+//                    return
+//                }
+//                do {
+//                    let lessons = try JSONDecoder().decode(Lessons.self, from: data)
+//                    promise(.success(lessons))
+//                } catch {
+//                    promise(.failure(ServiceError.decode))
+//                }
             }
         }
         .handleEvents(receiveSubscription: onSubscription, receiveCancel: onCancel)
@@ -64,5 +65,15 @@ final class TodayService: TodayServiceProtocol {
             "Authorization": ""
         ]
         return urlRequest
+    }
+
+    private func lessonDummy() -> Lessons {
+        return [
+            Lesson(categoryName: "개발", currentProgressRate: nil, endDate: nil, goalProgressRate: nil, isFinished: nil, lessonID: 297, lessonName: "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)1", lessonStatus: nil, price: nil, remainDay: 4, presentNumber: 0, siteName: "패스트캠퍼스", startDate: nil, totalNumber: 0, untilTodayFinished: true, untilTodayNumber: 0),
+            Lesson(categoryName: "개발", currentProgressRate: nil, endDate: nil, goalProgressRate: nil, isFinished: nil, lessonID: 297, lessonName: "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)2", lessonStatus: nil, price: nil, remainDay: 5, presentNumber: 0, siteName: "패스트캠퍼스", startDate: nil, totalNumber: 0, untilTodayFinished: false, untilTodayNumber: 0),
+            Lesson(categoryName: "개발", currentProgressRate: nil, endDate: nil, goalProgressRate: nil, isFinished: nil, lessonID: 297, lessonName: "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)3", lessonStatus: nil, price: nil, remainDay: 6, presentNumber: 0, siteName: "패스트캠퍼스", startDate: nil, totalNumber: 0, untilTodayFinished: true, untilTodayNumber: 0),
+            Lesson(categoryName: "개발", currentProgressRate: nil, endDate: nil, goalProgressRate: nil, isFinished: nil, lessonID: 297, lessonName: "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)4", lessonStatus: nil, price: nil, remainDay: 7, presentNumber: 0, siteName: "패스트캠퍼스", startDate: nil, totalNumber: 0, untilTodayFinished: false, untilTodayNumber: 0),
+            Lesson(categoryName: "개발", currentProgressRate: nil, endDate: nil, goalProgressRate: nil, isFinished: nil, lessonID: 297, lessonName: "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)5", lessonStatus: nil, price: nil, remainDay: 8, presentNumber: 0, siteName: "패스트캠퍼스", startDate: nil, totalNumber: 0, untilTodayFinished: true, untilTodayNumber: 0),
+        ]
     }
 }

@@ -151,12 +151,12 @@ final class TodayViewController: UIViewController {
         snapshot.appendItems([.headerInformation], toSection: .header)
 
         let done = viewModel.lessons
-            .filter{ $0.untilTodayFinished ?? true }
+            .filter{ !($0.untilTodayFinished ?? true) }
             .map{ Item.doneLesson($0) }
         snapshot.appendItems(done, toSection: .done)
 
         let will = viewModel.lessons
-            .filter{ !($0.untilTodayFinished ?? true) }
+            .filter{ $0.untilTodayFinished ?? true }
             .map{ Item.willLesson($0) }
         snapshot.appendItems(will, toSection: .will)
         
