@@ -230,5 +230,17 @@ class DependencyContainer {
         
         return coordinator
     }
+    
+    func makeLectureEditCoordinatorFactory(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        
+        let viewController = LectureEditViewController()
+        
+        let coordinator = LectureEditCoordinator(router: router, viewController: viewController)
+        
+        viewController.navigator = coordinator
+        
+        return coordinator
+    }
 }
 
