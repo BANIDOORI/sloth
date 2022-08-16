@@ -19,13 +19,12 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
 
     lazy var lessonInformationView = LessonInformationView()
 
-    lazy var progressBarView: UIView = {
-        let view = UIView()
+    lazy var progressBarView: HalfCircleProgressBar = {
+        let view = HalfCircleProgressBar()
         view.snp.makeConstraints {
             $0.width.equalTo(213)
             $0.height.equalTo(70)
         }
-        view.backgroundColor = .gray200
         return view
     }()
 
@@ -104,6 +103,12 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         setupLayout()
         addSubviews()
         setUpConstraints()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // NOTE: 그냥 애니메이션 보여주려고 넣은 거
+        progressBarView.progressAnimation(duration: 2)
     }
 
     required init?(coder: NSCoder) {
