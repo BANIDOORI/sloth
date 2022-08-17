@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import Lottie
 
 final class TodayLessonCollectionViewCell: UICollectionViewCell {
     static var identifier: String {
@@ -32,12 +33,22 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
     lazy var plusButton: UIButton = {
         let button = UIButton()
         button.setImage(.activationPlus, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handlePlusButtonTapped),
+            for: .touchUpInside
+        )
         return button
     }()
 
     lazy var minusButton: UIButton = {
         let button = UIButton()
         button.setImage(.disableMinus, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handleMinusButtonTapped),
+            for: .touchUpInside
+        )
         return button
     }()
 
@@ -48,14 +59,13 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    lazy var pigView: UIView = {
-        let view = UIView()
-        view.snp.makeConstraints {
+    lazy var pigView: AnimationView = {
+        let animationView = AnimationView(name: "pigAnimation")
+        animationView.snp.makeConstraints {
             $0.width.equalTo(64)
             $0.height.equalTo(58)
         }
-        view.backgroundColor = .gray200
-        return view
+        return animationView
     }()
 
     lazy var bottomStackView: UIStackView = {
@@ -160,6 +170,14 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         lessonInformationView.siteNameLabel.textColor = isDone ? .primary600 : .black
         lessonInformationView.lessonNameLabel.textColor = isDone ? .white : .black
         backgroundColor = isDone ? .primary500 : .white
+    }
+
+    @objc private func handlePlusButtonTapped() {
+        pigView.play()
+    }
+
+    @objc private func handleMinusButtonTapped() {
+        
     }
 }
 
