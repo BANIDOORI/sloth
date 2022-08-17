@@ -26,6 +26,8 @@
 		CE5CE0E42830A9FB00C70EAF /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */; };
 		CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D5192879994400CDEEC7 /* PaddingLabel.swift */; };
 		CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */; };
+		CE90A2A428ABC2A300F5521C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CE90A2A328ABC2A300F5521C /* Lottie */; };
+		CE90A2A628ABC2B800F5521C /* pigAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = CE90A2A528ABC2B800F5521C /* pigAnimation.json */; };
 		E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0203398287A7AD300ED01DA /* StartCoordinator.swift */; };
 		E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */; };
 		E020339E287A8DE400ED01DA /* StartNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339D287A8DE400ED01DA /* StartNavigator.swift */; };
@@ -160,6 +162,7 @@
 		CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		CE61D5192879994400CDEEC7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonInformationView.swift; sourceTree = "<group>"; };
+		CE90A2A528ABC2B800F5521C /* pigAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pigAnimation.json; path = ../../../../Downloads/pigAnimation.json; sourceTree = "<group>"; };
 		E0203398287A7AD300ED01DA /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E020339D287A8DE400ED01DA /* StartNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigator.swift; sourceTree = "<group>"; };
@@ -273,6 +276,7 @@
 				E05D962E2827CEC1007F2ACA /* SnapKit in Frameworks */,
 				E086095E2838BF4B0050E7C6 /* KakaoSDKCommon in Frameworks */,
 				E086095C2838BF4B0050E7C6 /* KakaoSDKAuth in Frameworks */,
+				CE90A2A428ABC2A300F5521C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +463,7 @@
 		E05D96092827B1B5007F2ACA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE90A2A528ABC2B800F5521C /* pigAnimation.json */,
 				E020339A287A8BF500ED01DA /* Extension */,
 				E086091D28310FB00050E7C6 /* TitleInput */,
 				E0860910282D4A070050E7C6 /* ConfirmButton.swift */,
@@ -710,6 +715,7 @@
 				E086095D2838BF4B0050E7C6 /* KakaoSDKCommon */,
 				E086095F2838BF4B0050E7C6 /* KakaoSDKUser */,
 				E08609622838BFBB0050E7C6 /* GoogleSignIn */,
+				CE90A2A328ABC2A300F5521C /* Lottie */,
 			);
 			productName = Sloth;
 			productReference = E05D95D62827ACF4007F2ACA /* Sloth.app */;
@@ -787,6 +793,7 @@
 				E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				E086095A2838BF4B0050E7C6 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				E08609612838BFBB0050E7C6 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CE90A2A228ABC2A300F5521C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = E05D95D72827ACF4007F2ACA /* Products */;
 			projectDirPath = "";
@@ -805,6 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */,
+				CE90A2A628ABC2B800F5521C /* pigAnimation.json in Resources */,
 				E05D95E62827ACF5007F2ACA /* LaunchScreen.storyboard in Resources */,
 				E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */,
 				E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */,
@@ -1284,6 +1292,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE90A2A228ABC2A300F5521C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1311,6 +1327,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE90A2A328ABC2A300F5521C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE90A2A228ABC2A300F5521C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		E05D962D2827CEC1007F2ACA /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E05D962C2827CEC1007F2ACA /* XCRemoteSwiftPackageReference "SnapKit" */;
