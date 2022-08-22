@@ -27,7 +27,7 @@
 		CE61D51A2879994400CDEEC7 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D5192879994400CDEEC7 /* PaddingLabel.swift */; };
 		CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */; };
 		CE90A2A428ABC2A300F5521C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CE90A2A328ABC2A300F5521C /* Lottie */; };
-		CE90A2A628ABC2B800F5521C /* pigAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = CE90A2A528ABC2B800F5521C /* pigAnimation.json */; };
+		CEE9FDD428B3BDA900897499 /* pigAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = CEE9FDD328B3BDA900897499 /* pigAnimation.json */; };
 		E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0203398287A7AD300ED01DA /* StartCoordinator.swift */; };
 		E020339C287A8C0200ED01DA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */; };
 		E020339E287A8DE400ED01DA /* StartNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E020339D287A8DE400ED01DA /* StartNavigator.swift */; };
@@ -161,7 +161,7 @@
 		CE5CE0E32830A9FB00C70EAF /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		CE61D5192879994400CDEEC7 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonInformationView.swift; sourceTree = "<group>"; };
-		CE90A2A528ABC2B800F5521C /* pigAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pigAnimation.json; path = ../../../../Downloads/pigAnimation.json; sourceTree = "<group>"; };
+		CEE9FDD328B3BDA900897499 /* pigAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pigAnimation.json; sourceTree = "<group>"; };
 		E0203398287A7AD300ED01DA /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		E020339B287A8C0200ED01DA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E020339D287A8DE400ED01DA /* StartNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigator.swift; sourceTree = "<group>"; };
@@ -461,7 +461,7 @@
 		E05D96092827B1B5007F2ACA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CE90A2A528ABC2B800F5521C /* pigAnimation.json */,
+				CEE9FDD328B3BDA900897499 /* pigAnimation.json */,
 				E020339A287A8BF500ED01DA /* Extension */,
 				E086091D28310FB00050E7C6 /* TitleInput */,
 				E0860910282D4A070050E7C6 /* ConfirmButton.swift */,
@@ -809,12 +809,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */,
-				CE90A2A628ABC2B800F5521C /* pigAnimation.json in Resources */,
 				E05D95E62827ACF5007F2ACA /* LaunchScreen.storyboard in Resources */,
 				E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */,
 				E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */,
 				E05D95E32827ACF5007F2ACA /* Assets.xcassets in Resources */,
 				E05D95E12827ACF4007F2ACA /* Main.storyboard in Resources */,
+				CEE9FDD428B3BDA900897499 /* pigAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
