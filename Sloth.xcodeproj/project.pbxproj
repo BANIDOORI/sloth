@@ -104,9 +104,9 @@
 		E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */; };
 		E0A8A05228AA32DD00355885 /* LectureInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */; };
 		E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */; };
-		E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */; };
-		E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */; };
-		E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */; };
+		E0A8A05F28AA43D800355885 /* SB어그로OTFB.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */; };
+		E0A8A06028AA43DB00355885 /* SB어그로OTFL.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */; };
+		E0A8A06128AA43E000355885 /* SB어그로OTFM.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */; };
 		E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */; };
 		E0A8A06628AA73B000355885 /* LectureEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06528AA73B000355885 /* LectureEditViewController.swift */; };
 		E0A8A06828AA752D00355885 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06728AA752D00355885 /* Date+Extension.swift */; };
@@ -242,9 +242,9 @@
 		E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureSummaryInformationView.swift; sourceTree = "<group>"; };
 		E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfoRowView.swift; sourceTree = "<group>"; };
 		E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryCoordinator.swift; sourceTree = "<group>"; };
-		E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
-		E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
-		E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
+		E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFB.otf"; sourceTree = "<group>"; };
+		E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFL.otf"; sourceTree = "<group>"; };
+		E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFM.otf"; sourceTree = "<group>"; };
 		E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryNavigator.swift; sourceTree = "<group>"; };
 		E0A8A06528AA73B000355885 /* LectureEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditViewController.swift; sourceTree = "<group>"; };
 		E0A8A06728AA752D00355885 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -666,9 +666,9 @@
 		E0A8A05528AA3B4600355885 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */,
-				E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */,
-				E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */,
+				E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */,
+				E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */,
+				E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -811,10 +811,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */,
+				E0A8A05F28AA43D800355885 /* SB어그로OTFB.otf in Resources */,
 				E05D95E62827ACF5007F2ACA /* LaunchScreen.storyboard in Resources */,
-				E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */,
-				E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */,
+				E0A8A06128AA43E000355885 /* SB어그로OTFM.otf in Resources */,
+				E0A8A06028AA43DB00355885 /* SB어그로OTFL.otf in Resources */,
 				E05D95E32827ACF5007F2ACA /* Assets.xcassets in Resources */,
 				E05D95E12827ACF4007F2ACA /* Main.storyboard in Resources */,
 				CEE9FDD428B3BDA900897499 /* pigAnimation.json in Resources */,
@@ -1123,7 +1123,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1135,7 +1135,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sloth.nanagong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanagong.sloths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1150,10 +1150,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sloth/Sloth.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1165,9 +1165,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sloth.nanagong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanagong.sloths;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "sloth provisioning";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
