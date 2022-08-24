@@ -24,4 +24,8 @@ class SlothTests: XCTestCase {
     func testPerformanceExample() throws {
         XCTAssert(true)
     }
+  
+    func testDevelopBranch() throws {
+        XCTAssert(true)
+    }
 }
