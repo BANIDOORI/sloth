@@ -8,5 +8,6 @@
 import Foundation
 
 protocol MainViewNavigator: AnyObject {
-    func showMyPage()
+    func showLectureRegister()
+
 }

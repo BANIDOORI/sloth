@@ -40,6 +40,10 @@ extension UIImage {
     static var alertError: UIImage {
         UIImage(named: "ic_alert_error")!
     }
+
+    static var actionBell: UIImage {
+        UIImage(named: "ic_action_bell")!
+    }
     
     static var failureStamp: UIImage {
         UIImage(named: "ic_failure")!
@@ -67,6 +71,22 @@ extension UIImage {
 
     static var activationMinusWhite: UIImage {
         UIImage(named: "activation_minus_white")!
+    }
+    
+    static var back: UIImage {
+        UIImage(named: "ic_navi_arrow_back")!
+    }
+    
+    static var expandMore: UIImage {
+        UIImage(named: "ic_expand_more")!
+    }
+    
+    static var actionPlus: UIImage {
+        UIImage(named: "ic_action_plus")!
+    }
+    
+    static var right: UIImage {
+        UIImage(named: "ic_navi_chevron_right")!
     }
     
     struct Sloth {
@@ -104,6 +124,20 @@ extension UIImage {
         
         static var todayLose: UIImage {
             UIImage(named: "img_sloth_today_lose")!
+        }
+    }
+    
+    struct Login {
+        static var google: UIImage {
+            UIImage(named: "btn_google_login")!
+        }
+        
+        static var kakao: UIImage {
+            UIImage(named: "btn_kakao_login")!
+        }
+        
+        static var apple: UIImage {
+            UIImage(named: "btn_apple_login")!
         }
     }
 }

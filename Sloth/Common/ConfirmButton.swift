@@ -28,7 +28,7 @@ class ConfirmButton: UIButton {
     
     private func setAttributes() {
         titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        titleLabel?.textColor = .white
+        setTitleColor(.white, for: .normal)
         titleLabel?.textAlignment = .center
         
         layer.cornerRadius = 10

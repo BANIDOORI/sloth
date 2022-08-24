@@ -10,28 +10,29 @@ import UIKit
 
 
 class MainViewCoordinator: Coordinator {
+    var children: [Coordinator] = []
     var router: Router
     
     private let viewController: UIViewController
     
-    private let myPageCoordinatorFactory: () -> (Coordinator)
+    private let lectureRegisterCoordinatorFactory: () -> (Coordinator)
     
     init(router: Router,
          viewController: UIViewController,
-         myPageCoordinatorFactory: @escaping () -> (Coordinator)) {
+         lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator)) {
         self.router = router
         self.viewController = viewController
-        self.myPageCoordinatorFactory = myPageCoordinatorFactory
+        self.lectureRegisterCoordinatorFactory = lectureRegisterCoordinatorFactory
     }
     
-    func present() {
-        router.present(viewController: viewController, animated: true)
+    func present(animated: Bool, onDismissed: (() -> Void)?) {
+        router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
     }
 }
 
 extension MainViewCoordinator: MainViewNavigator {
-    func showMyPage() {
-        let coordinator = myPageCoordinatorFactory()
-        present(child: coordinator)
+    func showLectureRegister() {
+        let coordinator = lectureRegisterCoordinatorFactory()
+        present(child: coordinator, animated: true)
     }
 }

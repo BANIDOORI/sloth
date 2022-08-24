@@ -19,9 +19,6 @@ final class ActivityIndicatorView: UIActivityIndicatorView {
     }
 
     private func setUp() {
-        color = .white
-        backgroundColor = .darkGray
-        layer.cornerRadius = 5.0
         hidesWhenStopped = true
     }
 }

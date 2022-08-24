@@ -7,35 +7,47 @@
 
 import UIKit
 import Combine
+import Lottie
 
 final class TodayLessonCollectionViewCell: UICollectionViewCell {
-    static let identifier = "TodayLessonCollectionViewCell"
-
+    static var identifier: String {
+        return String(describing: TodayLessonCollectionViewCell.self)
+    }
+    
     var viewModel: TodayLessonCollectionCellViewModel! {
         didSet { setUpViewModel() }
     }
 
     lazy var lessonInformationView = LessonInformationView()
 
-    lazy var progressBarView: UIView = {
-        let view = UIView()
+    lazy var progressBarView: HalfCircleProgressBar = {
+        let view = HalfCircleProgressBar()
         view.snp.makeConstraints {
             $0.width.equalTo(213)
             $0.height.equalTo(70)
         }
-        view.backgroundColor = .gray200
         return view
     }()
 
     lazy var plusButton: UIButton = {
         let button = UIButton()
         button.setImage(.activationPlus, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handlePlusButtonTapped),
+            for: .touchUpInside
+        )
         return button
     }()
 
     lazy var minusButton: UIButton = {
         let button = UIButton()
         button.setImage(.disableMinus, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handleMinusButtonTapped),
+            for: .touchUpInside
+        )
         return button
     }()
 
@@ -46,14 +58,13 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    lazy var pigView: UIView = {
-        let view = UIView()
-        view.snp.makeConstraints {
+    lazy var pigView: AnimationView = {
+        let animationView = AnimationView(name: "pigAnimation")
+        animationView.snp.makeConstraints {
             $0.width.equalTo(64)
             $0.height.equalTo(58)
         }
-        view.backgroundColor = .gray200
-        return view
+        return animationView
     }()
 
     lazy var bottomStackView: UIStackView = {
@@ -103,6 +114,12 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         addSubviews()
         setUpConstraints()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // NOTE: 그냥 애니메이션 보여주려고 넣은 거
+        progressBarView.progressAnimation(duration: 2)
+    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -142,7 +159,7 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         lessonInformationView.remainDayLabel.text = "D-\(viewModel.remainDay ?? 0)"
         lessonInformationView.categoryNameLabel.text = viewModel.categoryName
         lessonInformationView.siteNameLabel.text = viewModel.siteName
-        lessonInformationView.lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)" //viewModel.lessonName
+        lessonInformationView.lessonNameLabel.text = viewModel.lessonName
         numberLabel.text = "0/4"
     }
 
@@ -158,6 +175,14 @@ final class TodayLessonCollectionViewCell: UICollectionViewCell {
         lessonInformationView.siteNameLabel.textColor = isDone ? .primary600 : .black
         lessonInformationView.lessonNameLabel.textColor = isDone ? .white : .black
         backgroundColor = isDone ? .primary500 : .white
+    }
+
+    @objc private func handlePlusButtonTapped() {
+        pigView.play()
+    }
+
+    @objc private func handleMinusButtonTapped() {
+        
     }
 }
 

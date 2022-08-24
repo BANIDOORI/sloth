@@ -41,75 +41,7 @@ class TitleInput: UIView {
         return label
     }()
     
-    // MARK: Input Container View Properties
-    var borderWidth: CGFloat = 1 {
-        didSet {
-            inputContainerView.layer.borderWidth = borderWidth
-        }
-    }
-    
-    var borderColor: UIColor = .gray300 // inactive
-    var errorBorderColor: UIColor? = .error
-    var focusedBorderColor: UIColor? = .primary400
-    
-    var activatedBackgroundColor: UIColor? = .clear
-    var disabledBackgroundColor: UIColor? = .gray300
-    
-    var cornerRadius: CGFloat = 10 {
-        didSet {
-            inputContainerView.layer.cornerRadius = cornerRadius
-        }
-    }
-    
-    private lazy var inputContainerView: UIView = {
-        let view = UIView()
-        view.layer.borderColor = borderColor.cgColor
-        view.layer.borderWidth = borderWidth
-        view.layer.cornerRadius = cornerRadius
-        view.backgroundColor = activatedBackgroundColor
-        return view
-    }()
-    
-    // MARK: Text Field Properties
-    var text: String? {
-        didSet {
-            textField.text = text
-        }
-    }
-    
-    var textFieldAlignment: NSTextAlignment = .left {
-        didSet {
-            textField.textAlignment = textFieldAlignment
-        }
-    }
-    
-    var textFieldFont: UIFont = .systemFont(ofSize: 16, weight: .regular) {
-        didSet {
-            textField.font = textFieldFont
-        }
-    }
-    
-    var placeholder: String? {
-        didSet {
-            textField.placeholder = placeholder
-        }
-    }
-    
-    var textFieldColor: UIColor = .gray600 {
-        didSet {
-            textField.textColor = textFieldColor
-        }
-    }
-    
-    lazy var textField: UITextField = {
-        let field = UITextField()
-        field.textAlignment = textFieldAlignment
-        field.font = textFieldFont
-        field.placeholder = placeholder
-        field.textColor = textFieldColor
-        field.backgroundColor = .clear
-        return field
-    }()
+    let containerView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -122,8 +54,7 @@ class TitleInput: UIView {
     
     private func initializeViews() {
         addSubview(titleLabel)
-        addSubview(inputContainerView)
-        inputContainerView.addSubview(textField)
+        addSubview(containerView)
         initializeConstraints()
     }
     
@@ -133,13 +64,11 @@ class TitleInput: UIView {
             $0.height.equalTo(22)
         }
         
-        inputContainerView.snp.makeConstraints {
-            $0.left.right.bottom.equalToSuperview()
+        containerView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.height.equalTo(56)
             $0.top.equalTo(titleLabel.snp.bottom).offset(8)
         }
         
-        textField.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(17)
-        }
     }
 }

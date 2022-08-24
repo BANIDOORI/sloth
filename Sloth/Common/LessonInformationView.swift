@@ -36,6 +36,17 @@ class LessonInformationView: UIView {
         return label
     }()
 
+    lazy var deadlineLabel: PaddingLabel = {
+        let label = PaddingLabel()
+        label.font = .systemFont(ofSize: 12, weight: .regular)
+        label.backgroundColor = .error
+        label.clipsToBounds = true
+        label.text = "마감 임박"
+        label.textColor = .white
+        label.layer.cornerRadius = 8
+        return label
+    }()
+
     lazy var labelStackView: UIStackView = {
         let emptyView = UIView()
         emptyView.backgroundColor = .clear
@@ -44,6 +55,7 @@ class LessonInformationView: UIView {
                 remainDayLabel,
                 categoryNameLabel,
                 siteNameLabel,
+                deadlineLabel,
                 emptyView
             ]
         )
@@ -61,14 +73,23 @@ class LessonInformationView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        dummyData()
         addSubviews()
         setUpConstraints()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        dummyData()
         addSubviews()
         setUpConstraints()
+    }
+
+    private func dummyData() {
+        remainDayLabel.text = "D-19"
+        categoryNameLabel.text = "개발"
+        siteNameLabel.text = "인프런"
+        lessonNameLabel.text = "프로그래밍 시작하기 : 파이썬 입문 (Inflearn Original)"
     }
 
     private func addSubviews() {
@@ -77,6 +98,7 @@ class LessonInformationView: UIView {
         container.spacing = 10
         container.addArrangedSubview(labelStackView)
         container.addArrangedSubview(lessonNameLabel)
+        deadlineLabel.isHidden = true
     }
 
     private func setUpConstraints() {

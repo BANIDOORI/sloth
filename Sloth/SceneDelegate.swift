@@ -11,8 +11,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    private let container = DependencyContainer()
-    private var mainCoordinator: Coordinator?
+    private var container: DependencyContainer!
+    private var mainCoordinator: Coordinator!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,10 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
+        container = DependencyContainer(window: window)
         
         guard let window = window else { return }
-        mainCoordinator = container.makeMainCoordinator(window: window)
-        mainCoordinator?.present()
+        let mainCoordinator = container.makeStartCoordinator(window: window)
+        self.mainCoordinator = mainCoordinator
+        self.mainCoordinator.present(animated: true, onDismissed: nil)
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

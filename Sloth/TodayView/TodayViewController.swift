@@ -10,10 +10,10 @@ import Combine
 import SnapKit
 
 final class TodayViewController: UIViewController {
-    enum Section: Hashable {
-        case header
-        case will
-        case done
+    enum Section: String, Hashable {
+        case header = ""
+        case will = "오늘까지 들어야하는 강의"
+        case done = "오늘까지 완료한 강의"
     }
 
     enum Item: Hashable {
@@ -30,6 +30,17 @@ final class TodayViewController: UIViewController {
     private var bindings = Set<AnyCancellable>()
     private var dataSource: DataSource!
     weak var navigator: TodayViewNavigatorDelegate?
+    
+    private lazy var notificationButton: UIButton = {
+        let button = UIButton()
+        button.setImage(.actionBell, for: .normal)
+        button.addTarget(
+            self,
+            action: #selector(handleNotificationButtonTapped),
+            for: .touchUpInside
+        )
+        return button
+    }()
 
     init(viewModel: TodayViewModel = TodayViewModel()) {
         self.viewModel = viewModel
@@ -46,7 +57,6 @@ final class TodayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpCollectionView()
         configureDataSource()
         setUpBindings()
@@ -55,6 +65,11 @@ final class TodayViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.retrySearch()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavigationBar()
     }
 
     private func setUpCollectionView() {
@@ -65,6 +80,11 @@ final class TodayViewController: UIViewController {
         todayView.collectionView.register(
             TodayLessonCollectionViewCell.self,
             forCellWithReuseIdentifier: TodayLessonCollectionViewCell.identifier
+        )
+        todayView.collectionView.register(
+            TodayLessonSectionHeaderCell.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: TodayLessonSectionHeaderCell.identifier
         )
     }
 
@@ -131,16 +151,20 @@ final class TodayViewController: UIViewController {
         snapshot.appendItems([.headerInformation], toSection: .header)
 
         let done = viewModel.lessons
-            .filter{ $0.untilTodayFinished ?? true }
+            .filter{ !($0.untilTodayFinished ?? true) }
             .map{ Item.doneLesson($0) }
         snapshot.appendItems(done, toSection: .done)
 
         let will = viewModel.lessons
-            .filter{ !($0.untilTodayFinished ?? true) }
+            .filter{ $0.untilTodayFinished ?? true }
             .map{ Item.willLesson($0) }
         snapshot.appendItems(will, toSection: .will)
-
+        
         dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    @objc private func handleNotificationButtonTapped() {
+        
     }
 }
 
@@ -178,5 +202,31 @@ extension TodayViewController {
                     return cell
                 }
             })
+
+        dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
+            guard kind == UICollectionView.elementKindSectionHeader else { return nil }
+            let view = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: TodayLessonSectionHeaderCell.identifier,
+                for: indexPath
+            ) as? TodayLessonSectionHeaderCell
+            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
+            view?.titleLabel.text = section.rawValue
+            return view
+        }
+    }
+}
+
+extension TodayViewController {
+    func setupNavigationBar() {
+        navigationItem.setHidesBackButton(true, animated: false)
+        navigationController?.navigationBar.tintColor = .gray600
+
+        let stackView = UIStackView()
+        stackView.addArrangedSubviews(views: [notificationButton])
+        stackView.spacing = 16
+
+        let rightBarButton = UIBarButtonItem(customView: stackView)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = rightBarButton
     }
 }
