@@ -1,0 +1,19 @@
+name: iOS Run Test workflow
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Start xcode Build 🛠
+        run: |
+          xcodebuild clean test -project Sloth.xcodeproj -scheme Sloth -destination 'platform=iOS Simulator, name=iPhone 13 Pro, OS=latest'
