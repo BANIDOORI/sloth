@@ -14,6 +14,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      
+    - name: Resolve Dependencies
+      id: resolution
+      uses: GetSidetrack/action-xcodeproj-spm-update@main
+      with:
+        forceResolution: true
+        failWhenOutdated: false
+        
     - name: Start xcode Build 🛠
       run: |
-        xcodebuild -resolvePackageDependencies clean test -project Sloth.xcodeproj -scheme Sloth -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
+        xcodebuild clean test -project Sloth.xcodeproj -scheme Sloth -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
