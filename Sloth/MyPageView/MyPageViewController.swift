@@ -8,7 +8,7 @@
 import UIKit
 
 
-class MyPageViewController: UIViewController {
+class MyPageViewController: BaseViewController {
     
     private var elements: [MyPageElement] = []
     
@@ -135,11 +135,37 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = elements[indexPath.section]
-        guard let serviceItem = item as? MyPageServiceElement else { return }
-        let type = serviceItem.serviceType[indexPath.row]
-        switch type {
-        case .informationPolicy:
-            openUrlIfPossible("https://www.notion.so/mraz3068/c9edcf0b426941b4844a196407c0cc06")
+        switch item.type {
+        case .account:
+            showPopup(
+                .editProfile(
+                    onEditteded: { name in
+                        print("name: \(name)")
+                        self.dismissPopup()
+                    }
+                )
+            )
+        case .service:
+            guard let serviceItem = item as? MyPageServiceElement else { return }
+            let type = serviceItem.serviceType[indexPath.row]
+            switch type {
+            case .informationPolicy:
+                openUrlIfPossible("https://www.notion.so/mraz3068/c9edcf0b426941b4844a196407c0cc06")
+            case .logOut:
+                showPopup(
+                    .logout(
+                        onLoggedOut: {
+                            print("Logout")
+                            self.dismissPopup()
+                        }, onCanceled: {
+                            print("Cancel")
+                            self.dismissPopup()
+                        }
+                    )
+                )
+            default:
+                break
+            }
         default:
             break
         }

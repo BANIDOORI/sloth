@@ -126,6 +126,11 @@
 		E0A8A08828AA946700355885 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */; };
 		E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08928AA959C00355885 /* UITableView+Extension.swift */; };
 		E0A8A08C28ABBE6900355885 /* HalfCircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */; };
+		E0A8A09328ABE30F00355885 /* ProfileEditPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */; };
+		E0A8A09828AD3E8200355885 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09728AD3E8200355885 /* BaseViewController.swift */; };
+		E0A8A09C28B2342B00355885 /* WarningPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09B28B2342B00355885 /* WarningPopupView.swift */; };
+		E0A8A0A028B236EC00355885 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09F28B236EC00355885 /* PopupView.swift */; };
+		E0A8A0A228B240C600355885 /* PopupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A0A128B240C600355885 /* PopupType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +261,11 @@
 		E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A08928AA959C00355885 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircleProgressBar.swift; sourceTree = "<group>"; };
+		E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditPopupView.swift; sourceTree = "<group>"; };
+		E0A8A09728AD3E8200355885 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E0A8A09B28B2342B00355885 /* WarningPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupView.swift; sourceTree = "<group>"; };
+		E0A8A09F28B236EC00355885 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		E0A8A0A128B240C600355885 /* PopupType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +457,7 @@
 		E05D96092827B1B5007F2ACA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A08F28ABE11A00355885 /* Alert */,
 				CEE9FDD328B3BDA900897499 /* pigAnimation.json */,
 				E020339A287A8BF500ED01DA /* Extension */,
 				E086091D28310FB00050E7C6 /* TitleInput */,
@@ -459,6 +470,7 @@
 				CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */,
 				E0A8A07628AA870900355885 /* SwitchView.swift */,
 				E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */,
+				E0A8A09728AD3E8200355885 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -677,6 +689,17 @@
 			path = Element;
 			sourceTree = "<group>";
 		};
+		E0A8A08F28ABE11A00355885 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */,
+				E0A8A09B28B2342B00355885 /* WarningPopupView.swift */,
+				E0A8A09F28B236EC00355885 /* PopupView.swift */,
+				E0A8A0A128B240C600355885 /* PopupType.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -839,11 +862,13 @@
 				E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */,
 				E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
+				E0A8A09328ABE30F00355885 /* ProfileEditPopupView.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
 				E0A8A04328AA11AE00355885 /* TitleField.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
 				E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */,
 				E08609522838AA700050E7C6 /* LoginViewModel.swift in Sources */,
+				E0A8A09828AD3E8200355885 /* BaseViewController.swift in Sources */,
 				E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */,
 				E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
@@ -884,6 +909,7 @@
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */,
 				E0A8A07728AA870900355885 /* SwitchView.swift in Sources */,
+				E0A8A0A228B240C600355885 /* PopupType.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
 				E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */,
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
@@ -897,7 +923,9 @@
 				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */,
+				E0A8A0A028B236EC00355885 /* PopupView.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
+				E0A8A09C28B2342B00355885 /* WarningPopupView.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 				E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */,

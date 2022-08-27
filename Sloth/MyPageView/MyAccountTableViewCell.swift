@@ -71,9 +71,6 @@ class MyAccountTableViewCell: UITableViewCell {
         }
         
         stackView.addArrangedSubviews(views: [profileIconContainerView, nameLabel, emailLabel])
-        profileIconContainerView.snp.makeConstraints {
-            $0.height.equalTo(65)
-        }
         profileIconContainerView.addSubview(profileIconView)
         
         profileIconView.snp.makeConstraints {

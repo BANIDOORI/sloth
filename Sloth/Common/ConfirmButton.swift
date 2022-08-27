@@ -8,7 +8,11 @@
 import UIKit
 
 class ConfirmButton: UIButton {
-    var activeBackgroundColor: UIColor = .primary400
+    var activeBackgroundColor: UIColor = .primary400 {
+        didSet {
+            backgroundColor = activeBackgroundColor
+        }
+    }
     var disableBackgroundColor: UIColor? = .gray300
     
     override var isEnabled: Bool {
