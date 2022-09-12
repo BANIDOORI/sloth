@@ -152,7 +152,7 @@ final class LectureDetailViewController: UIViewController {
     private lazy var editButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(UIColor.gray600, for: .normal)
-        button.setTitle("Edit", for: .normal)
+        button.setTitle("수정", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         button.addTarget(self, action: #selector(handleEditButtonTapped), for: .touchUpInside)
         return button
@@ -292,11 +292,8 @@ final class LectureDetailViewController: UIViewController {
         navigationController?.navigationBar.backIndicatorImage = .back
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = .back
         
-        let stackView = UIStackView()
-        stackView.addArrangedSubview(editButton)
-        
         let rightBarButton = UIBarButtonItem(customView: editButton)
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = rightBarButton
+        navigationItem.rightBarButtonItem = rightBarButton
     }
 
     @objc private func handleDeleteButtonTapped() {
