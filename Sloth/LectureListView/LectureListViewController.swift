@@ -10,7 +10,7 @@ import SnapKit
 import Combine
 
 final class LectureListViewController: UIViewController {
-    weak var navigator: LectureListNavigatorDelegate?
+    weak var navigator: LectureListNavigator?
 
     enum Section: String, Hashable {
         case ing = "진행중인 강의"
@@ -254,7 +254,6 @@ extension LectureListViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        // NOTE:
-        navigationController?.pushViewController(LectureDetailViewController(), animated: true)
+        navigator?.showLectureDetail()
     }
 }

@@ -16,13 +16,18 @@ class MainViewCoordinator: Coordinator {
     private let viewController: UIViewController
     
     private let lectureRegisterCoordinatorFactory: () -> (Coordinator)
+    private let lectureDetailCoordinatorFactory: () -> (Coordinator)
     
-    init(router: Router,
-         viewController: UIViewController,
-         lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator)) {
+    init(
+        router: Router,
+        viewController: UIViewController,
+        lectureRegisterCoordinatorFactory: @escaping () -> (Coordinator),
+        lectureDetailCoordinatorFactory: @escaping () -> (Coordinator)
+    ) {
         self.router = router
         self.viewController = viewController
         self.lectureRegisterCoordinatorFactory = lectureRegisterCoordinatorFactory
+        self.lectureDetailCoordinatorFactory = lectureDetailCoordinatorFactory
     }
     
     func present(animated: Bool, onDismissed: (() -> Void)?) {
@@ -33,6 +38,11 @@ class MainViewCoordinator: Coordinator {
 extension MainViewCoordinator: MainViewNavigator {
     func showLectureRegister() {
         let coordinator = lectureRegisterCoordinatorFactory()
+        present(child: coordinator, animated: true)
+    }
+    
+    func showLectureDetail() {
+        let coordinator = lectureDetailCoordinatorFactory()
         present(child: coordinator, animated: true)
     }
 }

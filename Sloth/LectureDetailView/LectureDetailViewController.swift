@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 final class LectureDetailViewController: UIViewController {
+    weak var navigator: LectureDetailNavigator?
+    
     private lazy var scrollView = UIScrollView()
     private lazy var contentView = UIView()
 
@@ -146,9 +148,19 @@ final class LectureDetailViewController: UIViewController {
         view.backgroundColor = .primary100
         return view
     }()
-
+    
+    private lazy var editButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(UIColor.gray600, for: .normal)
+        button.setTitle("Edit", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
+        button.addTarget(self, action: #selector(handleEditButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupScrollView()
         setupScrollSubViews()
         setupHeaderViews()
@@ -157,9 +169,6 @@ final class LectureDetailViewController: UIViewController {
         setupProgressBarView()
         setupLessonDescriptionView()
         setupDeleteButton()
-
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = .back
     }
 
     private func setupScrollView(){
@@ -275,9 +284,27 @@ final class LectureDetailViewController: UIViewController {
             $0.trailing.leading.equalToSuperview().inset(16)
         }
     }
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.tintColor = .gray600
+        
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        navigationController?.navigationBar.backIndicatorImage = .back
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = .back
+        
+        let stackView = UIStackView()
+        stackView.addArrangedSubview(editButton)
+        
+        let rightBarButton = UIBarButtonItem(customView: editButton)
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = rightBarButton
+    }
 
     @objc private func handleDeleteButtonTapped() {
         print(#function)
+    }
+    
+    @objc private func handleEditButtonTapped() {
+        navigator?.showLectureEdit()
     }
 }
 

@@ -28,12 +28,3 @@ final class LectureListCoordinator: Coordinator {
         router.present(viewController: viewController, animated: animated, onDismissed: onDismissed)
     }
 }
-
-extension LectureListCoordinator: LectureListNavigatorDelegate {
-    func showLectureRegister() {
-        print(#function)
-        let coordinator = lectureRegisterCoordinatorFactory()
-        present(child: coordinator, animated: true)
-    }
-}
-
