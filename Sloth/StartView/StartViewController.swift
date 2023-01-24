@@ -103,6 +103,6 @@ class StartViewController: UIViewController {
     }
     
     @objc private func handleButtonTapped() {
-        navigator?.showMain()
+        navigator?.showLogin()
     }
 }
