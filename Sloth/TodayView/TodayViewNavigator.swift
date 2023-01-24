@@ -7,6 +7,4 @@
 
 import Foundation
 
-protocol TodayViewNavigatorDelegate: AnyObject {
-    func showMyPage()
-}
+protocol TodayViewNavigator: AnyObject {}

@@ -29,7 +29,7 @@ final class TodayViewController: UIViewController {
     private let viewModel: TodayViewModel
     private var bindings = Set<AnyCancellable>()
     private var dataSource: DataSource!
-    weak var navigator: TodayViewNavigatorDelegate?
+    weak var navigator: TodayViewNavigator?
     
     private lazy var notificationButton: UIButton = {
         let button = UIButton()

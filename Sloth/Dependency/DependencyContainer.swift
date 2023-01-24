@@ -57,6 +57,10 @@ class DependencyContainer {
             self.makeLectureInformationRegisterCoordinator(navigationController: navigationController)
         }
         
+        let lectureDetailCoordinatorFactory: () -> Coordinator = {
+            self.makeLectureDetailCoordinator(navigationController: navigationController)
+        }
+        
         let viewController = MainViewController(
             viewModel: viewModel,
             todayViewControllerFactory: todayViewControllerFactory,
@@ -67,7 +71,8 @@ class DependencyContainer {
         let coordinator = MainViewCoordinator(
             router: router,
             viewController: viewController,
-            lectureRegisterCoordinatorFactory: lectureRegisterCoordinatorFactory
+            lectureRegisterCoordinatorFactory: lectureRegisterCoordinatorFactory,
+            lectureDetailCoordinatorFactory: lectureDetailCoordinatorFactory
         )
         
         viewModel.navigator = coordinator
@@ -202,13 +207,33 @@ class DependencyContainer {
         return coordinator
     }
     
-    func makeTodayViewControllerFactory(navigator: TodayViewNavigatorDelegate?) -> TodayViewController {
+    func makeLectureDetailCoordinator(navigationController: UINavigationController) -> Coordinator {
+        let router = NavigationRouter(navigationController: navigationController)
+        
+        let viewController = LectureDetailViewController()
+        
+        let lectureEditCoordinatorFactory = {
+            self.makeLectureEditCoordinatorFactory(navigationController: navigationController)
+        }
+        
+        let coordinator = LectureDetailCoordinator(
+            router: router,
+            viewController: viewController,
+            lectureEditCoordinatorFactory: lectureEditCoordinatorFactory
+        )
+        
+        viewController.navigator = coordinator
+        
+        return coordinator
+    }
+    
+    func makeTodayViewControllerFactory(navigator: TodayViewNavigator?) -> TodayViewController {
         let viewController = TodayViewController()
         viewController.navigator = navigator
         return viewController
     }
     
-    func makeLectureListViewControllerFactory(navigator: LectureListNavigatorDelegate?) -> LectureListViewController {
+    func makeLectureListViewControllerFactory(navigator: LectureListNavigator?) -> LectureListViewController {
         let viewController = LectureListViewController()
         viewController.navigator = navigator
         return viewController

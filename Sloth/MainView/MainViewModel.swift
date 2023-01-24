@@ -7,13 +7,14 @@
 
 import Foundation
 
-final class MainViewModel: TodayViewNavigatorDelegate, LectureListNavigatorDelegate {
-    func showMyPage() {
-
-    }
+final class MainViewModel: TodayViewNavigator, LectureListNavigator {
     
     func showLectureRegister() {
         navigator?.showLectureRegister()
+    }
+    
+    func showLectureDetail() {
+        navigator?.showLectureDetail()
     }
 
     weak var navigator: MainViewNavigator?
