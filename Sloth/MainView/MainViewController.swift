@@ -106,7 +106,7 @@ class MainViewController: UITabBarController {
     }
 }
 
-extension MainViewController: TodayViewNavigatorDelegate {
+extension MainViewController: TodayViewNavigator {
     func showMyPage() {
         
     }

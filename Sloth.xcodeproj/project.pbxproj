@@ -62,7 +62,7 @@
 		E05D96242827CB4A007F2ACA /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */; };
 		E05D962B2827CE0A007F2ACA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D962A2827CE0A007F2ACA /* TodayViewController.swift */; };
 		E05D962E2827CEC1007F2ACA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E05D962D2827CEC1007F2ACA /* SnapKit */; };
-		E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */; };
+		E05D96302827D006007F2ACA /* TodayViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D962F2827D006007F2ACA /* TodayViewNavigator.swift */; };
 		E05D96322827D057007F2ACA /* MainViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96312827D057007F2ACA /* MainViewNavigator.swift */; };
 		E05D96342827D20F007F2ACA /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96332827D20F007F2ACA /* MyPageViewController.swift */; };
 		E05D96362827D234007F2ACA /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D96352827D234007F2ACA /* MyPageCoordinator.swift */; };
@@ -104,9 +104,9 @@
 		E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */; };
 		E0A8A05228AA32DD00355885 /* LectureInfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */; };
 		E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */; };
-		E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */; };
-		E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */; };
-		E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */; };
+		E0A8A05F28AA43D800355885 /* SB어그로OTFB.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */; };
+		E0A8A06028AA43DB00355885 /* SB어그로OTFL.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */; };
+		E0A8A06128AA43E000355885 /* SB어그로OTFM.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */; };
 		E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */; };
 		E0A8A06628AA73B000355885 /* LectureEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06528AA73B000355885 /* LectureEditViewController.swift */; };
 		E0A8A06828AA752D00355885 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A06728AA752D00355885 /* Date+Extension.swift */; };
@@ -126,17 +126,17 @@
 		E0A8A08828AA946700355885 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */; };
 		E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08928AA959C00355885 /* UITableView+Extension.swift */; };
 		E0A8A08C28ABBE6900355885 /* HalfCircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */; };
+		E0A8A09328ABE30F00355885 /* ProfileEditPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */; };
+		E0A8A09828AD3E8200355885 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09728AD3E8200355885 /* BaseViewController.swift */; };
+		E0A8A09C28B2342B00355885 /* WarningPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09B28B2342B00355885 /* WarningPopupView.swift */; };
+		E0A8A0A028B236EC00355885 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A09F28B236EC00355885 /* PopupView.swift */; };
+		E0A8A0A228B240C600355885 /* PopupType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A0A128B240C600355885 /* PopupType.swift */; };
+		E0C6950128C64338000BDB25 /* LectureDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6950028C64338000BDB25 /* LectureDetailNavigator.swift */; };
+		E0C6950328C64390000BDB25 /* LectureDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6950228C64390000BDB25 /* LectureDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E05D95ED2827ACF6007F2ACA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E05D95CE2827ACF4007F2ACA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E05D95D52827ACF4007F2ACA;
-			remoteInfo = Sloth;
-		};
-		E05D95F72827ACF6007F2ACA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E05D95CE2827ACF4007F2ACA /* Project object */;
 			proxyType = 1;
@@ -190,7 +190,6 @@
 		E05D95E72827ACF5007F2ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E05D95EC2827ACF6007F2ACA /* SlothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D95F02827ACF6007F2ACA /* SlothTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlothTests.swift; sourceTree = "<group>"; };
-		E05D95F62827ACF6007F2ACA /* SlothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D960A2827B1BC007F2ACA /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		E05D960C2827B5CC007F2ACA /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		E05D960F2827CA07007F2ACA /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -200,7 +199,7 @@
 		E05D961F2827CAC0007F2ACA /* InitNavRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitNavRouter.swift; sourceTree = "<group>"; };
 		E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		E05D962A2827CE0A007F2ACA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewNavigatorDelegate.swift; sourceTree = "<group>"; };
+		E05D962F2827D006007F2ACA /* TodayViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewNavigator.swift; sourceTree = "<group>"; };
 		E05D96312827D057007F2ACA /* MainViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigator.swift; sourceTree = "<group>"; };
 		E05D96332827D20F007F2ACA /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		E05D96352827D234007F2ACA /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
@@ -242,9 +241,9 @@
 		E0A8A04D28AA24F400355885 /* LectureSummaryInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureSummaryInformationView.swift; sourceTree = "<group>"; };
 		E0A8A05128AA32DD00355885 /* LectureInfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureInfoRowView.swift; sourceTree = "<group>"; };
 		E0A8A05328AA382600355885 /* LectureRegisterSummaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryCoordinator.swift; sourceTree = "<group>"; };
-		E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF B.otf"; sourceTree = "<group>"; };
-		E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF L.otf"; sourceTree = "<group>"; };
-		E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB 어그로OTF M.otf"; sourceTree = "<group>"; };
+		E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFB.otf"; sourceTree = "<group>"; };
+		E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFL.otf"; sourceTree = "<group>"; };
+		E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SB어그로OTFM.otf"; sourceTree = "<group>"; };
 		E0A8A06228AA513000355885 /* LectureRegisterSummaryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRegisterSummaryNavigator.swift; sourceTree = "<group>"; };
 		E0A8A06528AA73B000355885 /* LectureEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureEditViewController.swift; sourceTree = "<group>"; };
 		E0A8A06728AA752D00355885 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -264,6 +263,13 @@
 		E0A8A08728AA946700355885 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A08928AA959C00355885 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircleProgressBar.swift; sourceTree = "<group>"; };
+		E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditPopupView.swift; sourceTree = "<group>"; };
+		E0A8A09728AD3E8200355885 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E0A8A09B28B2342B00355885 /* WarningPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningPopupView.swift; sourceTree = "<group>"; };
+		E0A8A09F28B236EC00355885 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		E0A8A0A128B240C600355885 /* PopupType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupType.swift; sourceTree = "<group>"; };
+		E0C6950028C64338000BDB25 /* LectureDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailNavigator.swift; sourceTree = "<group>"; };
+		E0C6950228C64390000BDB25 /* LectureDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,13 +293,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E05D95F32827ACF6007F2ACA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -310,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				CE03A2E128A9FC9C000269D0 /* LectureDetailViewController.swift */,
+				E0C6950028C64338000BDB25 /* LectureDetailNavigator.swift */,
 			);
 			path = LectureDetailView;
 			sourceTree = "<group>";
@@ -416,7 +416,6 @@
 			children = (
 				E05D95D62827ACF4007F2ACA /* Sloth.app */,
 				E05D95EC2827ACF6007F2ACA /* SlothTests.xctest */,
-				E05D95F62827ACF6007F2ACA /* SlothUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +462,7 @@
 		E05D96092827B1B5007F2ACA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8A08F28ABE11A00355885 /* Alert */,
 				CEE9FDD328B3BDA900897499 /* pigAnimation.json */,
 				E020339A287A8BF500ED01DA /* Extension */,
 				E086091D28310FB00050E7C6 /* TitleInput */,
@@ -475,6 +475,7 @@
 				CE61D51B2879D79800CDEEC7 /* LessonInformationView.swift */,
 				E0A8A07628AA870900355885 /* SwitchView.swift */,
 				E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */,
+				E0A8A09728AD3E8200355885 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -494,6 +495,7 @@
 				E05D96122827CA4B007F2ACA /* Coordinator.swift */,
 				E0A8A06B28AA7E7F00355885 /* LectureEditCoordinator.swift */,
 				E02033BF288BC7FA00ED01DA /* LectureListCoordinator.swift */,
+				E0C6950228C64390000BDB25 /* LectureDetailCoordinator.swift */,
 				E05D96232827CB4A007F2ACA /* MainViewCoordinator.swift */,
 				E02033B4287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift */,
 				E05D96352827D234007F2ACA /* MyPageCoordinator.swift */,
@@ -533,7 +535,7 @@
 				E05D962A2827CE0A007F2ACA /* TodayViewController.swift */,
 				CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */,
 				CE5CE0DC282EBFF900C70EAF /* TodayView.swift */,
-				E05D962F2827D006007F2ACA /* TodayViewNavigatorDelegate.swift */,
+				E05D962F2827D006007F2ACA /* TodayViewNavigator.swift */,
 				CE5CE0DE282EC18200C70EAF /* Cell */,
 			);
 			path = TodayView;
@@ -666,9 +668,9 @@
 		E0A8A05528AA3B4600355885 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E0A8A05C28AA43D400355885 /* SB 어그로OTF B.otf */,
-				E0A8A05D28AA43D400355885 /* SB 어그로OTF L.otf */,
-				E0A8A05E28AA43D400355885 /* SB 어그로OTF M.otf */,
+				E0A8A05C28AA43D400355885 /* SB어그로OTFB.otf */,
+				E0A8A05D28AA43D400355885 /* SB어그로OTFL.otf */,
+				E0A8A05E28AA43D400355885 /* SB어그로OTFM.otf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -691,6 +693,17 @@
 				E0A8A08328AA8ADC00355885 /* PushNotiElement.swift */,
 			);
 			path = Element;
+			sourceTree = "<group>";
+		};
+		E0A8A08F28ABE11A00355885 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8A09228ABE30F00355885 /* ProfileEditPopupView.swift */,
+				E0A8A09B28B2342B00355885 /* WarningPopupView.swift */,
+				E0A8A09F28B236EC00355885 /* PopupView.swift */,
+				E0A8A0A128B240C600355885 /* PopupType.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,24 +752,6 @@
 			productReference = E05D95EC2827ACF6007F2ACA /* SlothTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E05D95F52827ACF6007F2ACA /* SlothUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E05D96062827ACF6007F2ACA /* Build configuration list for PBXNativeTarget "SlothUITests" */;
-			buildPhases = (
-				E05D95F22827ACF6007F2ACA /* Sources */,
-				E05D95F32827ACF6007F2ACA /* Frameworks */,
-				E05D95F42827ACF6007F2ACA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E05D95F82827ACF6007F2ACA /* PBXTargetDependency */,
-			);
-			name = SlothUITests;
-			productName = SlothUITests;
-			productReference = E05D95F62827ACF6007F2ACA /* SlothUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -771,10 +766,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					E05D95EB2827ACF6007F2ACA = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = E05D95D52827ACF4007F2ACA;
-					};
-					E05D95F52827ACF6007F2ACA = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = E05D95D52827ACF4007F2ACA;
 					};
@@ -801,7 +792,6 @@
 			targets = (
 				E05D95D52827ACF4007F2ACA /* Sloth */,
 				E05D95EB2827ACF6007F2ACA /* SlothTests */,
-				E05D95F52827ACF6007F2ACA /* SlothUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -811,10 +801,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A8A05F28AA43D800355885 /* SB 어그로OTF B.otf in Resources */,
+				E0A8A05F28AA43D800355885 /* SB어그로OTFB.otf in Resources */,
 				E05D95E62827ACF5007F2ACA /* LaunchScreen.storyboard in Resources */,
-				E0A8A06128AA43E000355885 /* SB 어그로OTF M.otf in Resources */,
-				E0A8A06028AA43DB00355885 /* SB 어그로OTF L.otf in Resources */,
+				E0A8A06128AA43E000355885 /* SB어그로OTFM.otf in Resources */,
+				E0A8A06028AA43DB00355885 /* SB어그로OTFL.otf in Resources */,
 				E05D95E32827ACF5007F2ACA /* Assets.xcassets in Resources */,
 				E05D95E12827ACF4007F2ACA /* Main.storyboard in Resources */,
 				CEE9FDD428B3BDA900897499 /* pigAnimation.json in Resources */,
@@ -822,13 +812,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E05D95EA2827ACF6007F2ACA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E05D95F42827ACF6007F2ACA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -861,7 +844,7 @@
 				E086092328310FDF0050E7C6 /* TitleInput.swift in Sources */,
 				E02033A7287AAFDB00ED01DA /* InformationAgreementCoordinator.swift in Sources */,
 				CE61D51C2879D79800CDEEC7 /* LessonInformationView.swift in Sources */,
-				E05D96302827D006007F2ACA /* TodayViewNavigatorDelegate.swift in Sources */,
+				E05D96302827D006007F2ACA /* TodayViewNavigator.swift in Sources */,
 				E02033A5287AAF3200ED01DA /* LoginNavigator.swift in Sources */,
 				E086091F28310FBF0050E7C6 /* TitleActionField.swift in Sources */,
 				E020339E287A8DE400ED01DA /* StartNavigator.swift in Sources */,
@@ -870,6 +853,7 @@
 				E05D960D2827B5CC007F2ACA /* ColorPalette.swift in Sources */,
 				E086093E28389E470050E7C6 /* EndpointProvider.swift in Sources */,
 				E02033B5287B1F4500ED01DA /* LectureGoalRegisterCoordinator.swift in Sources */,
+				E0C6950128C64338000BDB25 /* LectureDetailNavigator.swift in Sources */,
 				CE03A2D728A791C7000269D0 /* LectoureListCollectionCell.swift in Sources */,
 				E08609572838BE9E0050E7C6 /* GoogleSessionService.swift in Sources */,
 				E0A8A08028AA8A5900355885 /* MyAccountElement.swift in Sources */,
@@ -885,12 +869,15 @@
 				E0A8A04E28AA24F400355885 /* LectureSummaryInformationView.swift in Sources */,
 				E0A8A05428AA382600355885 /* LectureRegisterSummaryCoordinator.swift in Sources */,
 				E0860913282D4C8C0050E7C6 /* CancelButton.swift in Sources */,
+				E0A8A09328ABE30F00355885 /* ProfileEditPopupView.swift in Sources */,
 				E0860911282D4A070050E7C6 /* ConfirmButton.swift in Sources */,
 				E0A8A04328AA11AE00355885 /* TitleField.swift in Sources */,
 				E05D95DA2827ACF4007F2ACA /* AppDelegate.swift in Sources */,
 				E02033AB287AFDDE00ED01DA /* UIViewController+Extension.swift in Sources */,
 				E08609522838AA700050E7C6 /* LoginViewModel.swift in Sources */,
+				E0A8A09828AD3E8200355885 /* BaseViewController.swift in Sources */,
 				E02033B7287B1F5900ED01DA /* LectureGoalRegisterNavigator.swift in Sources */,
+				E0C6950328C64390000BDB25 /* LectureDetailCoordinator.swift in Sources */,
 				E0A8A06A28AA762B00355885 /* TitleDaySelector.swift in Sources */,
 				E05D95DC2827ACF4007F2ACA /* SceneDelegate.swift in Sources */,
 				E0A8A07928AA88A200355885 /* UICollectionView+Extension.swift in Sources */,
@@ -930,6 +917,7 @@
 				E05D960B2827B1BC007F2ACA /* Icons.swift in Sources */,
 				E0A8A04728AA165000355885 /* PushNotiCycle.swift in Sources */,
 				E0A8A07728AA870900355885 /* SwitchView.swift in Sources */,
+				E0A8A0A228B240C600355885 /* PopupType.swift in Sources */,
 				E05D96132827CA4B007F2ACA /* Coordinator.swift in Sources */,
 				E086094B2838A1A40050E7C6 /* LogoutRequest.swift in Sources */,
 				E08609472838A1570050E7C6 /* HTTPMethod.swift in Sources */,
@@ -943,7 +931,9 @@
 				CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */,
 				E0203399287A7AD300ED01DA /* StartCoordinator.swift in Sources */,
 				E0A8A06328AA513000355885 /* LectureRegisterSummaryNavigator.swift in Sources */,
+				E0A8A0A028B236EC00355885 /* PopupView.swift in Sources */,
 				E086092628368B420050E7C6 /* StartViewController.swift in Sources */,
+				E0A8A09C28B2342B00355885 /* WarningPopupView.swift in Sources */,
 				E08609552838BE7C0050E7C6 /* AppleSessionManager.swift in Sources */,
 				E05D96202827CAC1007F2ACA /* NavigationRouter.swift in Sources */,
 				E0A8A08A28AA959C00355885 /* UITableView+Extension.swift in Sources */,
@@ -958,13 +948,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E05D95F22827ACF6007F2ACA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -972,11 +955,6 @@
 			isa = PBXTargetDependency;
 			target = E05D95D52827ACF4007F2ACA /* Sloth */;
 			targetProxy = E05D95ED2827ACF6007F2ACA /* PBXContainerItemProxy */;
-		};
-		E05D95F82827ACF6007F2ACA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E05D95D52827ACF4007F2ACA /* Sloth */;
-			targetProxy = E05D95F72827ACF6007F2ACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1050,7 +1028,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1104,7 +1082,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1123,24 +1101,26 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sloth.nanagong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanagong.nanagong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1150,27 +1130,29 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sloth/Sloth.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sloth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sloth.nanagong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nanagong.nanagong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "nanagong provisioning";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1181,9 +1163,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banidoori.SlothTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1201,9 +1183,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
+				DEVELOPMENT_TEAM = NF7D3MF6YF;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.banidoori.SlothTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1211,42 +1193,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sloth.app/Sloth";
-			};
-			name = Release;
-		};
-		E05D96072827ACF6007F2ACA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banidoori.SlothUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Sloth;
-			};
-			name = Debug;
-		};
-		E05D96082827ACF6007F2ACA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6VQP8QD69R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.banidoori.SlothUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Sloth;
 			};
 			name = Release;
 		};
@@ -1276,15 +1222,6 @@
 			buildConfigurations = (
 				E05D96042827ACF6007F2ACA /* Debug */,
 				E05D96052827ACF6007F2ACA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E05D96062827ACF6007F2ACA /* Build configuration list for PBXNativeTarget "SlothUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E05D96072827ACF6007F2ACA /* Debug */,
-				E05D96082827ACF6007F2ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
