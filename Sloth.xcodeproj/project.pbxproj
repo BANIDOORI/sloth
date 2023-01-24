@@ -17,6 +17,7 @@
 		CE03A2DF28A94870000269D0 /* LectureListSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2DE28A94870000269D0 /* LectureListSectionHeaderCell.swift */; };
 		CE03A2E228A9FC9C000269D0 /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03A2E128A9FC9C000269D0 /* LectureDetailViewController.swift */; };
 		CE0E25712882C21300188AD5 /* TodayLessonSectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */; };
+		CE47F8D6297FDAE0009592FC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47F8D5297FDAE0009592FC /* StorageManager.swift */; };
 		CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */; };
 		CE5CE0D6282EBBD900C70EAF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D5282EBBD900C70EAF /* Lesson.swift */; };
 		CE5CE0D8282EBCB500C70EAF /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */; };
@@ -153,6 +154,7 @@
 		CE03A2DE28A94870000269D0 /* LectureListSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListSectionHeaderCell.swift; sourceTree = "<group>"; };
 		CE03A2E128A9FC9C000269D0 /* LectureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
 		CE0E25702882C21300188AD5 /* TodayLessonSectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonSectionHeaderCell.swift; sourceTree = "<group>"; };
+		CE47F8D5297FDAE0009592FC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		CE5324B52874781D00E3FEBA /* TodayLessonHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonHeaderCell.swift; sourceTree = "<group>"; };
 		CE5CE0D5282EBBD900C70EAF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		CE5CE0D7282EBCB500C70EAF /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				E0A8A07628AA870900355885 /* SwitchView.swift */,
 				E0A8A08B28ABBE6900355885 /* HalfCircleProgressBar.swift */,
 				E0A8A09728AD3E8200355885 /* BaseViewController.swift */,
+				CE47F8D5297FDAE0009592FC /* StorageManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				E0A8A06C28AA7E7F00355885 /* LectureEditCoordinator.swift in Sources */,
 				E02033BE288BC77800ED01DA /* LectureListViewController.swift in Sources */,
 				CE03A2E228A9FC9C000269D0 /* LectureDetailViewController.swift in Sources */,
+				CE47F8D6297FDAE0009592FC /* StorageManager.swift in Sources */,
 				E08609652838C22A0050E7C6 /* LoginCoordinator.swift in Sources */,
 				E02033AD287B008300ED01DA /* UIAlertController+Extension.swift in Sources */,
 				CE5324B62874781D00E3FEBA /* TodayLessonHeaderCell.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 
 final class MainViewModel: TodayViewNavigator, LectureListNavigator {
-    
+
     func showLectureRegister() {
         navigator?.showLectureRegister()
     }

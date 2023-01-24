@@ -18,12 +18,13 @@ class DependencyContainer {
     private let urlProvider: URLProvider
     private let endpointProvider: EndpointProvider
     private let requestMaker: RequestMaker
+    private let authStorageManager: StorageManager<LoginResponse>
     
     init(window: UIWindow?) {
         networkManager = NetworkManagerImp()
         urlProvider = URLProvider(
             scheme: "https",
-            host: "slothbackend.hopto.org",
+            host: "nanagong-api.com",
             path: "",
             login: "/api/oauth/login",
             logout: "/api/logout")
@@ -34,11 +35,20 @@ class DependencyContainer {
         kakaoSessionManager.initSDK()
         googleSessionManager = GoogleSessiongManager()
         appleSessionManager = AppleSessionMananger(window: window)
+        authStorageManager = StorageManager<LoginResponse>(type: .token)
+    }
+
+    func makeMainCoordinator(window: UIWindow) -> Coordinator {
+        let storageManager = StorageManager<LoginResponse>(type: .token)
+        guard storageManager.load() != nil else {
+            let startCoordinator = makeStartCoordinator(window: window)
+            return startCoordinator
+        }
+        let router = InitNavRouter(window: window)
+        return makeMainCoordinator(router: router)
     }
     
-    func makeMainCoordinator(navigationController: UINavigationController) -> Coordinator {
-        let router = NavigationRouter(navigationController: navigationController)
-        
+    func makeMainCoordinator(router: InitNavRouter) -> Coordinator {
         let viewModel = MainViewModel()
         
         let todayViewControllerFactory: () -> (TodayViewController) = {
@@ -54,11 +64,11 @@ class DependencyContainer {
         }
         
         let lectureRegisterCoordinatorFactory: () -> (Coordinator) = {
-            self.makeLectureInformationRegisterCoordinator(navigationController: navigationController)
+            self.makeLectureInformationRegisterCoordinator(navigationController: router.navigationController)
         }
         
         let lectureDetailCoordinatorFactory: () -> Coordinator = {
-            self.makeLectureDetailCoordinator(navigationController: navigationController)
+            self.makeLectureDetailCoordinator(navigationController: router.navigationController)
         }
         
         let viewController = MainViewController(
@@ -107,7 +117,7 @@ class DependencyContainer {
         }
         
         let mainCoordinatorFactory: () -> (Coordinator) = {
-            self.makeMainCoordinator(navigationController: router.navigationController)
+            return self.makeMainCoordinator(router: router)
         }
         
         let coordinator = StartCoordinator(
@@ -131,7 +141,8 @@ class DependencyContainer {
             kakaoSessionManager: kakaoSessionManager,
             appleSessionManager: appleSessionManager,
             networkManager: networkManager,
-            requestMaker: requestMaker
+            requestMaker: requestMaker,
+            authStorageManager: authStorageManager
         )
         let viewModel = LoginViewModel(service: service)
         let viewController = LoginViewController(viewModel: viewModel)

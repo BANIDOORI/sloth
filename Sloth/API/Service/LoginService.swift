@@ -29,7 +29,7 @@ enum LoginProvider {
     case apple(toke: String, clientId: String, code: String)
 }
 
-class LoginService {
+final class LoginService {
     
     @Published private(set) var loginResult: LoginResponse?
     
@@ -39,16 +39,19 @@ class LoginService {
     private let appleSessionManager: AppleSessionMananger
     private let networkManager: NetworkManager
     private let requestMaker: RequestMaker
+    private let authStorageManager: StorageManager<LoginResponse>
     
     init(kakaoSessionManager: KakaoSessionManager,
          appleSessionManager: AppleSessionMananger,
          networkManager: NetworkManager,
-         requestMaker: RequestMaker
+         requestMaker: RequestMaker,
+         authStorageManager: StorageManager<LoginResponse>
     ) {
         self.kakaoSessionManager = kakaoSessionManager
         self.appleSessionManager = appleSessionManager
         self.networkManager = networkManager
         self.requestMaker = requestMaker
+        self.authStorageManager = authStorageManager
     }
     
     func loginWithKakao() -> AnyPublisher<LoginResponse, LoginError> {
@@ -68,6 +71,10 @@ class LoginService {
         let request = requestMaker.makeLoginRequest(provider: .kakao(token: token))
         return networkManager.execute(request: request)
             .decode(type: LoginResponse.self, decoder: JSONDecoder())
+            .map{ response -> LoginResponse in
+                self.authStorageManager.store(response)
+                return response
+            }
             .mapError { error -> LoginError in
                 print("[LOGIN] ERROR \(error)")
                 if error is DecodingError {

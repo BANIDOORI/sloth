@@ -10,7 +10,7 @@ import Foundation
 class LogoutRequest: Requestable {
     var headers: [String : String]
     var body: [String : Any]?
-    var httpMethod: HTTPMethod = .get
+    var httpMethod: HTTPMethod = .post
     var endpoint: Endpoint
     
     init(endpoint: Endpoint) {

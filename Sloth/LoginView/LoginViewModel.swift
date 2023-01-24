@@ -27,8 +27,10 @@ class LoginViewModel {
                 case .finished:
                     print("LOGIN SUCCESS")
                 }
-            } receiveValue: { response in
-                print("LOGIN", response)
+            } receiveValue: { [weak navigator] _ in
+                DispatchQueue.main.async{
+                    navigator?.dismissAndStart()
+                }
             }.store(in: &disposable)
     }
     
